@@ -1,0 +1,1 @@
+export { getAllArtTypes } from './getAllArtTypes';

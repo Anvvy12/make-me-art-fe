@@ -5,6 +5,7 @@ import cn from 'classnames';
 import s from './GroupCart.module.scss';
 import Button from 'ui/Button';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 interface TProps extends React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
@@ -14,6 +15,11 @@ interface TProps extends React.DetailedHTMLProps<
   src: string;
   count: number;
   title: string;
+  type: {
+    slug: string;
+    title: string;
+    description: string;
+  };
 }
 
 export default function GroupCart({
@@ -21,17 +27,28 @@ export default function GroupCart({
   src,
   count,
   title,
+  type,
   ...props
 }: TProps) {
   const { t } = useTranslation(undefined, {
     keyPrefix: 'page.main.gallery_sct.card',
   });
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/type/${type.slug}`, {
+      state: {
+        title: type.title,
+        description: type.description,
+      },
+    });
+  };
 
   return (
     <div className={cn(s.GroupCart, className)} {...props}>
       <div className={s.imgWrapper}>
         <img className={s.img} src={src} alt={t('img_alt')} />
-        <Button variant={'outline'} className={s.btn}>
+        <Button variant={'outline'} className={s.btn} onClick={handleClick}>
           {t('view_btn')}
         </Button>
       </div>
