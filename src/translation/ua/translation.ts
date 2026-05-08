@@ -55,7 +55,14 @@ export default {
       not_found_title: 'Серію не знайдено',
       not_found_desc: 'Оберіть серію з галереї.',
     },
-    gallery: {},
+    gallery: {
+      title: 'Галерея',
+      works: 'робіт',
+      medium: 'Матеріал',
+      year: 'Рік',
+      size: 'Розмір',
+      price: 'Ціна',
+    },
   },
   common: {
     header: {},

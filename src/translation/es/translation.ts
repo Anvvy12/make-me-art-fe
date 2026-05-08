@@ -55,7 +55,14 @@ export default {
       not_found_title: 'Serie no encontrada',
       not_found_desc: 'Elige una serie desde la galería.',
     },
-    gallery: {},
+    gallery: {
+      title: 'Galería',
+      works: 'obras',
+      medium: 'Material',
+      year: 'Año',
+      size: 'Tamaño',
+      price: 'Precio',
+    },
   },
   common: {
     header: {},

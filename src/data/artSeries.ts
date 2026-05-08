@@ -445,8 +445,8 @@ export const ART_SERIES: TArtSeries[] = [
     ],
   },
   {
-    slug: 'nap\u00f3leon_life',
-    cover: '/src/assets/img/nap\u00f3leonsLife/IMG_5186.JPG',
+    slug: 'napoleon_life',
+    cover: '/src/assets/img/napoleonsLife/IMG_5186.JPG',
     translations: {
       ua: {
         title: 'Наполеонівське життя',
@@ -466,8 +466,8 @@ export const ART_SERIES: TArtSeries[] = [
     },
     artworks: [
       {
-        id: 'nap\u00f3leon-in-egypt',
-        image: '/src/assets/img/nap\u00f3leonsLife/IMG_5185.JPG',
+        id: 'napoleon-in-egypt',
+        image: '/src/assets/img/napoleonsLife/IMG_5185.JPG',
         translations: {
           ua: {
             title: 'Наполеон в Єгипті',
@@ -493,8 +493,8 @@ export const ART_SERIES: TArtSeries[] = [
         },
       },
       {
-        id: 'nap\u00f3leon-with-rooster',
-        image: '/src/assets/img/nap\u00f3leonsLife/IMG_5186.JPG',
+        id: 'napoleon-with-rooster',
+        image: '/src/assets/img/napoleonsLife/IMG_5186.JPG',
         translations: {
           ua: {
             title: 'Наполеон з півником',
@@ -520,8 +520,8 @@ export const ART_SERIES: TArtSeries[] = [
         },
       },
       {
-        id: 'nap\u00f3leon-and-josephine',
-        image: '/src/assets/img/nap\u00f3leonsLife/IMG_5191.JPG',
+        id: 'napoleon-and-josephine',
+        image: '/src/assets/img/napoleonsLife/IMG_5191.JPG',
         translations: {
           ua: {
             title: 'Наполеон та Жозефіна',
@@ -548,7 +548,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'josephine',
-        image: '/src/assets/img/nap\u00f3leonsLife/IMG_5192.JPG',
+        image: '/src/assets/img/napoleonsLife/IMG_5192.JPG',
         translations: {
           ua: {
             title: 'Жозефіна',
@@ -574,8 +574,8 @@ export const ART_SERIES: TArtSeries[] = [
         },
       },
       {
-        id: 'nap\u00f3leon-taking-josephine',
-        image: '/src/assets/img/nap\u00f3leonsLife/IMG_5193.JPG',
+        id: 'napoleon-taking-josephine',
+        image: '/src/assets/img/napoleonsLife/IMG_5193.JPG',
         translations: {
           ua: {
             title: 'Наполеон пользует Жозефіну',
@@ -601,8 +601,8 @@ export const ART_SERIES: TArtSeries[] = [
         },
       },
       {
-        id: 'nap\u00f3leon-taking-josephine-back-view',
-        image: '/src/assets/img/nap\u00f3leonsLife/IMG_5197.JPG',
+        id: 'napoleon-taking-josephine-back-view',
+        image: '/src/assets/img/napoleonsLife/IMG_5197.JPG',
         translations: {
           ua: {
             title: 'Наполеон пользует Жозефіну (вигляд ззаду)',
@@ -628,8 +628,8 @@ export const ART_SERIES: TArtSeries[] = [
         },
       },
       {
-        id: 'nap\u00f3leon-buckwheat-sower',
-        image: '/src/assets/img/nap\u00f3leonsLife/IMG_5198.JPG',
+        id: 'napoleon-buckwheat-sower',
+        image: '/src/assets/img/napoleonsLife/IMG_5198.JPG',
         translations: {
           ua: {
             title: 'Наполеон-гречкосій',
@@ -655,8 +655,8 @@ export const ART_SERIES: TArtSeries[] = [
         },
       },
       {
-        id: 'nap\u00f3leon-traveler',
-        image: '/src/assets/img/nap\u00f3leonsLife/IMG_5199.JPG',
+        id: 'napoleon-traveler',
+        image: '/src/assets/img/napoleonsLife/IMG_5199.JPG',
         translations: {
           ua: {
             title: 'Наполеон-мандрівник',

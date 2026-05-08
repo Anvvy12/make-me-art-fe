@@ -4,6 +4,7 @@ import s from './GallerySct.module.scss';
 import GroupCart from './components/GroupCart';
 import { useTranslation } from 'react-i18next';
 import { ART_SERIES, type TArtSeries } from '../../../../data/artSeries';
+import { SECTIONS_CONSTANTS } from 'constants/SECTIONS_CONSTANTS';
 
 type TLocale = keyof TArtSeries['translations'];
 
@@ -20,7 +21,10 @@ export default function GallerySct() {
   const locale = getLocale(i18n.language);
 
   return (
-    <section className={cn(s.GallerySct)}>
+    <section
+      className={cn(s.GallerySct)}
+      id={SECTIONS_CONSTANTS.GALLERY_SCT.slice(1)}
+    >
       <h2 className={s.sectionTitle}>{t('title')}</h2>
       <div className={s.galleryContent}>
         {ART_SERIES.map((series) => (

@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import s from './Footer.module.scss';
 import Logo from 'ui/Logo';
 import { Link } from 'react-router-dom';
+import { NAVIGATION_LINKS } from 'constants/SECTIONS_CONSTANTS';
 
 interface TProps extends React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
@@ -22,13 +23,13 @@ export default function Footer({ className = '', ...props }: TProps) {
     <div className={cn(s.Footer, className)} {...props}>
       <Logo />
       <nav className={s.navList}>
-        <Link className={s.link} to='/'>
+        <Link className={s.link} to={NAVIGATION_LINKS.MAIN}>
           {t('main')}
         </Link>
-        <Link className={s.link} to='/gallery'>
+        <Link className={s.link} to={NAVIGATION_LINKS.GALLERY}>
           {t('gallery')}
         </Link>
-        <Link className={s.link} to='/about'>
+        <Link className={s.link} to={NAVIGATION_LINKS.ABOUT}>
           {t('about')}
         </Link>
       </nav>

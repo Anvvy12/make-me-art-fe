@@ -2,8 +2,9 @@ import cn from 'classnames';
 import s from './Header.module.scss';
 import Logo from 'ui/Logo';
 import BurgerMenu from './ui/BurgerMenu';
-import { SECTIONS_CONSTANTS } from 'constants/SECTIONS_CONSTANTS';
+import { NAVIGATION_LINKS } from 'constants/SECTIONS_CONSTANTS';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import LanguageSelect from './ui/LanguageSelect';
 
 export default function Header() {
@@ -14,15 +15,15 @@ export default function Header() {
       <div className={s.inner}>
         <Logo />
         <nav className={s.nav}>
-          <a className={s.link} href={SECTIONS_CONSTANTS.MAIN_SCT}>
+          <Link className={s.link} to={NAVIGATION_LINKS.MAIN}>
             {t('nav.main')}
-          </a>
-          <a className={s.link} href={SECTIONS_CONSTANTS.GALLERY_SCT}>
+          </Link>
+          <Link className={s.link} to={NAVIGATION_LINKS.GALLERY}>
             {t('nav.gallery')}
-          </a>
-          <a className={s.link} href={SECTIONS_CONSTANTS.ABOUT_SCT}>
+          </Link>
+          <Link className={s.link} to={NAVIGATION_LINKS.ABOUT}>
             {t('nav.about')}
-          </a>
+          </Link>
         </nav>
         <div className={s.actions}>
           <LanguageSelect />
@@ -31,19 +32,19 @@ export default function Header() {
           <BurgerMenu.MenuBtn />
           <BurgerMenu.Menu>
             <BurgerMenu.MenuItem>
-              <a className={s.link} href={SECTIONS_CONSTANTS.MAIN_SCT}>
+              <Link className={s.link} to={NAVIGATION_LINKS.MAIN}>
                 {t('nav.main')}
-              </a>
+              </Link>
             </BurgerMenu.MenuItem>
             <BurgerMenu.MenuItem>
-              <a className={s.link} href={SECTIONS_CONSTANTS.GALLERY_SCT}>
+              <Link className={s.link} to={NAVIGATION_LINKS.GALLERY}>
                 {t('nav.gallery')}
-              </a>
+              </Link>
             </BurgerMenu.MenuItem>
             <BurgerMenu.MenuItem>
-              <a className={s.link} href={SECTIONS_CONSTANTS.ABOUT_SCT}>
+              <Link className={s.link} to={NAVIGATION_LINKS.ABOUT}>
                 {t('nav.about')}
-              </a>
+              </Link>
             </BurgerMenu.MenuItem>
           </BurgerMenu.Menu>
         </BurgerMenu.Wrapper>
