@@ -52,6 +52,10 @@ export default {
       year: 'Рік',
       size: 'Розмір',
       price: 'Ціна',
+      view_details: '\u0414\u0435\u0442\u0430\u043b\u0456',
+      open_artwork:
+        '\u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0438 \u0440\u043e\u0431\u043e\u0442\u0443',
+      close: '\u0417\u0430\u043a\u0440\u0438\u0442\u0438',
       not_found_title: 'Серію не знайдено',
       not_found_desc: 'Оберіть серію з галереї.',
     },
@@ -62,6 +66,10 @@ export default {
       year: 'Рік',
       size: 'Розмір',
       price: 'Ціна',
+      view_details: '\u0414\u0435\u0442\u0430\u043b\u0456',
+      open_artwork:
+        '\u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0438 \u0440\u043e\u0431\u043e\u0442\u0443',
+      close: '\u0417\u0430\u043a\u0440\u0438\u0442\u0438',
     },
   },
   common: {
