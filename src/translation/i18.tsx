@@ -1,8 +1,13 @@
 import en from './en/translation';
+import es from './es/translation';
 import ua from './ua/translation';
 import i18n from 'i18next';
+import { LOCAL_STORAGE_LANGUAGE_KEY } from 'constants/LANGUAGES_CONSTANTS';
 
 export type Language = typeof en;
+export type TLanguageCode = 'en' | 'ua' | 'es';
+
+export const LANGUAGE_CODES: TLanguageCode[] = ['en', 'ua', 'es'];
 
 const resources = {
   en: {
@@ -11,15 +16,27 @@ const resources = {
   ua: {
     translation: ua,
   },
+  es: {
+    translation: es,
+  },
 };
 
+function getSavedLanguage(): TLanguageCode {
+  const savedLanguage = localStorage.getItem(LOCAL_STORAGE_LANGUAGE_KEY);
+
+  if (LANGUAGE_CODES.includes(savedLanguage as TLanguageCode)) {
+    return savedLanguage as TLanguageCode;
+  }
+
+  return 'en';
+}
+
 i18n.init({
-  // we init with resources
   resources,
+  lng: getSavedLanguage(),
   fallbackLng: 'en',
   ns: ['translation'],
   defaultNS: 'translation',
-  // debug: false,
   returnObjects: true,
   keySeparator: '.',
   interpolation: {

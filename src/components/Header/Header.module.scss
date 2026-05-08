@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 
     .link {
       font-size: var(--main-sm-font-size);
@@ -29,9 +30,46 @@
       align-items: center;
       justify-content: center;
       gap: 24px;
+      margin-left: auto;
 
       @media screen and (max-width: $lg) {
         display: none;
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      @media screen and (max-width: $lg) {
+        display: none;
+      }
+    }
+
+    .languageSelect {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+
+      select {
+        min-width: 64px;
+        height: 34px;
+        padding: 0 10px;
+        border: 1px solid currentColor;
+        border-radius: 0;
+        background-color: transparent;
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      option {
+        background-color: var(--primary-dark-color);
+        color: var(--main-text-color);
       }
     }
 
