@@ -4,45 +4,10 @@ import Logo from 'ui/Logo';
 import BurgerMenu from './ui/BurgerMenu';
 import { SECTIONS_CONSTANTS } from 'constants/SECTIONS_CONSTANTS';
 import { useTranslation } from 'react-i18next';
-import { LOCAL_STORAGE_LANGUAGE_KEY } from 'constants/LANGUAGES_CONSTANTS';
-import { LANGUAGE_CODES, type TLanguageCode } from '../../translation/i18';
+import LanguageSelect from './ui/LanguageSelect';
 
 export default function Header() {
-  const { t, i18n } = useTranslation(undefined, { keyPrefix: 'common' });
-
-  const handleLanguageChange = (language: TLanguageCode) => {
-    localStorage.setItem(LOCAL_STORAGE_LANGUAGE_KEY, language);
-    void i18n.changeLanguage(language);
-  };
-
-  const renderLanguageSelect = () => (
-    <div className={s.languageSelect}>
-      <span className={s.languageLabel}>{t('language.label')}</span>
-      <div
-        className={s.languageOptions}
-        role='group'
-        aria-label={t('language.label')}
-      >
-        {LANGUAGE_CODES.map((language) => {
-          const isActive = i18n.language.startsWith(language);
-
-          return (
-            <button
-              className={cn(s.languageOption, {
-                [s.activeLanguage]: isActive,
-              })}
-              type='button'
-              aria-pressed={isActive}
-              onClick={() => handleLanguageChange(language)}
-              key={language}
-            >
-              {t(`language.${language}`)}
-            </button>
-          );
-        })}
-      </div>
-    </div>
-  );
+  const { t } = useTranslation(undefined, { keyPrefix: 'common' });
 
   return (
     <section className={cn(s.Header)}>
@@ -59,7 +24,9 @@ export default function Header() {
             {t('nav.about')}
           </a>
         </nav>
-        <div className={s.actions}>{renderLanguageSelect()}</div>
+        <div className={s.actions}>
+          <LanguageSelect />
+        </div>
         <BurgerMenu.Wrapper className={s.burgerMenu}>
           <BurgerMenu.MenuBtn />
           <BurgerMenu.Menu>
@@ -78,7 +45,6 @@ export default function Header() {
                 {t('nav.about')}
               </a>
             </BurgerMenu.MenuItem>
-            <BurgerMenu.MenuItem>{renderLanguageSelect()}</BurgerMenu.MenuItem>
           </BurgerMenu.Menu>
         </BurgerMenu.Wrapper>
       </div>
