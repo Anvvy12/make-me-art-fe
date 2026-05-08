@@ -50,27 +50,67 @@
     .languageSelect {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 500;
+      gap: 10px;
+      padding: 4px;
+      border: 1px solid rgb(15 23 42 / 12%);
+      border-radius: 999px;
+      background: rgb(255 255 255 / 56%);
+      box-shadow: 0 10px 24px rgb(15 23 42 / 8%);
+      font-size: 12px;
+      font-weight: 600;
       white-space: nowrap;
+    }
 
-      select {
-        min-width: 64px;
-        height: 34px;
-        padding: 0 10px;
-        border: 1px solid currentColor;
-        border-radius: 0;
-        background-color: transparent;
-        color: inherit;
-        font: inherit;
-        cursor: pointer;
-      }
+    .languageLabel {
+      padding-left: 10px;
+      color: var(--main-light-text-color);
+      font-size: 11px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
 
-      option {
-        background-color: var(--primary-dark-color);
+    .languageOptions {
+      display: inline-grid;
+      grid-template-columns: repeat(3, minmax(38px, 1fr));
+      gap: 2px;
+      padding: 2px;
+      border-radius: 999px;
+      background: rgb(255 255 255 / 72%);
+    }
+
+    .languageOption {
+      min-width: 38px;
+      height: 30px;
+      padding: 0 10px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--main-light-text-color);
+      font: inherit;
+      line-height: 1;
+      cursor: pointer;
+      transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+
+      &:hover {
         color: var(--main-text-color);
+        background: rgb(255 179 193 / 24%);
       }
+
+      &:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+      }
+    }
+
+    .activeLanguage {
+      background: var(--secondary-color);
+      color: var(--dark-color);
+      box-shadow: 0 6px 14px rgb(255 77 109 / 22%);
+      transform: translateY(-1px);
     }
 
     .burgerMenu {
