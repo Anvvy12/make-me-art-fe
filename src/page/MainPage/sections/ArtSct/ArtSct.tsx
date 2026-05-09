@@ -1,6 +1,8 @@
 import cn from 'classnames';
 import DescCart from './components/DescCart';
 import s from './ArtSct.module.scss';
+import SHodunnukImg from 'img/title-art/shodennuk.jpg';
+import ShpaleruImg from 'img/title-art/shpaleru.jpg';
 import { useTranslation } from 'react-i18next';
 
 export default function ArtSct() {
@@ -12,10 +14,7 @@ export default function ArtSct() {
         <DescCart.Title>
           <h2>{t('comedy.header')}</h2>
         </DescCart.Title>
-        <DescCart.ImgWrapper
-          src={'/src/assets/img/title-art/shpaleru.jpg'}
-          desc={t('comedy.img_desc')}
-        />
+        <DescCart.ImgWrapper src={ShpaleruImg} desc={t('comedy.img_desc')} />
         <DescCart.Desc>{t('comedy.desc')}</DescCart.Desc>
       </DescCart.Wrapper>
       <DescCart.Wrapper descTemplate={'art-right'}>
@@ -33,8 +32,8 @@ export default function ArtSct() {
           <h2>{t('transformation.header')}</h2>
         </DescCart.Title>
         <DescCart.ImgWrapper
-          src={'/src/assets/img/title-art/krov-sohne.jpg'}
-          desc={t('transformation.img_desc')}
+          src={SHodunnukImg}
+          desc={'Підпис під фото «фото роботи «щоденник»'}
         />
         <DescCart.Desc>{t('transformation.desc')}</DescCart.Desc>
       </DescCart.Wrapper>

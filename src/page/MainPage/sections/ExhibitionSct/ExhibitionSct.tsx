@@ -1,8 +1,8 @@
 import cn from 'classnames';
 
-import studioFloorColor from 'img/exhibition/studio-floor-color.jpg';
-import galleryInstallation from 'img/exhibition/gallery-installation.jpg';
-import studioFloorMono from 'img/exhibition/studio-floor-mono.jpg';
+import studioFloorColor from 'img/exhibition/smile_photo.jpg';
+import galleryInstallation from 'img/photo1_sct1.jpg';
+import studioFloorMono from 'img/title-art/krov-sohne.jpg';
 
 import s from './ExhibitionSct.module.scss';
 
@@ -26,16 +26,17 @@ export default function ExhibitionSct() {
     <section className={cn(s.ExhibitionSct)} aria-labelledby='exhibition-title'>
       <div className={s.header}>
         <p className={s.eyebrow}>Експозиція / 2025-2026</p>
-        <h2 id='exhibition-title'>Візуальне дослідження сили буденності</h2>
+        <h2 id='exhibition-title'>Візуальне дослідження буденності</h2>
       </div>
 
       <div className={s.introGrid}>
         <div className={s.lead}>
           <p>
-            Навіть у новорічну ніч, під супровід живої музики в холі готелю, ці
-            «планктони» не полишали думок про роботу. Серія стала особистою
-            рефлексією на страх втратити себе у нескінченному циклі, будучи
-            такою наближеною до корпоративного життя.
+            Я не підлаштовую обставини під роботу — я підлаштовую роботу під
+            обставини. Для мене мистецтво не існує окремо від життя. Воно
+            народжується з станів, середовища, випадковостей і моментів, у яких
+            я перебуваю. Я не намагаюсь створити ідеальні умови для творчості, a
+            дозволяю життю впливати на неї.
           </p>
         </div>
 
