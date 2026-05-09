@@ -74,8 +74,8 @@ export default class MakeMeArtClient extends BaseClient {
   };
 
   private onRequest = (
-    request: InternalAxiosRequestConfig<never>
-  ): InternalAxiosRequestConfig<never> => {
+    request: InternalAxiosRequestConfig
+  ): InternalAxiosRequestConfig => {
     if (this.localAuthManager.isValidToken(this.localAuthManager.token))
       request.headers['Authorization'] =
         `Bearer ${this.localAuthManager.token}`;

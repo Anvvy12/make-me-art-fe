@@ -4,6 +4,7 @@ import s from './MainPage.module.scss';
 import GallerySct from './sections/GallerySct';
 import AboutSct from './sections/AboutSct';
 import ArtSct from './sections/ArtSct';
+import ExhibitionSct from './sections/ExhibitionSct';
 import { SECTIONS_CONSTANTS } from 'constants/SECTIONS_CONSTANTS';
 
 export default function MainPage() {
@@ -11,6 +12,7 @@ export default function MainPage() {
     <main className={cn(s.MainPage)} id={SECTIONS_CONSTANTS.MAIN_SCT.slice(1)}>
       <AboutSct />
       <GallerySct />
+      <ExhibitionSct />
       <ArtSct />
     </main>
   );

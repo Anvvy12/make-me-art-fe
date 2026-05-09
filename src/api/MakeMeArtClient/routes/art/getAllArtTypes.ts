@@ -1,6 +1,6 @@
 import { TResponseError } from '../../types';
 import BaseClient from 'api/BaseClient';
-import { AxiosRequestConfig } from 'axios';
+import { AxiosRequestConfig, isAxiosError } from 'axios';
 
 /**
  * @function getAllArtTypes
@@ -25,12 +25,16 @@ export async function getAllArtTypes(
   try {
     const { data } = await this.client.get<TSuccess>(`/art/art-type/`, config);
     return data;
-  } catch (error: never | TError) {
-    if (error.data.status === 'Error') throw error.data;
-    else
+  } catch (error: unknown) {
+    if (isAxiosError<TError>(error)) {
+      if (error.response?.data?.status === 'Error') throw error.response.data;
+
       throw {
-        message: error?.message,
-        status: error?.response.status,
+        message: error.message,
+        status: error.response?.status,
       };
+    }
+
+    throw error;
   }
 }

@@ -12,6 +12,8 @@
     "eslint:fix": "eslint \"**/*.{ts,tsx,js,jsx}\" --fix"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.100.9",
+    "axios": "^1.16.0",
     "classnames": "^2.5.1",
     "hamburger-react": "^2.5.2",
     "img": "^3.0.3",
