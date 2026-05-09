@@ -4,14 +4,15 @@
   .PublicLayout {
     width: 100%;
     position: relative;
+    min-height: 100%;
 
     .main {
       max-width: 100%;
       display: grid;
-      padding: 4em 3em;
+      padding: clamp(2.2em, 5vw, 5em) clamp(1em, 4vw, 3em);
 
       @media screen and (max-width: $lg) {
-        padding: 3em 2em;
+        padding-block: 2.6em;
       }
     }
   }

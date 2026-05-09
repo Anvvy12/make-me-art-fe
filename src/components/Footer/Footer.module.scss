@@ -2,7 +2,7 @@
 
 @layer component {
   .Footer {
-    background-color: var(--primary-dark-color);
+    background-color: #171310;
     min-height: 100px;
     display: flex;
     width: 100%;
@@ -10,9 +10,9 @@
     justify-content: center;
     align-items: center;
     gap: 18px;
-    border-top: 1px solid var(--border-color);
-    padding: 2.5em 0 3.8em;
-    color: var(--main-light-text-color);
+    border-top: 1px solid rgb(255 255 255 / 10%);
+    padding: clamp(2.5em, 6vw, 4.5em) 1.2em;
+    color: rgb(255 253 249 / 72%);
 
     .navList {
       display: flex;
@@ -29,6 +29,20 @@
 
       .link {
         font-size: var(--main-sm-font-size);
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: var(--secondary-light-color);
+        }
+      }
+    }
+
+    a {
+      overflow-wrap: anywhere;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--secondary-light-color);
       }
     }
   }

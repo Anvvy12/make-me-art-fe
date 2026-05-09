@@ -5,13 +5,14 @@
     top: 100%;
 
     width: 100vw;
-    padding: 20px;
+    padding: 22px clamp(20px, 6vw, 40px);
 
     display: flex;
     flex-direction: column;
     gap: 12px;
 
-    background-color: var(--primary-dark-color);
+    background-color: rgb(255 253 249 / 96%);
+    box-shadow: 0 24px 44px rgb(33 28 25 / 12%);
 
     opacity: 0;
     visibility: hidden;
@@ -22,7 +23,7 @@
       opacity 0.3s ease,
       visibility 0.3s ease;
     z-index: 10;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid rgb(31 26 23 / 10%);
 
     &.open {
       opacity: 1;

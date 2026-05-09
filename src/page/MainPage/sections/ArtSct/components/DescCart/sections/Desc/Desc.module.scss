@@ -1,8 +1,10 @@
 @layer component {
   .Desc {
-    font-size: var(--main-md-font-size);
+    max-width: 760px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--main-light-text-color);
     font-style: italic;
-    letter-spacing: 0.15em;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
   }
 }

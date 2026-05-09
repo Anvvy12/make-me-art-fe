@@ -2,11 +2,12 @@
 
 @layer section {
   .MainPage {
-    max-width: 80em;
+    max-width: 82em;
 
     margin: 0 auto;
     display: grid;
-    gap: 6em;
+    gap: clamp(4em, 8vw, 8em);
     min-height: 100%;
+    width: 100%;
   }
 }

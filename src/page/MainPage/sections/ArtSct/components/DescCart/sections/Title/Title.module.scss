@@ -1,17 +1,14 @@
 @use 'styles/variables' as *;
 @layer component {
   .Title {
-    font-size: var(--main-lg-font-size);
+    font-size: clamp(1.65rem, 4vw, 3rem);
     text-wrap: wrap;
     text-align: center;
+    line-height: 1.05;
+    color: var(--main-text-color);
 
     @media screen and (min-width: $lg) {
       text-align: start;
-      font-size: var(--main-lg-font-size);
-    }
-
-    @media screen and (max-width: $lg) {
-      font-size: var(--main-md-font-size);
     }
   }
 }

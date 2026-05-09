@@ -5,9 +5,10 @@
     cursor: pointer;
 
     &.md {
-      min-height: 50px;
-      padding: 14px 32px;
-      font-size: 18px;
+      min-height: 46px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 16px;
       font-weight: 500;
     }
 
@@ -16,6 +17,7 @@
     &.primary {
       background-color: var(--secondary-color);
       color: var(--dark-color);
+      box-shadow: 0 12px 24px rgb(217 79 104 / 18%);
       transition:
         background-color 0.4s ease-in-out,
         color 0.4s ease-in-out;
@@ -27,6 +29,7 @@
           color 0.4s ease-in-out;
         border: 1px solid var(--secondary-color);
         color: var(--secondary-color);
+        box-shadow: none;
       }
     }
 

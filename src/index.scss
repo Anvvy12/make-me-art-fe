@@ -22,7 +22,18 @@
   body {
     margin: 0;
     padding: 0;
-    //background-color: var(--primary-color);
+    background:
+      radial-gradient(
+        circle at top left,
+        rgb(246 183 197 / 28%),
+        transparent 34rem
+      ),
+      linear-gradient(
+        180deg,
+        #fffaf4 0%,
+        var(--primary-color) 46%,
+        #f4ece2 100%
+      );
     color: var(--dark-color);
 
     font-family: var(--main-font-family);
@@ -30,6 +41,7 @@
 
     font-weight: 400;
     line-height: var(--line-height);
+    overflow-x: hidden;
   }
 
   ul {
