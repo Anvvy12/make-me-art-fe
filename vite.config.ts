@@ -4,19 +4,23 @@ import path from 'path';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    svgr({
-      include: '**/*.svg?react',
-      svgrOptions: {
-        ref: true,
-      },
-    }),
-  ],
-  publicDir: path.resolve(__dirname, './public'),
+
+  base: '/make-me-art-fe/',
+
+    plugins: [
+  react(),
+  svgr({
+    include: '**/*.svg?react',
+    svgrOptions: {
+      ref: true,
+    },
+  }),
+],
+
   build: {
-    outDir: path.resolve(__dirname, './build'),
-  },
+  outDir: 'dist',
+},
+
   resolve: {
     alias: {
       styles: path.resolve(__dirname, './src/styles'),
