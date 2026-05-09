@@ -1,5 +1,9 @@
 @layer component {
   .Logo {
-    height: 64px;
+    display: block;
+
+    .img {
+      max-height: 64px;
+    }
   }
 }
