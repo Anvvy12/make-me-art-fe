@@ -11,7 +11,6 @@ export default function MainPage() {
     <main className={cn(s.MainPage)} id={SECTIONS_CONSTANTS.MAIN_SCT.slice(1)}>
       <AboutSct />
       <GallerySct />
-
       <ArtSct />
     </main>
   );

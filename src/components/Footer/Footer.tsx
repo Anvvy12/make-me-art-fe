@@ -33,7 +33,7 @@ export default function Footer({ className = '', ...props }: TProps) {
           {t('about')}
         </Link>
       </nav>
-      <a href={'mailTo:romanbs.wo@gmail.com'}>romanbs.wo@gmail.com</a>
+      <a href={'mailTo:Sofyreign22@gmail.com'}>Sofyreign22@gmail.com</a>
     </div>
   );
 }
