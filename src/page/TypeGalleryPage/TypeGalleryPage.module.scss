@@ -36,14 +36,7 @@
     line-height: 1.55;
   }
 
-  .deliveryNote {
-    width: fit-content;
-    padding: 8px 12px;
-    border: 1px solid var(--secondary-color);
-    font-size: 14px;
-    font-weight: 500;
-  }
-
+  
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

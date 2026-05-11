@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import TypeGalleryCard from '../../components/TypeGalleryCard';
 import { ART_SERIES_BY_SLUG, type TArtSeries } from '../../data/artSeries';
 import TypeGalleryMdl from '../../modals/TypeGalleryMdl';
+import TextBlock from 'components/TextBlock';
 
 type TLocale = keyof TArtSeries['translations'];
 type TArtwork = TArtSeries['artworks'][number];
@@ -67,7 +68,9 @@ export default function TypeGalleryPage() {
         </p>
         <h1>{seriesText.title}</h1>
         <p className={s.description}>{seriesText.description}</p>
-        <p className={s.deliveryNote}>{seriesText.deliveryNote}</p>
+        <TextBlock>
+          <p className={s.deliveryNote}>{seriesText.deliveryNote}</p>
+        </TextBlock>
       </div>
 
       <div className={s.grid}>
