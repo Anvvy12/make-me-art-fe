@@ -1,13 +1,13 @@
 {
   "name": "makemeart",
-  "homepage": "https://anvvy12.github.io/make-me-art-fe",
+  "homepage": "https://anvvy12.github.io/make-me-art-fe/",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist -r https://github.com/Anvvy12/make-me-art-fe.git",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky",

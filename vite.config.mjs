@@ -4,7 +4,7 @@ import path from 'path';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
-  base: '/make-me-art-fe',
+  base: '/make-me-art-fe/',
 
   plugins: [
     react(),
