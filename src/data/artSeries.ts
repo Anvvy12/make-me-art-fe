@@ -43,7 +43,7 @@ export type TArtSeries = {
 export const ART_SERIES: TArtSeries[] = [
   {
     slug: 'men',
-    cover: '/src/assets/img/mans/borus.jpg',
+    cover: './src/assets/img/mans/borus.jpg',
     translations: {
       ua: {
         title: 'Чоловіки',
@@ -64,7 +64,7 @@ export const ART_SERIES: TArtSeries[] = [
     artworks: [
       {
         id: 'edik',
-        image: '/src/assets/img/mans/edik.jpg',
+        image: './src/assets/img/mans/edik.jpg',
         translations: {
           ua: {
             title: 'Едік або ж холодец',
@@ -93,7 +93,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'vladik',
-        image: '/src/assets/img/mans/vladik.jpg',
+        image: './src/assets/img/mans/vladik.jpg',
         translations: {
           ua: {
             title: 'Владік',
@@ -122,7 +122,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'oleksii',
-        image: '/src/assets/img/mans/oleksii.jpg',
+        image: './src/assets/img/mans/oleksii.jpg',
         translations: {
           ua: {
             title: 'Алєксєй',
@@ -151,7 +151,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'boris',
-        image: '/src/assets/img/mans/borus.jpg',
+        image: './src/assets/img/mans/borus.jpg',
         translations: {
           ua: {
             title: 'Борис',
@@ -180,7 +180,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'vitalik',
-        image: '/src/assets/img/mans/vitalik.jpg',
+        image: './src/assets/img/mans/vitalik.jpg',
         translations: {
           ua: {
             title: 'Віталік',
@@ -211,7 +211,7 @@ export const ART_SERIES: TArtSeries[] = [
   },
   {
     slug: 'rutine',
-    cover: '/src/assets/img/rutine/loop.jpg',
+    cover: './src/assets/img/rutine/loop.jpg',
     translations: {
       ua: {
         title: 'Рутина',
@@ -232,7 +232,7 @@ export const ART_SERIES: TArtSeries[] = [
     artworks: [
       {
         id: 'loop',
-        image: '/src/assets/img/rutine/loop.jpg',
+        image: './src/assets/img/rutine/loop.jpg',
         translations: {
           ua: {
             title: 'Петля',
@@ -259,7 +259,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'climb',
-        image: '/src/assets/img/rutine/gththj.jpg',
+        image: './src/assets/img/rutine/gththj.jpg',
         translations: {
           ua: {
             title: 'Дертя',
@@ -288,7 +288,7 @@ export const ART_SERIES: TArtSeries[] = [
   },
   {
     slug: 'office_new_year',
-    cover: '/src/assets/img/NYPlankton/n_1_on_the_way.jpg',
+    cover: './src/assets/img/NYPlankton/n_1_on_the_way.jpg',
     translations: {
       ua: {
         title: 'Новий рік офісного планктона',
@@ -309,7 +309,7 @@ export const ART_SERIES: TArtSeries[] = [
     artworks: [
       {
         id: 'on-the-way',
-        image: '/src/assets/img/NYPlankton/n_1_on_the_way.jpg',
+        image: './src/assets/img/NYPlankton/n_1_on_the_way.jpg',
         translations: {
           ua: {
             title: 'On The Way',
@@ -336,7 +336,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'in-progress',
-        image: '/src/assets/img/NYPlankton/n_2 in progress.jpg',
+        image: './src/assets/img/NYPlankton/n_2 in progress.jpg',
         translations: {
           ua: {
             title: 'In Progress',
@@ -363,7 +363,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'something-went-wrong',
-        image: '/src/assets/img/NYPlankton/n_3_something_went_wrong.jpg',
+        image: './src/assets/img/NYPlankton/n_3_something_went_wrong.jpg',
         translations: {
           ua: {
             title: 'Something Went Wrong',
@@ -390,7 +390,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'i-wont-do-it-again',
-        image: "/src/assets/img/NYPlankton/n_4_i_won't_do_it_again.jpg",
+        image: "./src/assets/img/NYPlankton/n_4_i_won't_do_it_again.jpg",
         translations: {
           ua: {
             title: "I Won't Do It Again",
@@ -417,7 +417,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'on-the-way-2',
-        image: '/src/assets/img/NYPlankton/n_5_on_the_way.jpg',
+        image: './src/assets/img/NYPlankton/n_5_on_the_way.jpg',
         translations: {
           ua: {
             title: 'On The Way 2',
@@ -446,7 +446,7 @@ export const ART_SERIES: TArtSeries[] = [
   },
   {
     slug: 'napoleon_life',
-    cover: '/src/assets/img/napoleonsLife/IMG_5186.jpg',
+    cover: './src/assets/img/napoleonsLife/IMG_5186.jpg',
     translations: {
       ua: {
         title: 'Наполеонівське життя',
@@ -467,7 +467,7 @@ export const ART_SERIES: TArtSeries[] = [
     artworks: [
       {
         id: 'napoleon-in-egypt',
-        image: '/src/assets/img/napoleonsLife/IMG_5185.jpg',
+        image: './src/assets/img/napoleonsLife/IMG_5185.jpg',
         translations: {
           ua: {
             title: 'Наполеон в Єгипті',
@@ -494,7 +494,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-with-rooster',
-        image: '/src/assets/img/napoleonsLife/IMG_5186.jpg',
+        image: './src/assets/img/napoleonsLife/IMG_5186.jpg',
         translations: {
           ua: {
             title: 'Наполеон з півником',
@@ -521,7 +521,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-and-josephine',
-        image: '/src/assets/img/napoleonsLife/IMG_5191.jpg',
+        image: './src/assets/img/napoleonsLife/IMG_5191.jpg',
         translations: {
           ua: {
             title: 'Наполеон та Жозефіна',
@@ -548,7 +548,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'josephine',
-        image: '/src/assets/img/napoleonsLife/IMG_5192.jpg',
+        image: './src/assets/img/napoleonsLife/IMG_5192.jpg',
         translations: {
           ua: {
             title: 'Жозефіна',
@@ -575,7 +575,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-taking-josephine',
-        image: '/src/assets/img/napoleonsLife/IMG_5193.jpg',
+        image: './src/assets/img/napoleonsLife/IMG_5193.jpg',
         translations: {
           ua: {
             title: 'Наполеон пользует Жозефіну',
@@ -602,7 +602,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-taking-josephine-back-view',
-        image: '/src/assets/img/napoleonsLife/IMG_5197.jpg',
+        image: './src/assets/img/napoleonsLife/IMG_5197.jpg',
         translations: {
           ua: {
             title: 'Наполеон пользует Жозефіну (вигляд ззаду)',
@@ -629,7 +629,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-buckwheat-sower',
-        image: '/src/assets/img/napoleonsLife/IMG_5198.jpg',
+        image: './src/assets/img/napoleonsLife/IMG_5198.jpg',
         translations: {
           ua: {
             title: 'Наполеон-гречкосій',
@@ -656,7 +656,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-traveler',
-        image: '/src/assets/img/napoleonsLife/IMG_5199.jpg',
+        image: './src/assets/img/napoleonsLife/IMG_5199.jpg',
         translations: {
           ua: {
             title: 'Наполеон-мандрівник',

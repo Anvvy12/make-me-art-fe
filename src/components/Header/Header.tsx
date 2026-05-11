@@ -21,9 +21,9 @@ export default function Header() {
           <Link className={s.link} to={NAVIGATION_LINKS.GALLERY}>
             {t('nav.gallery')}
           </Link>
-          <Link className={s.link} to={NAVIGATION_LINKS.ABOUT}>
-            {t('nav.about')}
-          </Link>
+          {/*<Link className={s.link} to={NAVIGATION_LINKS.ABOUT}>*/}
+          {/*  {t('nav.about')}*/}
+          {/*</Link>*/}
         </nav>
         <div className={s.actions}>
           <LanguageSelect />
@@ -41,11 +41,11 @@ export default function Header() {
                 {t('nav.gallery')}
               </Link>
             </BurgerMenu.MenuItem>
-            <BurgerMenu.MenuItem>
-              <Link className={s.link} to={NAVIGATION_LINKS.ABOUT}>
-                {t('nav.about')}
-              </Link>
-            </BurgerMenu.MenuItem>
+            {/*<BurgerMenu.MenuItem>*/}
+            {/*  <Link className={s.link} to={NAVIGATION_LINKS.ABOUT}>*/}
+            {/*    {t('nav.about')}*/}
+            {/*  </Link>*/}
+            {/*</BurgerMenu.MenuItem>*/}
           </BurgerMenu.Menu>
         </BurgerMenu.Wrapper>
       </div>
