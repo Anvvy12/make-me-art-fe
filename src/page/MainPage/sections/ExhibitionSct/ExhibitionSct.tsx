@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { useTranslation } from 'react-i18next';
 
 import studioFloorColor from 'img/exhibition/smile_photo.jpg';
 import galleryInstallation from 'img/photo1_sct1.jpg';
@@ -6,48 +7,44 @@ import studioFloorMono from 'img/title-art/krov-sohne.jpg';
 
 import s from './ExhibitionSct.module.scss';
 
-const statements = [
-  {
-    title: 'Людський ресурс',
-    text: 'Творчість авторки - це візуальне дослідження людського ресурсу, його невичерпності та недостатньо поміченої сили. Будучи уважним спостерігачем, вона фіксує буденність, перетворюючи щоденну рутину на глибокі соціальні та емоційні маніфести.',
-  },
-  {
-    title: 'Офісні планктони',
-    text: 'Центральна частина експозиції - серія «Офісні планктони». Роботи народилися з тривалого спостереження за мешканцями апарт-готелю та відвідувачами коворкінгу. Живучи в епіцентрі ділового ритму, художниця документувала життя людей, чий побут обмежений стінами офісів.',
-  },
-  {
-    title: 'Жінки з вікна майстерні',
-    text: 'Окремий блок присвячено образу жінки, який Софі бачила з вікна майстерні: жінки в сарафанах, що підіймаються на гору з важкими пакунками; матері в халатах, що в ранковому тумані перуть речі руками; бабуся, яка шукає арахіс у кишені для дитини.',
-  },
-];
-
 export default function ExhibitionSct() {
+  const { t } = useTranslation();
+
+  const statements = t('page.main.exhibition_sct.statements', {
+    returnObjects: true,
+  }) as {
+    title: string;
+    text: string;
+  }[];
+
   return (
     <section className={cn(s.ExhibitionSct)} aria-labelledby='exhibition-title'>
       <div className={s.header}>
-        <p className={s.eyebrow}>Експозиція / 2025-2026</p>
-        <h2 id='exhibition-title'>Візуальне дослідження буденності</h2>
+        <p className={s.eyebrow}>{t('page.main.exhibition_sct.eyebrow')}</p>
+
+        <h2 id='exhibition-title'>{t('page.main.exhibition_sct.title')}</h2>
       </div>
 
       <div className={s.introGrid}>
         <div className={s.lead}>
-          <p>
-            Я не підлаштовую обставини під роботу — я підлаштовую роботу під
-            обставини. Для мене мистецтво не існує окремо від життя. Воно
-            народжується з станів, середовища, випадковостей і моментів, у яких
-            я перебуваю. Я не намагаюсь створити ідеальні умови для творчості, a
-            дозволяю життю впливати на неї.
-          </p>
+          <p>{t('page.main.exhibition_sct.lead')}</p>
         </div>
 
-        <div className={s.photoStack} aria-label='Фотографії процесу монтажу'>
+        <div
+          className={s.photoStack}
+          aria-label={t('page.main.exhibition_sct.photos_aria')}
+        >
           <figure className={cn(s.photo, s.photoLarge)}>
-            <img src={galleryInstallation} alt='Софі монтує роботи в галереї' />
+            <img
+              src={galleryInstallation}
+              alt={t('page.main.exhibition_sct.gallery_alt')}
+            />
           </figure>
+
           <figure className={cn(s.photo, s.photoSmall)}>
             <img
               src={studioFloorColor}
-              alt='Роботи Софі на підлозі майстерні'
+              alt={t('page.main.exhibition_sct.studio_alt')}
             />
           </figure>
         </div>
@@ -66,23 +63,18 @@ export default function ExhibitionSct() {
         <figure className={s.monoPhoto}>
           <img
             src={studioFloorMono}
-            alt='Чорно-біла фотографія Софі під час оформлення робіт'
+            alt={t('page.main.exhibition_sct.mono_alt')}
           />
         </figure>
 
         <div className={s.finalText}>
-          <span>Найінтимніша робота</span>
-          <h3>Портрет жінки, що втратила все</h3>
-          <p>
-            Щоб передати глибину чужого болю, який художниця відчула як свій
-            власний, вона використала власну кров. Через брак інструментів, що
-            зламалися під час роботи над масштабним скляним проєктом, кров була
-            здобута за допомогою булавки від годинника.
-          </p>
-          <p>
-            Цей акт став найвищою точкою співпереживання - моментом, коли межа
-            між творцем і об'єктом зникає.
-          </p>
+          <span>{t('page.main.exhibition_sct.final.label')}</span>
+
+          <h3>{t('page.main.exhibition_sct.final.title')}</h3>
+
+          <p>{t('page.main.exhibition_sct.final.text_1')}</p>
+
+          <p>{t('page.main.exhibition_sct.final.text_2')}</p>
         </div>
       </div>
     </section>

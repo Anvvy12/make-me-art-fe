@@ -5,6 +5,7 @@ import cn from 'classnames';
 import s from './GalleryPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { ART_SERIES, type TArtSeries } from '../../data/artSeries';
+import TypeGalleryCard from 'components/TypeGalleryCard';
 
 type TLocale = keyof TArtSeries['translations'];
 
@@ -73,45 +74,24 @@ export default function GalleryPage() {
         {ALL_ARTWORKS.map(({ artwork, series }) => {
           const artworkText = artwork.translations[locale];
           const seriesText = series.translations[locale];
-
           return (
-            <article className={s.card} key={`${series.slug}-${artwork.id}`}>
-              <button
-                className={s.imageWrapper}
-                type='button'
-                aria-label={`${t('open_artwork')} ${artworkText.title}`}
-                onClick={() => setSelectedArtwork({ artwork, series })}
-              >
-                <img src={artwork.image} alt={artworkText.title} />
-                <span className={s.viewHint}>{t('view_details')}</span>
-              </button>
-              <div className={s.content}>
-                <div className={s.heading}>
-                  <p className={s.series}>
-                    {artworkText.series ?? seriesText.title}
-                  </p>
-                  <h2>{artworkText.title}</h2>
-                </div>
-                <dl className={s.metaList}>
-                  <div>
-                    <dt>{t('medium')}</dt>
-                    <dd>{artworkText.medium}</dd>
-                  </div>
-                  <div>
-                    <dt>{t('year')}</dt>
-                    <dd>{artworkText.year}</dd>
-                  </div>
-                  <div>
-                    <dt>{t('size')}</dt>
-                    <dd>{artworkText.size}</dd>
-                  </div>
-                  <div>
-                    <dt>{t('price')}</dt>
-                    <dd>{artworkText.price}</dd>
-                  </div>
-                </dl>
-              </div>
-            </article>
+            <TypeGalleryCard
+              key={`${series.slug}-${artwork.id}`}
+              artwork={artwork}
+              artworkText={artworkText}
+              index={ALL_ARTWORKS.findIndex(
+                (item) => item.artwork.id === artwork.id
+              )}
+              labels={{
+                openArtwork: t('open_artwork'),
+                viewDetails: t('view_details'),
+                medium: t('medium'),
+                year: t('year'),
+                size: t('size'),
+                price: t('price'),
+              }}
+              onOpen={() => setSelectedArtwork({ artwork, series })}
+            />
           );
         })}
       </div>
@@ -135,7 +115,7 @@ export default function GalleryPage() {
               aria-label={t('close')}
               onClick={() => setSelectedArtwork(null)}
             >
-              x
+              X
             </button>
             <div
               className={s.zoomArea}

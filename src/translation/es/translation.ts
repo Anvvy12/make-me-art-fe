@@ -9,6 +9,40 @@ export default {
         works_btn: 'Obras',
         about_btn: 'Sobre mí',
       },
+      exhibition_sct: {
+        eyebrow: 'Exposición / 2025-2026',
+        title: 'Una exploración visual de la vida cotidiana',
+        lead: 'No adapto las circunstancias a mi trabajo: adapto mi trabajo a las circunstancias. Para mí, el arte no existe separado de la vida. Nace de los estados emocionales, del entorno, de los accidentes y de los momentos en los que me encuentro. No intento crear condiciones perfectas para la creatividad, permito que la vida influya en ella.',
+        photos_aria: 'Fotografías del proceso de montaje',
+        gallery_alt: 'Sofi instalando obras en la galería',
+        studio_alt: 'Obras de Sofi en el suelo del estudio',
+        mono_alt: 'Fotografía en blanco y negro de Sofi organizando obras',
+        statements: [
+          {
+            title: 'El recurso humano',
+            text: 'La obra de la artista es una exploración visual del recurso humano, de su inagotabilidad y de su fuerza poco reconocida. Como observadora atenta, captura la vida cotidiana, transformando la rutina diaria en profundos manifiestos sociales y emocionales.',
+          },
+
+          {
+            title: 'Plancton de oficina',
+            text: 'La parte central de la exposición es la serie “Plancton de oficina”. Las obras nacieron de una larga observación de los residentes de un apart-hotel y de los visitantes de un coworking. Viviendo en el epicentro del ritmo empresarial, la artista documentó la vida de personas cuyo día a día está limitado por las paredes de oficinas.',
+          },
+
+          {
+            title: 'Mujeres vistas desde la ventana del estudio',
+            text: 'Un bloque separado está dedicado a la imagen de la mujer que Sofi veía desde la ventana del estudio: mujeres con vestidos de verano subiendo la colina con bolsas pesadas; madres con batas lavando ropa a mano en la niebla matutina; una abuela buscando cacahuetes en su bolsillo para un niño.',
+          },
+        ],
+
+        final: {
+          label: 'La obra más íntima',
+          title: 'Retrato de una mujer que lo perdió todo',
+          text_1:
+            'Para transmitir la profundidad del dolor ajeno, que la artista sintió como propio, utilizó su propia sangre. Debido a la falta de herramientas, que se rompieron durante el trabajo en un proyecto de vidrio a gran escala, la sangre fue obtenida utilizando el pasador de un reloj.',
+          text_2:
+            'Este acto se convirtió en el punto más alto de empatía: el momento en que la frontera entre el creador y el objeto desaparece.',
+        },
+      },
       about_sct: {
         name: 'Sophie Roman',
         description: 'Artista radicada en Kyiv. Arte contemporáneo y naíf.',

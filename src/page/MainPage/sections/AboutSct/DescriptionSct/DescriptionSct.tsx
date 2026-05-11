@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
 
 import s from './DescriptionSct.module.scss';
-import Button from '../../../../../ui/Button';
+import Button from 'ui/Button';
 
 export default function DescriptionSct() {
   const { t } = useTranslation(undefined, { keyPrefix: 'page.main.hero_sct' });

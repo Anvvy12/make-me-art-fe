@@ -9,6 +9,41 @@ export default {
         works_btn: 'Works',
         about_btn: 'About me',
       },
+      exhibition_sct: {
+        eyebrow: 'Exhibition / 2025-2026',
+        title: 'A Visual Study of Everyday Life',
+        lead: 'I do not adapt circumstances to my work — I adapt my work to circumstances. For me, art does not exist separately from life. It is born from emotional states, environments, coincidences, and the moments I live through. I do not try to create ideal conditions for creativity; instead, I allow life itself to influence it.',
+        photos_aria: 'Photos from the installation process',
+        gallery_alt: 'Sofi installing artworks in the gallery',
+        studio_alt: 'Sofi artworks on the studio floor',
+        mono_alt: 'Black-and-white photo of Sofi arranging artworks',
+
+        statements: [
+          {
+            title: 'Human Resource',
+            text: 'The artist’s work is a visual exploration of human potential, its inexhaustibility, and its often overlooked strength. As an attentive observer, she captures everyday life, transforming daily routine into profound social and emotional manifestos.',
+          },
+
+          {
+            title: 'Office Plankton',
+            text: 'The central part of the exhibition is the “Office Plankton” series. The works emerged from long-term observation of apartment hotel residents and coworking visitors. Living at the epicenter of business rhythm, the artist documented the lives of people whose existence is confined within office walls.',
+          },
+
+          {
+            title: 'Women from the Studio Window',
+            text: 'A separate section is dedicated to the image of women Sofi observed from her studio window: women in sundresses climbing uphill with heavy bags; mothers in robes washing clothes by hand in the morning fog; a grandmother searching her pocket for peanuts for a child.',
+          },
+        ],
+
+        final: {
+          label: 'The Most Intimate Work',
+          title: 'Portrait of a Woman Who Lost Everything',
+          text_1:
+            'To convey the depth of another person’s pain, which the artist felt as her own, she used her own blood. Due to the lack of tools, which broke during the creation of a large-scale glass project, the blood was drawn using a watch pin.',
+          text_2:
+            'This act became the highest point of empathy — the moment when the boundary between creator and subject disappears.',
+        },
+      },
       about_sct: {
         name: 'Sophie Roman',
         description: 'Kyiv-based artist. Contemporary and naive art.',

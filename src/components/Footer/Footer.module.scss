@@ -2,7 +2,7 @@
 
 @layer component {
   .Footer {
-    background-color: #171310;
+    background-color: var(--main-light-text-color);
     min-height: 100px;
     display: flex;
     width: 100%;
@@ -12,7 +12,7 @@
     gap: 18px;
     border-top: 1px solid rgb(255 255 255 / 10%);
     padding: clamp(2.5em, 6vw, 4.5em) 1.2em;
-    color: rgb(255 253 249 / 72%);
+    color: var(--primary-color);
 
     .navList {
       display: flex;
