@@ -4,22 +4,21 @@ import path from 'path';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
+  base: '/sophie-roman-art-gallery/',
 
-  base: '/make-me-art-fe/',
-
-    plugins: [
-  react(),
-  svgr({
-    include: '**/*.svg?react',
-    svgrOptions: {
-      ref: true,
-    },
-  }),
-],
+  plugins: [
+    react(),
+    svgr({
+      include: '**/*.svg?react',
+      svgrOptions: {
+        ref: true,
+      },
+    }),
+  ],
 
   build: {
-  outDir: 'dist',
-},
+    outDir: 'dist',
+  },
 
   resolve: {
     alias: {
