@@ -31,7 +31,7 @@ export default function ArtSct() {
         </DescCart.Title>
         <DescCart.ImgWrapper
           src={SHodunnukImg}
-          desc={'Підпис під фото «фото роботи «щоденник»'}
+          desc={'фото роботи «щоденник»'}
         />
         <DescCart.Desc>{t('transformation.desc')}</DescCart.Desc>
       </DescCart.Wrapper>

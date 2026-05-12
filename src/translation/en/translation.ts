@@ -26,7 +26,7 @@ export default {
 
           {
             title: 'Office Plankton',
-            text: 'The central part of the exhibition is the “Office Plankton” series. The works emerged from long-term observation of apartment hotel residents and coworking visitors. Living at the epicenter of business rhythm, the artist documented the lives of people whose existence is confined within office walls.',
+            text: '“Office Plankton” series. The works emerged from long-term observation of apartment hotel residents and coworking visitors. Living at the epicenter of business rhythm, the artist documented the lives of people whose existence is confined within office walls.',
           },
 
           {

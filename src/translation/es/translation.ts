@@ -25,7 +25,7 @@ export default {
 
           {
             title: 'Plancton de oficina',
-            text: 'La parte central de la exposición es la serie “Plancton de oficina”. Las obras nacieron de una larga observación de los residentes de un apart-hotel y de los visitantes de un coworking. Viviendo en el epicentro del ritmo empresarial, la artista documentó la vida de personas cuyo día a día está limitado por las paredes de oficinas.',
+            text: 'Serie “Plancton de oficina”. Las obras nacieron de una larga observación de los residentes de un apart-hotel y de los visitantes de un coworking. Viviendo en el epicentro del ritmo empresarial, la artista documentó la vida de personas cuyo día a día está limitado por las paredes de oficinas.',
           },
 
           {
