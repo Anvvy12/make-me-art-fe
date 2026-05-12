@@ -1,11 +1,13 @@
 import type { CSSProperties, MouseEvent } from 'react';
 import { useEffect, useState } from 'react';
+import CloseIcon from 'svg/close-icon.svg?react';
 
 import cn from 'classnames';
 import s from './GalleryPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { ART_SERIES, type TArtSeries } from '../../data/artSeries';
 import TypeGalleryCard from 'components/TypeGalleryCard';
+import Button from '../../ui/Button';
 
 type TLocale = keyof TArtSeries['translations'];
 
@@ -73,7 +75,6 @@ export default function GalleryPage() {
       <div className={s.grid}>
         {ALL_ARTWORKS.map(({ artwork, series }) => {
           const artworkText = artwork.translations[locale];
-          const seriesText = series.translations[locale];
           return (
             <TypeGalleryCard
               key={`${series.slug}-${artwork.id}`}
@@ -109,14 +110,13 @@ export default function GalleryPage() {
             aria-label={selectedArtworkText.title}
             onMouseDown={(event) => event.stopPropagation()}
           >
-            <button
+            <Button
               className={s.closeBtn}
-              type='button'
               aria-label={t('close')}
               onClick={() => setSelectedArtwork(null)}
             >
-              X
-            </button>
+              <CloseIcon className={s.closeIcon} />
+            </Button>
             <div
               className={s.zoomArea}
               style={

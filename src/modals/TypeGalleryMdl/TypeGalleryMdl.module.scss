@@ -30,20 +30,26 @@
   right: 12px;
   top: 12px;
   z-index: 2;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  max-width: 36px;
+  min-height: 36px;
   border: 0;
-  border-radius: 50%;
   background: rgb(255 255 255 / 88%);
   box-shadow: 0 8px 20px rgb(15 23 42 / 14%);
   color: var(--main-text-color);
   cursor: pointer;
   font-size: 24px;
   line-height: 1;
+  padding: 0;
   transition: background-color 0.2s ease;
+  border-radius: 50%;
+  aspect-ratio: 1;
+
+  .closeIcon {
+    height: 12px;
+  }
 
   &:hover {
     background: var(--secondary-color);

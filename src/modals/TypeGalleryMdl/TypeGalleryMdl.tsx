@@ -2,8 +2,9 @@ import type { CSSProperties, MouseEvent } from 'react';
 import { useState } from 'react';
 
 import type { TArtwork, TArtworkLocale } from '../../data/artSeries';
-
+import CloseIcon from 'svg/close-icon.svg?react';
 import s from './TypeGalleryMdl.module.scss';
+import Button from '../../ui/Button';
 
 type TProps = {
   artwork: TArtwork;
@@ -32,11 +33,7 @@ export default function TypeGalleryMdl({
   };
 
   return (
-    <div
-      className={s.modalOverlay}
-      role='presentation'
-      onMouseDown={onClose}
-    >
+    <div className={s.modalOverlay} role='presentation' onMouseDown={onClose}>
       <div
         className={s.modal}
         role='dialog'
@@ -44,14 +41,13 @@ export default function TypeGalleryMdl({
         aria-label={artworkText.title}
         onMouseDown={(event) => event.stopPropagation()}
       >
-        <button
+        <Button
           className={s.closeBtn}
-          type='button'
           aria-label={closeLabel}
           onClick={onClose}
         >
-          x
-        </button>
+          <CloseIcon className={s.closeIcon} />
+        </Button>
         <div
           className={s.zoomArea}
           style={
