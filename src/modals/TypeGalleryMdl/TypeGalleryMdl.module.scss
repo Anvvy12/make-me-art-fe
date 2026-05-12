@@ -66,6 +66,7 @@
   overflow: hidden;
   background: var(--primary-light-color);
   cursor: zoom-in;
+  touch-action: none;
 
   img {
     display: block;
@@ -73,12 +74,32 @@
     height: 100%;
     max-height: calc(92vh - 86px);
     object-fit: contain;
+
     transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
+
     transition: transform 0.18s ease;
   }
 
   &:hover img {
     transform: scale(1.9);
+  }
+
+  &[data-zoomed='true'] img {
+    transform: scale(2);
+  }
+}
+
+@media screen and (max-width: $md) {
+  .zoomArea {
+    cursor: default;
+
+    &:hover img {
+      transform: none;
+    }
+
+    &[data-zoomed='true'] img {
+      transform: scale(2.2);
+    }
   }
 }
 

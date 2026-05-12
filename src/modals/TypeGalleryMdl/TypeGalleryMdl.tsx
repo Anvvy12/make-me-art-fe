@@ -1,4 +1,4 @@
-import type { CSSProperties, MouseEvent } from 'react';
+import type { CSSProperties, MouseEvent, TouchEvent } from 'react';
 import { useState } from 'react';
 
 import type { TArtwork, TArtworkLocale } from '../../data/artSeries';
@@ -21,15 +21,46 @@ export default function TypeGalleryMdl({
   closeLabel,
   onClose,
 }: TProps) {
-  const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
+  const [zoomPosition, setZoomPosition] = useState({
+    x: 50,
+    y: 50,
+  });
 
-  const handleZoomMove = (event: MouseEvent<HTMLDivElement>) => {
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const updateZoomPosition = (
+    clientX: number,
+    clientY: number,
+    rect: DOMRect
+  ) => {
+    setZoomPosition({
+      x: ((clientX - rect.left) / rect.width) * 100,
+      y: ((clientY - rect.top) / rect.height) * 100,
+    });
+  };
+
+  const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+    if (window.innerWidth <= 768) return;
+
     const rect = event.currentTarget.getBoundingClientRect();
 
-    setZoomPosition({
-      x: ((event.clientX - rect.left) / rect.width) * 100,
-      y: ((event.clientY - rect.top) / rect.height) * 100,
-    });
+    updateZoomPosition(event.clientX, event.clientY, rect);
+  };
+
+  const handleTouchMove = (event: TouchEvent<HTMLDivElement>) => {
+    if (!isZoomed) return;
+
+    const touch = event.touches[0];
+
+    const rect = event.currentTarget.getBoundingClientRect();
+
+    updateZoomPosition(touch.clientX, touch.clientY, rect);
+  };
+
+  const handleToggleZoom = () => {
+    if (window.innerWidth > 768) return;
+
+    setIsZoomed((prev) => !prev);
   };
 
   return (
@@ -48,6 +79,7 @@ export default function TypeGalleryMdl({
         >
           <CloseIcon className={s.closeIcon} />
         </Button>
+
         <div
           className={s.zoomArea}
           style={
@@ -56,12 +88,17 @@ export default function TypeGalleryMdl({
               '--zoom-y': `${zoomPosition.y}%`,
             } as CSSProperties
           }
-          onMouseMove={handleZoomMove}
+          onMouseMove={handleMouseMove}
+          onTouchMove={handleTouchMove}
+          onClick={handleToggleZoom}
+          data-zoomed={isZoomed}
         >
           <img src={artwork.image} alt={artworkText.title} />
         </div>
+
         <div className={s.modalInfo}>
           <p>{artworkText.series ?? fallbackSeriesTitle}</p>
+
           <h2>{artworkText.title}</h2>
         </div>
       </div>
