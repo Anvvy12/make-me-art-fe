@@ -3,18 +3,25 @@
 .Header {
   border-bottom: 1px solid rgb(31 26 23 / 10%);
   background-color: rgb(255 253 249 / 82%);
-  min-height: 72px;
+
   position: sticky;
   top: 0;
+
   width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding-inline: clamp(1em, 4vw, 3em);
+
   color: var(--main-text-color);
+
+  padding-top: env(safe-area-inset-top);
+
+  min-height: calc(72px + env(safe-area-inset-top));
   backdrop-filter: blur(18px);
   box-shadow: 0 16px 40px rgb(33 28 25 / 7%);
-  z-index: 50;
   @media screen and (max-width: $lg) {
     padding-inline: 0;
   }
