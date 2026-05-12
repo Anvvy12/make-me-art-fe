@@ -12,7 +12,6 @@ export default function PublicLayout() {
       <main className={s.main}>
         <Outlet />
       </main>
-
       <Footer />
     </section>
   );

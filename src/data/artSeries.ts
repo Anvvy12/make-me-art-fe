@@ -1,3 +1,31 @@
+// --- Imports: Men ---
+import borisImg from 'img/mans/borus.jpg';
+import edikImg from 'img/mans/edik.jpg';
+import vladikImg from 'img/mans/vladik.jpg';
+import oleksiiImg from 'img/mans/oleksii.jpg';
+import vitalikImg from 'img/mans/vitalik.jpg';
+
+// --- Imports: Routine ---
+import loopImg from 'img/rutine/loop.jpg';
+import climbImg from 'img/rutine/gththj.jpg';
+
+// --- Imports: Office Plankton ---
+import onTheWayImg from 'img/NYPlankton/n_1_on_the_way.jpg';
+import inProgressImg from 'img/NYPlankton/n_2 in progress.jpg';
+import wrongImg from 'img/NYPlankton/n_3_something_went_wrong.jpg';
+import wontDoImg from 'img/NYPlankton/n_4_i_wont_do_it_again.jpg';
+import onTheWay2Img from 'img/NYPlankton/n_5_on_the_way.jpg';
+
+// --- Imports: Napoleon Life ---
+import napEgypImg from 'img/napoleonsLife/IMG_5185.jpg';
+import napRoosterImg from 'img/napoleonsLife/IMG_5186.jpg';
+import napJosImg from 'img/napoleonsLife/IMG_5191.jpg';
+import josImg from 'img/napoleonsLife/IMG_5192.jpg';
+import napTakingImg from 'img/napoleonsLife/IMG_5193.jpg';
+import napTakingBackImg from 'img/napoleonsLife/IMG_5197.jpg';
+import napSowerImg from 'img/napoleonsLife/IMG_5198.jpg';
+import napTravelImg from 'img/napoleonsLife/IMG_5199.jpg';
+
 export type TArtworkLocale = {
   title: string;
   series?: string;
@@ -21,21 +49,9 @@ export type TArtSeries = {
   slug: string;
   cover: string;
   translations: {
-    ua: {
-      title: string;
-      description: string;
-      deliveryNote: string;
-    };
-    en: {
-      title: string;
-      description: string;
-      deliveryNote: string;
-    };
-    es: {
-      title: string;
-      description: string;
-      deliveryNote: string;
-    };
+    ua: { title: string; description: string; deliveryNote: string };
+    en: { title: string; description: string; deliveryNote: string };
+    es: { title: string; description: string; deliveryNote: string };
   };
   artworks: TArtwork[];
 };
@@ -43,7 +59,7 @@ export type TArtSeries = {
 export const ART_SERIES: TArtSeries[] = [
   {
     slug: 'men',
-    cover: './src/assets/img/mans/borus.jpg',
+    cover: borisImg,
     translations: {
       ua: {
         title: 'Чоловіки',
@@ -64,7 +80,7 @@ export const ART_SERIES: TArtSeries[] = [
     artworks: [
       {
         id: 'edik',
-        image: './src/assets/img/mans/edik.jpg',
+        image: edikImg,
         translations: {
           ua: {
             title: 'Едік або ж холодец',
@@ -74,16 +90,14 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$300',
           },
           en: {
-            title: 'Edik, aka Aspic (Kholodets)',
-            series: 'From the "Men" series',
+            title: 'Edik, aka Aspic',
             medium: 'Paper, watercolor, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
           },
           es: {
-            title: 'Edik, tambi\u00e9n conocido como Aspic (Jolod\u00e9ts)',
-            series: 'De la serie "Hombres" (Choloviky)',
+            title: 'Edik (Jolodéts)',
             medium: 'Papel, acuarela, tinta',
             year: '2026',
             size: '41x41 cm',
@@ -93,7 +107,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'vladik',
-        image: './src/assets/img/mans/vladik.jpg',
+        image: vladikImg,
         translations: {
           ua: {
             title: 'Владік',
@@ -104,7 +118,6 @@ export const ART_SERIES: TArtSeries[] = [
           },
           en: {
             title: 'Vladik',
-            series: 'From the "Men" series',
             medium: 'Paper, watercolor, ink',
             year: '2026',
             size: '41x41 cm',
@@ -112,7 +125,6 @@ export const ART_SERIES: TArtSeries[] = [
           },
           es: {
             title: 'Vladik',
-            series: 'De la serie "Hombres" (Choloviky)',
             medium: 'Papel, acuarela, tinta',
             year: '2026',
             size: '41x41 cm',
@@ -122,7 +134,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'oleksii',
-        image: './src/assets/img/mans/oleksii.jpg',
+        image: oleksiiImg,
         translations: {
           ua: {
             title: 'Алєксєй',
@@ -133,15 +145,13 @@ export const ART_SERIES: TArtSeries[] = [
           },
           en: {
             title: 'Oleksii',
-            series: 'From the "Men" series',
             medium: 'Paper, watercolor, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
           },
           es: {
-            title: 'Alex\u00e9y',
-            series: 'De la serie "Hombres" (Choloviky)',
+            title: 'Alexéy',
             medium: 'Papel, acuarela, tinta',
             year: '2026',
             size: '41x41 cm',
@@ -151,7 +161,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'boris',
-        image: './src/assets/img/mans/borus.jpg',
+        image: borisImg,
         translations: {
           ua: {
             title: 'Борис',
@@ -162,7 +172,6 @@ export const ART_SERIES: TArtSeries[] = [
           },
           en: {
             title: 'Boris',
-            series: 'From the "Men" series',
             medium: 'Paper, watercolor, ink',
             year: '2026',
             size: '41x41 cm',
@@ -170,7 +179,6 @@ export const ART_SERIES: TArtSeries[] = [
           },
           es: {
             title: 'Boris',
-            series: 'De la serie "Hombres" (Choloviky)',
             medium: 'Papel, acuarela, tinta',
             year: '2026',
             size: '41x41 cm',
@@ -180,7 +188,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'vitalik',
-        image: './src/assets/img/mans/vitalik.jpg',
+        image: vitalikImg,
         translations: {
           ua: {
             title: 'Віталік',
@@ -191,7 +199,6 @@ export const ART_SERIES: TArtSeries[] = [
           },
           en: {
             title: 'Vitalik',
-            series: 'From the "Men" series',
             medium: 'Paper, watercolor, ink',
             year: '2026',
             size: '41x41 cm',
@@ -199,7 +206,6 @@ export const ART_SERIES: TArtSeries[] = [
           },
           es: {
             title: 'Vitalik',
-            series: 'De la serie "Hombres" (Choloviky)',
             medium: 'Papel, acuarela, tinta',
             year: '2026',
             size: '41x41 cm',
@@ -211,7 +217,7 @@ export const ART_SERIES: TArtSeries[] = [
   },
   {
     slug: 'rutine',
-    cover: './src/assets/img/rutine/loop.jpg',
+    cover: loopImg,
     translations: {
       ua: {
         title: 'Рутина',
@@ -232,7 +238,7 @@ export const ART_SERIES: TArtSeries[] = [
     artworks: [
       {
         id: 'loop',
-        image: './src/assets/img/rutine/loop.jpg',
+        image: loopImg,
         translations: {
           ua: {
             title: 'Петля',
@@ -249,8 +255,8 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$800',
           },
           es: {
-            title: 'Bucle / Loop',
-            medium: 'Tablero de fibra, acr\u00edlico, pintura al \u00f3leo',
+            title: 'Loop',
+            medium: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
             price: '$800',
@@ -259,7 +265,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'climb',
-        image: './src/assets/img/rutine/gththj.jpg',
+        image: climbImg,
         translations: {
           ua: {
             title: 'Дертя',
@@ -276,8 +282,8 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$800',
           },
           es: {
-            title: 'Ascenso / Climb',
-            medium: 'Tablero de fibra, acr\u00edlico, pintura al \u00f3leo',
+            title: 'Climb',
+            medium: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
             price: '$800',
@@ -288,7 +294,7 @@ export const ART_SERIES: TArtSeries[] = [
   },
   {
     slug: 'office_new_year',
-    cover: './src/assets/img/NYPlankton/n_1_on_the_way.jpg',
+    cover: onTheWayImg,
     translations: {
       ua: {
         title: 'Новий рік офісного планктона',
@@ -297,19 +303,19 @@ export const ART_SERIES: TArtSeries[] = [
       },
       en: {
         title: "Office Plankton's New Year",
-        description: 'Works from the "Office Plankton\'s New Year" series.',
+        description: 'Works from the series.',
         deliveryNote: 'Price does not include delivery.',
       },
       es: {
-        title: 'A\u00f1o Nuevo del Oficinista',
-        description: 'Obras de la serie "A\u00f1o Nuevo del Oficinista".',
+        title: 'Año Nuevo del Oficinista',
+        description: 'Obras de la serie.',
         deliveryNote: 'El precio no incluye la entrega.',
       },
     },
     artworks: [
       {
         id: 'on-the-way',
-        image: './src/assets/img/NYPlankton/n_1_on_the_way.jpg',
+        image: onTheWayImg,
         translations: {
           ua: {
             title: 'On The Way',
@@ -326,17 +332,17 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$600',
           },
           es: {
-            title: 'En camino (On The Way)',
-            medium: 'Fibra de madera, acr\u00edlico, \u00f3leo',
+            title: 'En camino',
+            medium: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
-            price: '600 USD',
+            price: '$600',
           },
         },
       },
       {
         id: 'in-progress',
-        image: './src/assets/img/NYPlankton/n_2 in progress.jpg',
+        image: inProgressImg,
         translations: {
           ua: {
             title: 'In Progress',
@@ -353,17 +359,17 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$600',
           },
           es: {
-            title: 'En proceso (In Progress)',
-            medium: 'Fibra de madera, acr\u00edlico, \u00f3leo',
+            title: 'En proceso',
+            medium: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
-            price: '600 USD',
+            price: '$600',
           },
         },
       },
       {
         id: 'something-went-wrong',
-        image: './src/assets/img/NYPlankton/n_3_something_went_wrong.jpg',
+        image: wrongImg,
         translations: {
           ua: {
             title: 'Something Went Wrong',
@@ -380,17 +386,17 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$600',
           },
           es: {
-            title: 'Algo sali\u00f3 mal (Something Went Wrong)',
-            medium: 'Fibra de madera, acr\u00edlico, \u00f3leo',
+            title: 'Algo salió mal',
+            medium: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
-            price: '600 USD',
+            price: '$600',
           },
         },
       },
       {
         id: 'i-wont-do-it-again',
-        image: "./src/assets/img/NYPlankton/n_4_i_won't_do_it_again.jpg",
+        image: wontDoImg,
         translations: {
           ua: {
             title: "I Won't Do It Again",
@@ -407,17 +413,17 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$600',
           },
           es: {
-            title: "No lo volver\u00e9 a hacer (I Won't Do It Again)",
-            medium: 'Fibra de madera, acr\u00edlico, \u00f3leo',
+            title: 'No lo volveré a hacer',
+            medium: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
-            price: '600 USD',
+            price: '$600',
           },
         },
       },
       {
         id: 'on-the-way-2',
-        image: './src/assets/img/NYPlankton/n_5_on_the_way.jpg',
+        image: onTheWay2Img,
         translations: {
           ua: {
             title: 'On The Way 2',
@@ -434,11 +440,11 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$600',
           },
           es: {
-            title: 'En camino 2 (On The Way 2)',
-            medium: 'Fibra de madera, acr\u00edlico, \u00f3leo',
+            title: 'En camino 2',
+            medium: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
-            price: '600 USD',
+            price: '$600',
           },
         },
       },
@@ -446,7 +452,7 @@ export const ART_SERIES: TArtSeries[] = [
   },
   {
     slug: 'napoleon_life',
-    cover: './src/assets/img/napoleonsLife/IMG_5186.jpg',
+    cover: napRoosterImg,
     translations: {
       ua: {
         title: 'Наполеонівське життя',
@@ -455,19 +461,19 @@ export const ART_SERIES: TArtSeries[] = [
       },
       en: {
         title: 'Napoleonic Life',
-        description: 'Works from the "Napoleonic Life" series.',
+        description: 'Works from the series.',
         deliveryNote: 'Price does not include delivery.',
       },
       es: {
-        title: 'Vida Napole\u00f3nica',
-        description: 'Obras de la serie "Vida Napole\u00f3nica".',
+        title: 'Vida Napoleónica',
+        description: 'Obras de la serie.',
         deliveryNote: 'El precio no incluye la entrega.',
       },
     },
     artworks: [
       {
         id: 'napoleon-in-egypt',
-        image: './src/assets/img/napoleonsLife/IMG_5185.jpg',
+        image: napEgypImg,
         translations: {
           ua: {
             title: 'Наполеон в Єгипті',
@@ -484,7 +490,7 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$200',
           },
           es: {
-            title: 'Napole\u00f3n en Egipto',
+            title: 'Napoleón en Egipto',
             medium: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
@@ -494,7 +500,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-with-rooster',
-        image: './src/assets/img/napoleonsLife/IMG_5186.jpg',
+        image: napRoosterImg,
         translations: {
           ua: {
             title: 'Наполеон з півником',
@@ -511,7 +517,7 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$200',
           },
           es: {
-            title: 'Napole\u00f3n con un Gallito',
+            title: 'Napoleón con un Gallito',
             medium: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
@@ -521,7 +527,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-and-josephine',
-        image: './src/assets/img/napoleonsLife/IMG_5191.jpg',
+        image: napJosImg,
         translations: {
           ua: {
             title: 'Наполеон та Жозефіна',
@@ -538,7 +544,7 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$200',
           },
           es: {
-            title: 'Napole\u00f3n y Josefina',
+            title: 'Napoleón y Josefina',
             medium: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
@@ -548,7 +554,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'josephine',
-        image: './src/assets/img/napoleonsLife/IMG_5192.jpg',
+        image: josImg,
         translations: {
           ua: {
             title: 'Жозефіна',
@@ -575,7 +581,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-taking-josephine',
-        image: './src/assets/img/napoleonsLife/IMG_5193.jpg',
+        image: napTakingImg,
         translations: {
           ua: {
             title: 'Наполеон пользует Жозефіну',
@@ -592,7 +598,7 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$200',
           },
           es: {
-            title: 'Napole\u00f3n Poseyendo a Josefina',
+            title: 'Napoleón Poseyendo a Josefina',
             medium: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
@@ -602,7 +608,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-taking-josephine-back-view',
-        image: './src/assets/img/napoleonsLife/IMG_5197.jpg',
+        image: napTakingBackImg,
         translations: {
           ua: {
             title: 'Наполеон пользует Жозефіну (вигляд ззаду)',
@@ -619,7 +625,7 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$200',
           },
           es: {
-            title: 'Napole\u00f3n Poseyendo a Josefina (Vista Posterior)',
+            title: 'Napoleón Poseyendo a Josefina (Vista Posterior)',
             medium: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
@@ -629,7 +635,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-buckwheat-sower',
-        image: './src/assets/img/napoleonsLife/IMG_5198.jpg',
+        image: napSowerImg,
         translations: {
           ua: {
             title: 'Наполеон-гречкосій',
@@ -646,7 +652,7 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$200',
           },
           es: {
-            title: 'Napole\u00f3n el Sembrador de Alforf\u00f3n',
+            title: 'Napoleón el Sembrador de Alforfón',
             medium: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
@@ -656,7 +662,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-traveler',
-        image: './src/assets/img/napoleonsLife/IMG_5199.jpg',
+        image: napTravelImg,
         translations: {
           ua: {
             title: 'Наполеон-мандрівник',
@@ -673,7 +679,7 @@ export const ART_SERIES: TArtSeries[] = [
             price: '$200',
           },
           es: {
-            title: 'Napole\u00f3n el Viajero',
+            title: 'Napoleón el Viajero',
             medium: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',

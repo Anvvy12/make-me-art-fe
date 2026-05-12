@@ -6,6 +6,7 @@ import { NAVIGATION_LINKS } from 'constants/SECTIONS_CONSTANTS';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import LanguageSelect from './ui/LanguageSelect';
+import Button from 'ui/Button';
 
 export default function Header() {
   const { t } = useTranslation(undefined, { keyPrefix: 'common' });
@@ -13,6 +14,7 @@ export default function Header() {
   return (
     <section className={cn(s.Header)}>
       <div className={s.inner}>
+        <Button className={s.backButton}>{'<'}</Button>
         <Logo />
         <nav className={s.nav}>
           <Link className={s.link} to={NAVIGATION_LINKS.MAIN}>

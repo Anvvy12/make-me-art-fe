@@ -29,9 +29,9 @@ export default function Footer({ className = '', ...props }: TProps) {
         <Link className={s.link} to={NAVIGATION_LINKS.GALLERY}>
           {t('gallery')}
         </Link>
-        <Link className={s.link} to={NAVIGATION_LINKS.ABOUT}>
-          {t('about')}
-        </Link>
+        {/*<Link className={s.link} to={NAVIGATION_LINKS.ABOUT}>*/}
+        {/*  {t('about')}*/}
+        {/*</Link>*/}
       </nav>
       <a href={'mailTo:Sofyreign22@gmail.com'}>Sofyreign22@gmail.com</a>
     </div>
