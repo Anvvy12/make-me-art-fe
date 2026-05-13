@@ -17,14 +17,14 @@ import wontDoImg from 'img/NYPlankton/n_4_i_wont_do_it_again.jpg';
 import onTheWay2Img from 'img/NYPlankton/n_5_on_the_way.jpg';
 
 // --- Imports: Napoleon Life ---
-import napEgypImg from 'img/napoleonsLife/IMG_5185.jpg';
-import napRoosterImg from 'img/napoleonsLife/IMG_5186.jpg';
-import napJosImg from 'img/napoleonsLife/IMG_5191.jpg';
-import josImg from 'img/napoleonsLife/IMG_5192.jpg';
-import napTakingImg from 'img/napoleonsLife/IMG_5193.jpg';
-import napTakingBackImg from 'img/napoleonsLife/IMG_5197.jpg';
-import napSowerImg from 'img/napoleonsLife/IMG_5198.jpg';
-import napTravelImg from 'img/napoleonsLife/IMG_5199.jpg';
+import Josephine from 'img/napoleonsLife/JosephineImg.jpg';
+import NapInEgypt from 'img/napoleonsLife/NapInEgyptImg.jpg';
+import NapoleonTheBuckwheatSower from 'img/napoleonsLife/NapoleonTheBuckwheatSower.jpg';
+import NapoleonTheTraveler from 'img/napoleonsLife/NapoleonTheTraveler.jpg';
+import NapoleonTakingJosephine from 'img/napoleonsLife/NapoleonTakingJosephine.jpg';
+import NapoleonTakingJosephineBackView from 'img/napoleonsLife/NapoleonTakingJosephine(BackView).jpg';
+import NapoleonWithRooster from 'img/napoleonsLife/NapoleonWithRooster.jpg';
+import NapoleonIsCold from 'img/napoleonsLife/NapoleonIsCold.jpg';
 
 export type TArtworkLocale = {
   title: string;
@@ -452,7 +452,7 @@ export const ART_SERIES: TArtSeries[] = [
   },
   {
     slug: 'napoleon_life',
-    cover: napRoosterImg,
+    cover: NapInEgypt,
     translations: {
       ua: {
         title: 'Наполеонівське життя',
@@ -473,7 +473,7 @@ export const ART_SERIES: TArtSeries[] = [
     artworks: [
       {
         id: 'napoleon-in-egypt',
-        image: napEgypImg,
+        image: NapInEgypt,
         translations: {
           ua: {
             title: 'Наполеон в Єгипті',
@@ -500,7 +500,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-with-rooster',
-        image: napRoosterImg,
+        image: NapoleonWithRooster,
         translations: {
           ua: {
             title: 'Наполеон з півником',
@@ -527,7 +527,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-and-josephine',
-        image: napJosImg,
+        image: NapoleonIsCold,
         translations: {
           ua: {
             title: 'Наполеон та Жозефіна',
@@ -554,7 +554,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'josephine',
-        image: josImg,
+        image: Josephine,
         translations: {
           ua: {
             title: 'Жозефіна',
@@ -581,7 +581,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-taking-josephine',
-        image: napTakingImg,
+        image: NapoleonTakingJosephine,
         translations: {
           ua: {
             title: 'Наполеон пользует Жозефіну',
@@ -608,7 +608,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-taking-josephine-back-view',
-        image: napTakingBackImg,
+        image: NapoleonTakingJosephineBackView,
         translations: {
           ua: {
             title: 'Наполеон пользует Жозефіну (вигляд ззаду)',
@@ -635,7 +635,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-buckwheat-sower',
-        image: napSowerImg,
+        image: NapoleonTheBuckwheatSower,
         translations: {
           ua: {
             title: 'Наполеон-гречкосій',
@@ -662,7 +662,7 @@ export const ART_SERIES: TArtSeries[] = [
       },
       {
         id: 'napoleon-traveler',
-        image: napTravelImg,
+        image: NapoleonTheTraveler,
         translations: {
           ua: {
             title: 'Наполеон-мандрівник',

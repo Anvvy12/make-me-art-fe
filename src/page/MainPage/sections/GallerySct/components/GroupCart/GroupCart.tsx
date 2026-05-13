@@ -36,7 +36,7 @@ export default function GroupCart({
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`type/${type.slug}`, {
+    navigate(`/type/${type.slug}`, {
       state: {
         title: type.title,
         description: type.description,
