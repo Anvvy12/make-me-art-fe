@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes, HashRouter } from 'react-router-dom';
 import PublicLayout from './layout/PublicLayout';
 import MainPage from './page/MainPage';
 import GalleryPage from './page/GalleryPage';

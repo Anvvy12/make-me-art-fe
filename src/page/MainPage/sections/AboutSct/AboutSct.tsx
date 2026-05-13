@@ -9,7 +9,7 @@ export default function AboutSct() {
   return (
     <section className={cn(s.AboutSct)} id='about-sct'>
       <div className={s.imgWrapper}>
-        <img className={s.img} src={ArtistImg} alt={t('img_alt')} />
+        <img className={s.img} loading={'lazy'} src={ArtistImg} alt={t('img_alt')} />
       </div>
       <div className={s.description}>
         <h3>{t('name')}</h3>
