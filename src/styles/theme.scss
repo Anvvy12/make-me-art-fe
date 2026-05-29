@@ -24,4 +24,9 @@
   --main-lg-font-size: #{$font-size-lg};
   --main-xl-font-size: #{$font-size-xl};
   --main-xxl-font-size: #{$font-size-xxl};
+
+  --sm-breakpoint: #{$sm};
+  --md-breakpoint: #{$md};
+  --lg-breakpoint: #{$lg};
+  --xl-breakpoint: #{$xl};
 }

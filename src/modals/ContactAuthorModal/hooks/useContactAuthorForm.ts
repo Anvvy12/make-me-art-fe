@@ -1,6 +1,7 @@
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 
 export type TContactAuthorFormValues = {
   name: string;
@@ -14,22 +15,25 @@ type TArgs = {
 };
 
 export function useContactAuthorForm({ artworkTitle, onSuccess }: TArgs) {
+  const { t } = useTranslation(undefined, {
+    keyPrefix: 'common.contact_modal',
+  });
+
   return useFormik<TContactAuthorFormValues>({
     initialValues: {
       name: '',
       email: '',
-      message: '',
+      message: t('message_default', { artworkTitle }),
     },
     validationSchema: yup.object({
-      name: yup.string().trim().required('Name is required'),
-
+      name: yup.string().trim().required(t('name_required')),
       email: yup
         .string()
         .trim()
-        .email('Enter a valid email')
-        .required('Email is required'),
+        .email(t('email_invalid'))
+        .required(t('email_required')),
 
-      message: yup.string().trim().required('Message is required'),
+      message: yup.string().trim().required(t('message_required')),
     }),
     onSubmit: async (values, { resetForm, setSubmitting }) => {
       try {

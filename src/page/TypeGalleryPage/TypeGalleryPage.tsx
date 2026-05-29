@@ -86,7 +86,7 @@ export default function TypeGalleryPage() {
               labels={{
                 openArtwork: t('open_artwork'),
                 viewDetails: t('view_details'),
-                medium: t('medium'),
+                materials: t('materials'),
                 year: t('year'),
                 size: t('size'),
                 price: t('price'),

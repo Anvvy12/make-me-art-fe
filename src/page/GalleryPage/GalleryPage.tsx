@@ -74,7 +74,7 @@ export default function GalleryPage() {
               labels={{
                 openArtwork: t('open_artwork'),
                 viewDetails: t('view_details'),
-                medium: t('medium'),
+                materials: t('materials'),
                 year: t('year'),
                 size: t('size'),
                 price: t('price'),
@@ -89,6 +89,7 @@ export default function GalleryPage() {
         <TypeGalleryMdl
           artwork={selectedArtwork.artwork}
           artworkText={selectedArtworkText}
+          closeLabel={t('close')}
           fallbackSeriesTitle={selectedSeriesText.title}
           onClose={() => setSelectedArtwork(null)}
         />

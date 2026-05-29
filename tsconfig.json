@@ -8,13 +8,11 @@
       "api/*": ["./api/*"],
       "assets/*": ["./assets/*"],
       "main": ["./main"],
-      "ws": ["./ws"],
       "components/*": ["./components/*"],
       "contexts/*": ["./contexts/*"],
       "modals/*": ["./modals/*"],
       "hooks/*": ["./hooks/*"],
       "pages/*": ["./pages/*"],
-      "store/*": ["./store/*"],
       "queries/*": ["./queries/*"],
       "managers/*": ["./managers/*"],
       "layouts/*": ["./layouts/*"],
@@ -22,7 +20,8 @@
       "translation/*": ["./translation/*"],
       "validation/*": ["./validation/*"],
       "utils/*": ["./utils/*"],
-      "types/*": ["./types/*"]
+      "types/*": ["./types/*"],
+      "styles/*": ["./styles/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,

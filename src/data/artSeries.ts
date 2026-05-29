@@ -29,7 +29,7 @@ import NapoleonIsCold from 'img/napoleonsLife/NapoleonIsCold.jpg';
 export type TArtworkLocale = {
   title: string;
   series?: string;
-  medium: string;
+  materials: string;
   year: string;
   size: string;
   price: string;
@@ -84,21 +84,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Едік або ж холодец',
-            medium: 'папір, акварель, чорнила',
+            materials: 'папір, акварель, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$300',
           },
           en: {
             title: 'Edik, aka Aspic',
-            medium: 'Paper, watercolor, ink',
+            materials: 'Paper, watercolor, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
           },
           es: {
             title: 'Edik (Jolodéts)',
-            medium: 'Papel, acuarela, tinta',
+            materials: 'Papel, acuarela, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
@@ -111,21 +111,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Владік',
-            medium: 'папір, акварель, чорнила',
+            materials: 'папір, акварель, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$300',
           },
           en: {
             title: 'Vladik',
-            medium: 'Paper, watercolor, ink',
+            materials: 'Paper, watercolor, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
           },
           es: {
             title: 'Vladik',
-            medium: 'Papel, acuarela, tinta',
+            materials: 'Papel, acuarela, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
@@ -138,21 +138,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Алєксєй',
-            medium: 'папір, акварель, чорнила',
+            materials: 'папір, акварель, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$300',
           },
           en: {
             title: 'Oleksii',
-            medium: 'Paper, watercolor, ink',
+            materials: 'Paper, watercolor, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
           },
           es: {
             title: 'Alexéy',
-            medium: 'Papel, acuarela, tinta',
+            materials: 'Papel, acuarela, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
@@ -165,21 +165,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Борис',
-            medium: 'папір, акварель, чорнила',
+            materials: 'папір, акварель, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$300',
           },
           en: {
             title: 'Boris',
-            medium: 'Paper, watercolor, ink',
+            materials: 'Paper, watercolor, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
           },
           es: {
             title: 'Boris',
-            medium: 'Papel, acuarela, tinta',
+            materials: 'Papel, acuarela, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
@@ -192,21 +192,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Віталік',
-            medium: 'папір, акварель, чорнила',
+            materials: 'папір, акварель, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$300',
           },
           en: {
             title: 'Vitalik',
-            medium: 'Paper, watercolor, ink',
+            materials: 'Paper, watercolor, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
           },
           es: {
             title: 'Vitalik',
-            medium: 'Papel, acuarela, tinta',
+            materials: 'Papel, acuarela, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$300',
@@ -242,21 +242,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Петля',
-            medium: 'ДВП, акрил, олійна фарба',
+            materials: 'ДВП, акрил, олійна фарба',
             year: '2025',
             size: '67x87 см',
             price: '$800',
           },
           en: {
             title: 'Loop',
-            medium: 'Fiberboard, acrylic, oil paint',
+            materials: 'Fiberboard, acrylic, oil paint',
             year: '2025',
             size: '67x87 cm',
             price: '$800',
           },
           es: {
             title: 'Loop',
-            medium: 'Fibra, acrílico, óleo',
+            materials: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
             price: '$800',
@@ -269,21 +269,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Дертя',
-            medium: 'ДВП, акрил, олійна фарба',
+            materials: 'ДВП, акрил, олійна фарба',
             year: '2025',
             size: '67x87 см',
             price: '$800',
           },
           en: {
             title: 'Climb',
-            medium: 'Fiberboard, acrylic, oil paint',
+            materials: 'Fiberboard, acrylic, oil paint',
             year: '2025',
             size: '67x87 cm',
             price: '$800',
           },
           es: {
             title: 'Climb',
-            medium: 'Fibra, acrílico, óleo',
+            materials: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
             price: '$800',
@@ -319,21 +319,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'On The Way',
-            medium: 'ДВП, акрил, олійна фарба',
+            materials: 'ДВП, акрил, олійна фарба',
             year: '2025',
             size: '67x87 см',
             price: '$600',
           },
           en: {
             title: 'On The Way',
-            medium: 'Fiberboard, acrylic, oil paint',
+            materials: 'Fiberboard, acrylic, oil paint',
             year: '2025',
             size: '67x87 cm',
             price: '$600',
           },
           es: {
             title: 'En camino',
-            medium: 'Fibra, acrílico, óleo',
+            materials: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
             price: '$600',
@@ -346,21 +346,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'In Progress',
-            medium: 'ДВП, акрил, олійна фарба',
+            materials: 'ДВП, акрил, олійна фарба',
             year: '2025',
             size: '67x87 см',
             price: '$600',
           },
           en: {
             title: 'In Progress',
-            medium: 'Fiberboard, acrylic, oil paint',
+            materials: 'Fiberboard, acrylic, oil paint',
             year: '2025',
             size: '67x87 cm',
             price: '$600',
           },
           es: {
             title: 'En proceso',
-            medium: 'Fibra, acrílico, óleo',
+            materials: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
             price: '$600',
@@ -373,21 +373,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Something Went Wrong',
-            medium: 'ДВП, акрил, олійна фарба',
+            materials: 'ДВП, акрил, олійна фарба',
             year: '2025',
             size: '67x87 см',
             price: '$600',
           },
           en: {
             title: 'Something Went Wrong',
-            medium: 'Fiberboard, acrylic, oil paint',
+            materials: 'Fiberboard, acrylic, oil paint',
             year: '2025',
             size: '67x87 cm',
             price: '$600',
           },
           es: {
             title: 'Algo salió mal',
-            medium: 'Fibra, acrílico, óleo',
+            materials: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
             price: '$600',
@@ -400,21 +400,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: "I Won't Do It Again",
-            medium: 'ДВП, акрил, олійна фарба',
+            materials: 'ДВП, акрил, олійна фарба',
             year: '2025',
             size: '67x87 см',
             price: '$600',
           },
           en: {
             title: "I Won't Do It Again",
-            medium: 'Fiberboard, acrylic, oil paint',
+            materials: 'Fiberboard, acrylic, oil paint',
             year: '2025',
             size: '67x87 cm',
             price: '$600',
           },
           es: {
             title: 'No lo volveré a hacer',
-            medium: 'Fibra, acrílico, óleo',
+            materials: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
             price: '$600',
@@ -427,21 +427,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'On The Way 2',
-            medium: 'ДВП, акрил, олійна фарба',
+            materials: 'ДВП, акрил, олійна фарба',
             year: '2025',
             size: '67x87 см',
             price: '$600',
           },
           en: {
             title: 'On The Way 2',
-            medium: 'Fiberboard, acrylic, oil paint',
+            materials: 'Fiberboard, acrylic, oil paint',
             year: '2025',
             size: '67x87 cm',
             price: '$600',
           },
           es: {
             title: 'En camino 2',
-            medium: 'Fibra, acrílico, óleo',
+            materials: 'Fibra, acrílico, óleo',
             year: '2025',
             size: '67x87 cm',
             price: '$600',
@@ -477,21 +477,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Наполеон в Єгипті',
-            medium: 'папір, чорнила',
+            materials: 'папір, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$200',
           },
           en: {
             title: 'Napoleon in Egypt',
-            medium: 'paper, ink',
+            materials: 'paper, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
           },
           es: {
             title: 'Napoleón en Egipto',
-            medium: 'papel, tinta',
+            materials: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
@@ -504,21 +504,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Наполеон з півником',
-            medium: 'папір, чорнила',
+            materials: 'папір, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$200',
           },
           en: {
             title: 'Napoleon with a Rooster',
-            medium: 'paper, ink',
+            materials: 'paper, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
           },
           es: {
             title: 'Napoleón con un Gallito',
-            medium: 'papel, tinta',
+            materials: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
@@ -531,21 +531,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Наполеон та Жозефіна',
-            medium: 'папір, чорнила',
+            materials: 'папір, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$200',
           },
           en: {
             title: 'Napoleon and Josephine',
-            medium: 'paper, ink',
+            materials: 'paper, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
           },
           es: {
             title: 'Napoleón y Josefina',
-            medium: 'papel, tinta',
+            materials: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
@@ -558,21 +558,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Жозефіна',
-            medium: 'папір, чорнила',
+            materials: 'папір, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$200',
           },
           en: {
             title: 'Josephine',
-            medium: 'paper, ink',
+            materials: 'paper, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
           },
           es: {
             title: 'Josefina',
-            medium: 'papel, tinta',
+            materials: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
@@ -585,21 +585,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Наполеон пользует Жозефіну',
-            medium: 'папір, чорнила',
+            materials: 'папір, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$200',
           },
           en: {
             title: 'Napoleon Taking Josephine',
-            medium: 'paper, ink',
+            materials: 'paper, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
           },
           es: {
             title: 'Napoleón Poseyendo a Josefina',
-            medium: 'papel, tinta',
+            materials: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
@@ -612,21 +612,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Наполеон пользует Жозефіну (вигляд ззаду)',
-            medium: 'папір, чорнила',
+            materials: 'папір, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$200',
           },
           en: {
             title: 'Napoleon Taking Josephine (Back View)',
-            medium: 'paper, ink',
+            materials: 'paper, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
           },
           es: {
             title: 'Napoleón Poseyendo a Josefina (Vista Posterior)',
-            medium: 'papel, tinta',
+            materials: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
@@ -639,21 +639,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Наполеон-гречкосій',
-            medium: 'папір, чорнила',
+            materials: 'папір, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$200',
           },
           en: {
             title: 'Napoleon the Buckwheat Sower',
-            medium: 'paper, ink',
+            materials: 'paper, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
           },
           es: {
             title: 'Napoleón el Sembrador de Alforfón',
-            medium: 'papel, tinta',
+            materials: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
@@ -666,21 +666,21 @@ export const ART_SERIES: TArtSeries[] = [
         translations: {
           ua: {
             title: 'Наполеон-мандрівник',
-            medium: 'папір, чорнила',
+            materials: 'папір, чорнила',
             year: '2026',
             size: '41x41 см',
             price: '$200',
           },
           en: {
             title: 'Napoleon the Traveler',
-            medium: 'paper, ink',
+            materials: 'paper, ink',
             year: '2026',
             size: '41x41 cm',
             price: '$200',
           },
           es: {
             title: 'Napoleón el Viajero',
-            medium: 'papel, tinta',
+            materials: 'papel, tinta',
             year: '2026',
             size: '41x41 cm',
             price: '$200',

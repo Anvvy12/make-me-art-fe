@@ -1,8 +1,15 @@
-import { Button, IconButton, Modal, TextField } from '@mui/material';
+import {
+  Button,
+  Dialog,
+  DialogContent,
+  IconButton,
+  TextField,
+} from '@mui/material';
 
 import CloseIcon from 'svg/close-icon.svg?react';
 import s from './ContactAuthorModal.module.scss';
 import { useContactAuthorForm } from './hooks/useContactAuthorForm';
+import { useTranslation } from 'react-i18next';
 
 type TProps = {
   artworkTitle: string;
@@ -15,6 +22,10 @@ export default function ContactAuthorModal({
   isOpen,
   onClose,
 }: TProps) {
+  const { t } = useTranslation(undefined, {
+    keyPrefix: 'common.contact_modal',
+  });
+
   const formik = useContactAuthorForm({
     artworkTitle,
     onSuccess: onClose,
@@ -26,29 +37,25 @@ export default function ContactAuthorModal({
   };
 
   return (
-    <Modal
-      className={s.modalOverlay}
+    <Dialog
       open={isOpen}
       onClose={handleClose}
       aria-labelledby='contact-author-title'
+      maxWidth='sm'
+      fullWidth
     >
-      <div
-        className={s.modal}
-        role='dialog'
-        aria-modal='true'
-        aria-labelledby='contact-author-title'
+      <IconButton
+        className={s.closeBtn}
+        type='button'
+        aria-label={t('close_label')}
+        onClick={handleClose}
       >
-        <IconButton
-          className={s.closeBtn}
-          type='button'
-          aria-label='Close contact form'
-          onClick={handleClose}
-        >
-          <CloseIcon className={s.closeIcon} />
-        </IconButton>
+        <CloseIcon className={s.closeIcon} />
+      </IconButton>
 
+      <DialogContent className={s.dialogContent}>
         <div className={s.header}>
-          <p>Contact with author</p>
+          <p>{t('title')}</p>
           <h2 id='contact-author-title'>{artworkTitle}</h2>
         </div>
 
@@ -56,7 +63,7 @@ export default function ContactAuthorModal({
           <TextField
             className={s.field}
             name='name'
-            label='Name'
+            label={t('name_label')}
             value={formik.values.name}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -68,7 +75,7 @@ export default function ContactAuthorModal({
           <TextField
             className={s.field}
             name='email'
-            label='Email'
+            label={t('email_label')}
             type='email'
             value={formik.values.email}
             onChange={formik.handleChange}
@@ -81,7 +88,7 @@ export default function ContactAuthorModal({
           <TextField
             className={s.field}
             name='message'
-            label='Message'
+            label={t('message_label')}
             value={formik.values.message}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -89,6 +96,7 @@ export default function ContactAuthorModal({
             helperText={formik.touched.message && formik.errors.message}
             fullWidth
             multiline
+            placeholder={t('message_placeholder')}
             minRows={5}
           />
 
@@ -97,10 +105,10 @@ export default function ContactAuthorModal({
             type='submit'
             disabled={formik.isSubmitting}
           >
-            Submit
+            {t('submit_btn')}
           </Button>
         </form>
-      </div>
-    </Modal>
+      </DialogContent>
+    </Dialog>
   );
 }
