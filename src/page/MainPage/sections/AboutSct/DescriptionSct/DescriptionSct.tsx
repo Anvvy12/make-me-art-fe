@@ -1,8 +1,8 @@
 import cn from 'classnames';
+import { Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import s from './DescriptionSct.module.scss';
-import Button from 'ui/Button';
 
 export default function DescriptionSct() {
   const { t } = useTranslation(undefined, { keyPrefix: 'page.main.hero_sct' });
@@ -14,7 +14,7 @@ export default function DescriptionSct() {
       <p className={s.description}>{t('description')}</p>
       <div className={s.actions}>
         <Button>{t('works_btn')}</Button>
-        <Button variant={'outline'}>{t('about_btn')}</Button>
+        <Button variant='outlined'>{t('about_btn')}</Button>
       </div>
     </section>
   );

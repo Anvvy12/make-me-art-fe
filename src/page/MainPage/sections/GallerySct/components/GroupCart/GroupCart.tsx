@@ -1,9 +1,9 @@
 import React from 'react';
 
+import { Button } from '@mui/material';
 import cn from 'classnames';
 
 import s from './GroupCart.module.scss';
-import Button from 'ui/Button';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
@@ -48,7 +48,7 @@ export default function GroupCart({
     <div className={cn(s.GroupCart, className)} {...props}>
       <div className={s.imgWrapper}>
         <img className={s.img} src={src} alt={t('img_alt')} />
-        <Button variant={'outline'} className={s.btn} onClick={handleClick}>
+        <Button variant='outlined' className={s.btn} onClick={handleClick}>
           {t('view_btn')}
         </Button>
       </div>

@@ -6,8 +6,8 @@ import { NAVIGATION_LINKS } from 'constants/SECTIONS_CONSTANTS';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 import LanguageSelect from './ui/LanguageSelect';
-import Button from 'ui/Button';
 import ArrowIcon from 'svg/arrow.svg?react';
+import { Button } from '@mui/material';
 
 export default function Header() {
   const n = useNavigate();

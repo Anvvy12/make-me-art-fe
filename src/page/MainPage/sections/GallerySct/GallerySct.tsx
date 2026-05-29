@@ -1,10 +1,10 @@
 import cn from 'classnames';
 
 import s from './GallerySct.module.scss';
-import GroupCart from './components/GroupCart';
 import { useTranslation } from 'react-i18next';
 import { ART_SERIES, type TArtSeries } from '../../../../data/artSeries';
 import { SECTIONS_CONSTANTS } from 'constants/SECTIONS_CONSTANTS';
+import GroupCart from './components/GroupCart';
 
 type TLocale = keyof TArtSeries['translations'];
 
