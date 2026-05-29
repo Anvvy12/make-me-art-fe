@@ -4,10 +4,7 @@ import cn from 'classnames';
 import s from './LanguageSelect.module.scss';
 import { LOCAL_STORAGE_LANGUAGE_KEY } from 'constants/LANGUAGES_CONSTANTS';
 import { useTranslation } from 'react-i18next';
-import {
-  LANGUAGE_CODES,
-  type TLanguageCode,
-} from '../../../../translation/i18';
+import { LANGUAGE_CODES, type TLanguageCode } from 'translation/i18';
 
 export default function LanguageSelect() {
   const { t, i18n } = useTranslation(undefined, { keyPrefix: 'common' });

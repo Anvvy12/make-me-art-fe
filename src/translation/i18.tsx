@@ -8,6 +8,7 @@ export type Language = typeof en;
 export type TLanguageCode = 'en' | 'ua' | 'es';
 
 export const LANGUAGE_CODES: TLanguageCode[] = ['en', 'ua', 'es'];
+const FALLBACK_LANGUAGE: TLanguageCode = 'en';
 
 const resources = {
   en: {
@@ -21,20 +22,31 @@ const resources = {
   },
 };
 
-function getSavedLanguage(): TLanguageCode {
-  const savedLanguage = localStorage.getItem(LOCAL_STORAGE_LANGUAGE_KEY);
-
-  if (LANGUAGE_CODES.includes(savedLanguage as TLanguageCode)) {
-    return savedLanguage as TLanguageCode;
+function normalizeLanguage(language?: string | null): TLanguageCode | null {
+  if (LANGUAGE_CODES.includes(language as TLanguageCode)) {
+    return language as TLanguageCode;
   }
 
-  return 'en';
+  return null;
+}
+
+function getDefaultLanguage(): TLanguageCode {
+  return (
+    normalizeLanguage(import.meta.env.VITE_DEFAULT_LANGUAGE) ??
+    FALLBACK_LANGUAGE
+  );
+}
+
+function getInitialLanguage(): TLanguageCode {
+  const savedLanguage = localStorage.getItem(LOCAL_STORAGE_LANGUAGE_KEY);
+
+  return normalizeLanguage(savedLanguage) ?? getDefaultLanguage();
 }
 
 i18n.init({
   resources,
-  lng: getSavedLanguage(),
-  fallbackLng: 'en',
+  lng: getInitialLanguage(),
+  fallbackLng: getDefaultLanguage(),
   ns: ['translation'],
   defaultNS: 'translation',
   returnObjects: true,

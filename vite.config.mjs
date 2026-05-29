@@ -30,6 +30,7 @@ export default defineConfig({
       ui: path.resolve(__dirname, './src/ui'),
       constants: path.resolve(__dirname, './src/constants'),
       api: path.resolve(__dirname, './src/api'),
+      translation: path.resolve(__dirname, './src/translation'),
     },
   },
 
