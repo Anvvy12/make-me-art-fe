@@ -11,7 +11,7 @@
       "ws": ["./ws"],
       "components/*": ["./components/*"],
       "contexts/*": ["./contexts/*"],
-      "modal/*": ["./components/Modal/*"],
+      "modals/*": ["./modals/*"],
       "hooks/*": ["./hooks/*"],
       "pages/*": ["./pages/*"],
       "store/*": ["./store/*"],

@@ -1,5 +1,8 @@
 import type { TArtwork, TArtworkLocale } from '../../data/artSeries';
+import { useState } from 'react';
 
+import { Button } from '@mui/material';
+import ContactAuthorModal from 'modals/ContactAuthorModal';
 import s from './TypeGalleryCard.module.scss';
 
 type TProps = {
@@ -24,6 +27,8 @@ export default function TypeGalleryCard({
   labels,
   onOpen,
 }: TProps) {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
   return (
     <article className={s.card}>
       <button
@@ -61,7 +66,22 @@ export default function TypeGalleryCard({
             <dd>{artworkText.price}</dd>
           </div>
         </dl>
+
+        <Button
+          className={s.contactBtn}
+          type='button'
+          variant='outlined'
+          onClick={() => setIsContactModalOpen(true)}
+        >
+          Contact with author
+        </Button>
       </div>
+
+      <ContactAuthorModal
+        artworkTitle={artworkText.title}
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </article>
   );
 }

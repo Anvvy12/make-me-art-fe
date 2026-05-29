@@ -4,7 +4,7 @@ import cn from 'classnames';
 import s from './GalleryPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { ART_SERIES, type TArtSeries } from '../../data/artSeries';
-import TypeGalleryCard from 'components/TypeGalleryCard';
+import TypeGalleryCard from '../../components/TypeGalleryCard';
 import TypeGalleryMdl from '../../modals/TypeGalleryMdl';
 
 type TLocale = keyof TArtSeries['translations'];
