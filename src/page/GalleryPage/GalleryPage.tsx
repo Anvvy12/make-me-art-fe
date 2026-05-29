@@ -1,13 +1,11 @@
-import type { CSSProperties, MouseEvent } from 'react';
 import { useEffect, useState } from 'react';
-import CloseIcon from 'svg/close-icon.svg?react';
 
 import cn from 'classnames';
 import s from './GalleryPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { ART_SERIES, type TArtSeries } from '../../data/artSeries';
 import TypeGalleryCard from 'components/TypeGalleryCard';
-import Button from '../../ui/Button';
+import TypeGalleryMdl from '../../modals/TypeGalleryMdl';
 
 type TLocale = keyof TArtSeries['translations'];
 
@@ -30,7 +28,6 @@ export default function GalleryPage() {
   const { t, i18n } = useTranslation(undefined, { keyPrefix: 'page.gallery' });
   const [selectedArtwork, setSelectedArtwork] =
     useState<TGalleryArtwork | null>(null);
-  const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
   const locale = getLocale(i18n.language);
 
   useEffect(() => {
@@ -50,15 +47,6 @@ export default function GalleryPage() {
       document.removeEventListener('keydown', handleEscape);
     };
   }, [selectedArtwork]);
-
-  const handleZoomMove = (event: MouseEvent<HTMLDivElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-
-    setZoomPosition({
-      x: ((event.clientX - rect.left) / rect.width) * 100,
-      y: ((event.clientY - rect.top) / rect.height) * 100,
-    });
-  };
 
   const selectedArtworkText = selectedArtwork?.artwork.translations[locale];
   const selectedSeriesText = selectedArtwork?.series.translations[locale];
@@ -98,46 +86,12 @@ export default function GalleryPage() {
       </div>
 
       {selectedArtwork && selectedArtworkText && selectedSeriesText && (
-        <div
-          className={s.modalOverlay}
-          role='presentation'
-          onMouseDown={() => setSelectedArtwork(null)}
-        >
-          <div
-            className={s.modal}
-            role='dialog'
-            aria-modal='true'
-            aria-label={selectedArtworkText.title}
-            onMouseDown={(event) => event.stopPropagation()}
-          >
-            <Button
-              className={s.closeBtn}
-              aria-label={t('close')}
-              onClick={() => setSelectedArtwork(null)}
-            >
-              <CloseIcon className={s.closeIcon} />
-            </Button>
-            <div
-              className={s.zoomArea}
-              style={
-                {
-                  '--zoom-x': `${zoomPosition.x}%`,
-                  '--zoom-y': `${zoomPosition.y}%`,
-                } as CSSProperties
-              }
-              onMouseMove={handleZoomMove}
-            >
-              <img
-                src={selectedArtwork.artwork.image}
-                alt={selectedArtworkText.title}
-              />
-            </div>
-            <div className={s.modalInfo}>
-              <p>{selectedArtworkText.series ?? selectedSeriesText.title}</p>
-              <h2>{selectedArtworkText.title}</h2>
-            </div>
-          </div>
-        </div>
+        <TypeGalleryMdl
+          artwork={selectedArtwork.artwork}
+          artworkText={selectedArtworkText}
+          fallbackSeriesTitle={selectedSeriesText.title}
+          onClose={() => setSelectedArtwork(null)}
+        />
       )}
     </section>
   );

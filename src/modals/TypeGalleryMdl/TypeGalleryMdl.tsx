@@ -1,16 +1,16 @@
 import type { CSSProperties, MouseEvent, TouchEvent } from 'react';
 import { useState } from 'react';
 
+import { IconButton } from '@mui/material';
 import type { TArtwork, TArtworkLocale } from '../../data/artSeries';
 import CloseIcon from 'svg/close-icon.svg?react';
 import s from './TypeGalleryMdl.module.scss';
-import Button from '../../ui/Button';
 
 type TProps = {
   artwork: TArtwork;
   artworkText: TArtworkLocale;
   fallbackSeriesTitle: string;
-  closeLabel: string;
+  closeLabel?: string;
   onClose: () => void;
 };
 
@@ -18,7 +18,7 @@ export default function TypeGalleryMdl({
   artwork,
   artworkText,
   fallbackSeriesTitle,
-  closeLabel,
+  closeLabel = 'Close',
   onClose,
 }: TProps) {
   const [zoomPosition, setZoomPosition] = useState({
@@ -72,13 +72,14 @@ export default function TypeGalleryMdl({
         aria-label={artworkText.title}
         onMouseDown={(event) => event.stopPropagation()}
       >
-        <Button
+        <IconButton
           className={s.closeBtn}
+          type='button'
           aria-label={closeLabel}
           onClick={onClose}
         >
           <CloseIcon className={s.closeIcon} />
-        </Button>
+        </IconButton>
 
         <div
           className={s.zoomArea}
