@@ -32,6 +32,8 @@ export default defineConfig({
       api: path.resolve(__dirname, './src/api'),
       translation: path.resolve(__dirname, './src/translation'),
       modals: path.resolve(__dirname, './src/modals'),
+      queries: path.resolve(__dirname, './src/queries'),
+      utils: path.resolve(__dirname, './src/utils'),
     },
   },
 

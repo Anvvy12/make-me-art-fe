@@ -1,0 +1,10 @@
+// Override default css variables for notify lib
+// https://fkhadra.github.io/react-toastify/how-to-style/
+
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  background-color: var(--theme-color);
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--error {
+  background-color: var(--danger-color);
+}

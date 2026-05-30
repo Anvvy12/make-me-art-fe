@@ -28,7 +28,7 @@ export default function ContactAuthorModal({
 
   const formik = useContactAuthorForm({
     artworkTitle,
-    onSuccess: onClose,
+    onClose,
   });
 
   const handleClose = () => {
@@ -103,7 +103,8 @@ export default function ContactAuthorModal({
           <Button
             className={s.submitBtn}
             type='submit'
-            disabled={formik.isSubmitting}
+            disabled={!formik.dirty && formik.isValid}
+            loading={formik.isSubmitting}
           >
             {t('submit_btn')}
           </Button>

@@ -6,7 +6,7 @@ const notify = (
   autoCloseTimeout = 5000
 ) => {
   const generalProps: ToastOptions = {
-    position: 'top-left',
+    position: 'top-right',
     autoClose: autoCloseTimeout,
     hideProgressBar: true,
     closeOnClick: true,
