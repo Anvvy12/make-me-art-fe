@@ -135,5 +135,9 @@ export default {
       gallery: 'Gallery',
       about: 'About me',
     },
+    notify: {
+      success: 'Your email was sent successfully',
+      error: 'Something went wrong, please try again later',
+    },
   },
 };

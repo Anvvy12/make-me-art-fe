@@ -134,5 +134,9 @@ export default {
       gallery: 'Galería',
       about: 'Sobre mí',
     },
+    notify: {
+      success: 'Su correo electrónico se envió correctamente',
+      error: 'Algo salió mal. Por favor, inténtelo de nuevo más tarde',
+    },
   },
 };

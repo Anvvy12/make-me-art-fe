@@ -8,7 +8,6 @@ const notify = (
   const generalProps: ToastOptions = {
     position: 'top-right',
     autoClose: autoCloseTimeout,
-    hideProgressBar: true,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,

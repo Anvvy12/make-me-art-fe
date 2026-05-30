@@ -21,6 +21,10 @@ export function useContactAuthorForm({ artworkTitle, onClose }: TArgs) {
     keyPrefix: 'common.contact_modal',
   });
 
+  const { t: tNotify } = useTranslation(undefined, {
+    keyPrefix: 'common.notify',
+  });
+
   const { mutate } = useEmailSendMut();
 
   return useFormik<TContactAuthorFormValues>({
@@ -43,13 +47,15 @@ export function useContactAuthorForm({ artworkTitle, onClose }: TArgs) {
     onSubmit: (values, formikHelpers) => {
       mutate(values, {
         onSuccess: () => {
-          console.log('success');
-          notify('success', 'your email was sent successfully');
+          notify('success', tNotify('success'));
+        },
+        onError: () => {
+          notify('error', tNotify('error'));
+        },
+        onSettled: () => {
           formikHelpers.resetForm();
           onClose();
         },
-        onError: () => {},
-        onSettled: () => {},
       });
     },
   });

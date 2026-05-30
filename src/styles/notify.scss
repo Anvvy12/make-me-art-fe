@@ -2,9 +2,13 @@
 // https://fkhadra.github.io/react-toastify/how-to-style/
 
 .Toastify__toast-theme--colored.Toastify__toast--success {
-  background-color: var(--theme-color);
+  background-color: var(--success-color) !important;
 }
 
 .Toastify__toast-theme--colored.Toastify__toast--error {
-  background-color: var(--danger-color);
+  background-color: var(--error-color) !important;
+}
+
+.Toastify__toast {
+  font-size: 14px;
 }
