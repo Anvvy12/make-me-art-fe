@@ -6,7 +6,7 @@ import TypeGalleryPage from './page/TypeGalleryPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/make-me-art-fe'>
       <Routes>
         <Route path='/' element={<PublicLayout />}>
           <Route index element={<MainPage />} />
