@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
 
-import studioFloorColor from 'img/exhibition/smile_photo.jpg';
-import galleryInstallation from 'img/photo1_sct1.jpg';
-import studioFloorMono from 'img/title-art/krov-sohne.jpg';
+import studioFloorColor from 'assets/lowImg/exhibition/smile_photo.webp';
+import galleryInstallation from 'assets/lowImg/exhibition/photo1_sct1.webp';
+import studioFloorMono from 'assets/lowImg/exhibition/krov-sohne.webp';
 
 import s from './ExhibitionSct.module.scss';
 
