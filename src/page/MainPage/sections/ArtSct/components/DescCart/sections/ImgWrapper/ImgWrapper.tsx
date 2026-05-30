@@ -21,7 +21,12 @@ export default function ImgWrapper({
 }: TProps) {
   return (
     <div className={cn(s.ImgWrapper, className)} {...props}>
-      <img src={src} className={s.img} alt={'Description Art'} />
+      <img
+        loading={'lazy'}
+        src={src}
+        className={s.img}
+        alt={'Description Art'}
+      />
       <p className={s.desc}>{desc}</p>
     </div>
   );

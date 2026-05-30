@@ -13,7 +13,13 @@ interface TProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 export default function Img({ className = '', src, ...props }: TProps) {
   return (
     <div className={s.wrapper} {...props}>
-      <img src={src} className={cn(s.Img, className)} {...props} alt={'alt'} />
+      <img
+        loading={'lazy'}
+        src={src}
+        className={cn(s.Img, className)}
+        {...props}
+        alt={'alt'}
+      />
     </div>
   );
 }
