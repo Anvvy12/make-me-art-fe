@@ -8,15 +8,16 @@ export type TContactAuthorFormValues = {
   name: string;
   email: string;
   message: string;
-  artworkTitle: string;
+  title: string;
 };
 
 type TArgs = {
-  artworkTitle: string;
+  initMessage: string | undefined;
+  title: string | undefined;
   onClose: () => void;
 };
 
-export function useContactAuthorForm({ artworkTitle, onClose }: TArgs) {
+export function useInitForm({ title = '', initMessage, onClose }: TArgs) {
   const { t } = useTranslation(undefined, {
     keyPrefix: 'common.contact_modal',
   });
@@ -29,11 +30,12 @@ export function useContactAuthorForm({ artworkTitle, onClose }: TArgs) {
 
   return useFormik<TContactAuthorFormValues>({
     initialValues: {
-      artworkTitle: '',
+      title: title,
       name: '',
       email: '',
-      message: t('message_default', { artworkTitle }),
+      message: initMessage ?? '',
     },
+    enableReinitialize: true,
     validationSchema: yup.object({
       name: yup.string().trim().required(t('name_required')),
       email: yup
@@ -44,6 +46,7 @@ export function useContactAuthorForm({ artworkTitle, onClose }: TArgs) {
 
       message: yup.string().trim().required(t('message_required')),
     }),
+
     onSubmit: (values, formikHelpers) => {
       mutate(values, {
         onSuccess: () => {

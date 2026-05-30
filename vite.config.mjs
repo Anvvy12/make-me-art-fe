@@ -26,6 +26,7 @@ export default defineConfig({
       styles: path.resolve(__dirname, './src/styles'),
       img: path.resolve(__dirname, './src/assets/img'),
       svg: path.resolve(__dirname, './src/assets/svg'),
+      assets: path.resolve(__dirname, './src/assets'),
       components: path.resolve(__dirname, './src/components'),
       ui: path.resolve(__dirname, './src/ui'),
       constants: path.resolve(__dirname, './src/constants'),
