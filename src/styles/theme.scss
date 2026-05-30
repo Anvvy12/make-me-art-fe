@@ -18,10 +18,20 @@
 
   --dark-color: #211c19;
 
+  --success-color: #6e9f7a;
+  --error-color: #c86a77;
+  --warning-color: #cfa05c;
+  --info-color: #7d9fc5;
+
   --main-xsm-font-size: #{$font-size-xsm};
   --main-sm-font-size: #{$font-size-sm};
   --main-md-font-size: #{$font-size-md};
   --main-lg-font-size: #{$font-size-lg};
   --main-xl-font-size: #{$font-size-xl};
   --main-xxl-font-size: #{$font-size-xxl};
+
+  --sm-breakpoint: #{$sm};
+  --md-breakpoint: #{$md};
+  --lg-breakpoint: #{$lg};
+  --xl-breakpoint: #{$xl};
 }

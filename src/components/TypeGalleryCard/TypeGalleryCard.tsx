@@ -1,5 +1,9 @@
 import type { TArtwork, TArtworkLocale } from '../../data/artSeries';
+import { useState } from 'react';
 
+import { Button } from '@mui/material';
+import ContactAuthorModal from 'modals/ContactAuthorModal';
+import { useTranslation } from 'react-i18next';
 import s from './TypeGalleryCard.module.scss';
 
 type TProps = {
@@ -9,7 +13,7 @@ type TProps = {
   labels: {
     openArtwork: string;
     viewDetails: string;
-    medium: string;
+    materials: string;
     year: string;
     size: string;
     price: string;
@@ -24,6 +28,11 @@ export default function TypeGalleryCard({
   labels,
   onOpen,
 }: TProps) {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const { t } = useTranslation(undefined, {
+    keyPrefix: 'common.contact_modal',
+  });
+
   return (
     <article className={s.card}>
       <button
@@ -45,8 +54,8 @@ export default function TypeGalleryCard({
         )}
         <dl className={s.metaList}>
           <div>
-            <dt>{labels.medium}</dt>
-            <dd>{artworkText.medium}</dd>
+            <dt>{labels.materials}</dt>
+            <dd>{artworkText.materials}</dd>
           </div>
           <div>
             <dt>{labels.year}</dt>
@@ -61,7 +70,23 @@ export default function TypeGalleryCard({
             <dd>{artworkText.price}</dd>
           </div>
         </dl>
+
+        <Button
+          className={s.contactBtn}
+          type='button'
+          variant='outlined'
+          size='small'
+          onClick={() => setIsContactModalOpen(true)}
+        >
+          {t('contact_author')}
+        </Button>
       </div>
+
+      <ContactAuthorModal
+        artworkTitle={artworkText.title}
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </article>
   );
 }

@@ -75,14 +75,14 @@ export default {
         },
         transformation: {
           header: '"Transformación"',
-          img_desc: 'Foto de la obra "Y la sangre se seca bastante rápido".',
+          img_desc: 'Foto de la obra "Diario"',
           desc: 'Hoy mi mirada cambió. Es difícil ignorar cómo la guerra vuelve a las personas del revés. La vida en la que el café de la mañana se convierte en una rutina solo para poder trabajar después de una noche sin dormir, llena de bombardeos, explosiones y dolor. Me resulta difícil hablar de esto. Veo cómo se tensan los hombros de las personas en la multitud, cómo han cambiado sus expresiones y cuánta emoción queda. ¿Cómo es vivir, trabajar, temer y reír para quienes ya no pueden sentir emociones? Sigo explorando esta pregunta, así como sigo creando algo con el pensamiento constante: "¿De verdad vivo en el siglo XXI?"',
         },
       },
     },
     type_gallery: {
       works: 'obras',
-      medium: 'Material',
+      materials: 'Material',
       year: 'Año',
       size: 'Tamaño',
       price: 'Precio',
@@ -95,7 +95,7 @@ export default {
     gallery: {
       title: 'Galería',
       works: 'obras',
-      medium: 'Material',
+      materials: 'Material',
       year: 'Año',
       size: 'Tamaño',
       price: 'Precio',
@@ -107,6 +107,22 @@ export default {
   common: {
     header: {},
     footer: {},
+    contact_modal: {
+      title: 'Contacto con la autora',
+      name_label: 'Nombre*',
+      name_required: 'El nombre es obligatorio',
+      email_label: 'Email*',
+      email_required: 'El email es obligatorio',
+      email_invalid: 'Introduce un email válido',
+      message_label: 'Mensaje*',
+      message_required: 'El mensaje es obligatorio',
+      message_placeholder: 'Escribe tu mensaje aquí',
+      message_default:
+        'Estoy interesado en su obra y me gustaría añadir la pintura "{{artworkTitle}}" a mi colección\n\n¡Por favor, póngase en contacto conmigo!\n\n¡Saludos cordiales!',
+      submit_btn: 'Enviar',
+      close_label: 'Cerrar formulario de contacto',
+      contact_author: 'Contactar con el autor',
+    },
     language: {
       label: 'Idioma',
       en: 'EN',
@@ -117,6 +133,10 @@ export default {
       main: 'Inicio',
       gallery: 'Galería',
       about: 'Sobre mí',
+    },
+    notify: {
+      success: 'Su correo electrónico se envió correctamente',
+      error: 'Algo salió mal. Por favor, inténtelo de nuevo más tarde',
     },
   },
 };

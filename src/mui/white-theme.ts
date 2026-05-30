@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material';
 import { muiButton } from './themeUI/muiButton';
+import { muiDialog } from './themeUI/muiDialog';
 
 export const WhiteTheme = createTheme({
   typography: {
@@ -12,5 +13,6 @@ export const WhiteTheme = createTheme({
   palette: { mode: 'light', primary: { main: '#fff' } },
   components: {
     ...muiButton,
+    ...muiDialog,
   },
 });

@@ -6,9 +6,10 @@
   overflow: hidden;
   border: 1px solid var(--secondary-color);
   background-color: var(--primary-color);
-  transition: border-color 0.2s ease,
-  box-shadow 0.2s ease,
-  transform 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 
   &:hover {
     border-color: var(--accent-color);
@@ -70,8 +71,9 @@
   pointer-events: none;
   text-transform: uppercase;
   transform: translate(-50%, -42%) scale(0.94);
-  transition: opacity 0.2s ease,
-  transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .content {
@@ -142,4 +144,9 @@
     line-height: 1.3;
     overflow-wrap: anywhere;
   }
+}
+
+.contactBtn:global(.MuiButton-root) {
+  width: 100%;
+  margin-top: 4px;
 }

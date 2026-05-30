@@ -1,4 +1,4 @@
-import { TResponseError } from '../../types';
+import { TResponseError } from '../types';
 import BaseClient from 'api/BaseClient';
 import { AxiosRequestConfig, isAxiosError } from 'axios';
 
