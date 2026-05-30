@@ -28,11 +28,23 @@ export default function TypeGalleryCard({
   labels,
   onOpen,
 }: TProps) {
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState<{
+    open: boolean;
+    message: string;
+    title: string;
+  }>({
+    open: false,
+    message: '',
+    title: '',
+  });
   const { t } = useTranslation(undefined, {
     keyPrefix: 'common.contact_modal',
   });
-
+  const handleClose = () => {
+    setIsModalOpen((prev) => {
+      return { ...prev, open: false, message: '', title: '' };
+    });
+  };
   return (
     <article className={s.card}>
       <button
@@ -76,17 +88,21 @@ export default function TypeGalleryCard({
           type='button'
           variant='outlined'
           size='small'
-          onClick={() => setIsContactModalOpen(true)}
+          onClick={() => {
+            setIsModalOpen({
+              message: t('message_default', {
+                artworkTitle: artworkText.title,
+              }),
+              title: artworkText.title,
+              open: true,
+            });
+          }}
         >
           {t('contact_author')}
         </Button>
       </div>
 
-      <ContactAuthorModal
-        artworkTitle={artworkText.title}
-        isOpen={isContactModalOpen}
-        onClose={() => setIsContactModalOpen(false)}
-      />
+      <ContactAuthorModal isOpen={isModalOpen} onClose={handleClose} />
     </article>
   );
 }

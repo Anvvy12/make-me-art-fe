@@ -1,34 +1,28 @@
-import {
-  Button,
-  Dialog,
-  DialogContent,
-  IconButton,
-  TextField,
-} from '@mui/material';
+import { Button, Dialog, DialogContent, IconButton, TextField, } from '@mui/material';
 
 import CloseIcon from 'svg/close-icon.svg?react';
 import s from './ContactAuthorModal.module.scss';
-import { useContactAuthorForm } from './hooks/useContactAuthorForm';
+import { useInitForm } from './hooks/useInitForm';
 import { useTranslation } from 'react-i18next';
 
 type TProps = {
-  artworkTitle: string;
-  isOpen: boolean;
+  isOpen: {
+    open: boolean;
+    message: string;
+    title: string;
+  };
   onClose: () => void;
 };
 
-export default function ContactAuthorModal({
-  artworkTitle,
-  isOpen,
-  onClose,
-}: TProps) {
+export default function ContactAuthorModal({ isOpen, onClose }: TProps) {
   const { t } = useTranslation(undefined, {
     keyPrefix: 'common.contact_modal',
   });
 
-  const formik = useContactAuthorForm({
-    artworkTitle,
+  const formik = useInitForm({
+    title: isOpen.title,
     onClose,
+    initMessage: isOpen.message,
   });
 
   const handleClose = () => {
@@ -38,7 +32,7 @@ export default function ContactAuthorModal({
 
   return (
     <Dialog
-      open={isOpen}
+      open={isOpen.open}
       onClose={handleClose}
       aria-labelledby='contact-author-title'
       maxWidth='sm'
@@ -56,7 +50,7 @@ export default function ContactAuthorModal({
       <DialogContent className={s.dialogContent}>
         <div className={s.header}>
           <p>{t('title')}</p>
-          <h2 id='contact-author-title'>{artworkTitle}</h2>
+          <h2 id='contact-author-title'>{isOpen.title}</h2>
         </div>
 
         <form className={s.form} noValidate onSubmit={formik.handleSubmit}>
@@ -103,7 +97,7 @@ export default function ContactAuthorModal({
           <Button
             className={s.submitBtn}
             type='submit'
-            disabled={!formik.dirty && formik.isValid}
+            disabled={!formik.dirty}
             loading={formik.isSubmitting}
           >
             {t('submit_btn')}

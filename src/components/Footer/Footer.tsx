@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
-
+import InstagramIcon from 'svg/instagram-logo.svg?react';
+import MailIcon from 'svg/mail-to.svg?react';
 import s from './Footer.module.scss';
 import Logo from 'ui/Logo';
 import { Link } from 'react-router-dom';
 import { NAVIGATION_LINKS } from 'constants/SECTIONS_CONSTANTS';
+import { IconButton } from '@mui/material';
+import ContactAuthorModal from 'modals/ContactAuthorModal';
 
 interface TProps extends React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
@@ -19,6 +22,22 @@ interface TProps extends React.DetailedHTMLProps<
 export default function Footer({ className = '', ...props }: TProps) {
   const { t } = useTranslation(undefined, { keyPrefix: 'common.nav' });
 
+  const [isModalOpen, setIsModalOpen] = useState<{
+    open: boolean;
+    message: string;
+    title: string;
+  }>({
+    open: false,
+    message: '',
+    title: '',
+  });
+
+  const handleClose = () => {
+    setIsModalOpen((prev) => {
+      return { ...prev, open: false, message: '', title: '' };
+    });
+  };
+
   return (
     <div className={cn(s.Footer, className)} {...props}>
       <Logo />
@@ -29,11 +48,26 @@ export default function Footer({ className = '', ...props }: TProps) {
         <Link className={s.link} to={NAVIGATION_LINKS.GALLERY}>
           {t('gallery')}
         </Link>
-        {/*<Link className={s.link} to={NAVIGATION_LINKS.ABOUT}>*/}
-        {/*  {t('about')}*/}
-        {/*</Link>*/}
       </nav>
-      <a href={'mailTo:Sofyreign22@gmail.com'}>Sofyreign22@gmail.com</a>
+      <div className={s.contacts}>
+        <IconButton
+          className={s.iconButton}
+          onClick={() => setIsModalOpen((prev) => ({ ...prev, open: true }))}
+        >
+          <MailIcon className={s.svg} />
+        </IconButton>
+        <IconButton
+          className={s.iconButton}
+          component='a'
+          href={
+            'https://www.instagram.com/sofyromann?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
+          }
+          target='_blank'
+        >
+          <InstagramIcon className={s.svg} />
+        </IconButton>
+      </div>
+      <ContactAuthorModal isOpen={isModalOpen} onClose={handleClose} />
     </div>
   );
 }
