@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import TypeGalleryCard from '../../components/TypeGalleryCard';
-import TypeGalleryMdl from '../../modals/TypeGalleryMdl';
+import DetailsMdl from 'modals/DetailsMdl';
 import TextBlock from 'components/TextBlock';
 
 import {
@@ -97,7 +97,7 @@ export default function TypeGalleryPage() {
       </div>
 
       {selectedArtwork && selectedArtworkText && (
-        <TypeGalleryMdl
+        <DetailsMdl
           artwork={selectedArtwork}
           artworkText={selectedArtworkText}
           closeLabel={t('close')}

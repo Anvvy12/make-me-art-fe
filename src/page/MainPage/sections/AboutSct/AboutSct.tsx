@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import ArtistImg from 'img/main-photo.jpg';
+import ArtistImg from 'assets/lowImg/main-photo.webp';
 import s from './AboutSct.module.scss';
 import { useTranslation } from 'react-i18next';
 

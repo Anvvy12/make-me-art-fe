@@ -5,7 +5,7 @@ import s from './GalleryPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { ART_TITLES, ARTWORKS_BY_SERIES, type TArtSeries, } from '../../data/artSeries';
 import TypeGalleryCard from '../../components/TypeGalleryCard';
-import TypeGalleryMdl from '../../modals/TypeGalleryMdl';
+import DetailsMdl from 'modals/DetailsMdl';
 
 type TLocale = keyof TArtSeries['translations'];
 
@@ -87,7 +87,7 @@ export default function GalleryPage() {
       </div>
 
       {selectedArtwork && selectedArtworkText && selectedSeriesText && (
-        <TypeGalleryMdl
+        <DetailsMdl
           artwork={selectedArtwork.artwork}
           artworkText={selectedArtworkText}
           closeLabel={t('close')}

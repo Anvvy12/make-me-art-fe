@@ -46,9 +46,9 @@ export default function GroupCart({
 
   return (
     <div className={cn(s.GroupCart, className)} {...props}>
-      <div className={s.imgWrapper}>
+      <div className={s.imgWrapper} onClick={handleClick}>
         <img loading={'lazy'} className={s.img} src={src} alt={t('img_alt')} />
-        <Button variant='outlined' className={s.btn} onClick={handleClick}>
+        <Button variant='outlined' className={s.btn}>
           {t('view_btn')}
         </Button>
       </div>

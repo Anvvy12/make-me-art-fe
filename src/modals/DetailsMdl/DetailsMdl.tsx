@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { IconButton } from '@mui/material';
 import type { TArtwork, TArtworkLocale } from '../../data/artSeries';
 import CloseIcon from 'svg/close-icon.svg?react';
-import s from './TypeGalleryMdl.module.scss';
+import s from './DetailsMdl.module.scss';
 
 type TProps = {
   artwork: TArtwork;
@@ -14,7 +14,7 @@ type TProps = {
   onClose: () => void;
 };
 
-export default function TypeGalleryMdl({
+export default function DetailsMdl({
   artwork,
   artworkText,
   fallbackSeriesTitle,
