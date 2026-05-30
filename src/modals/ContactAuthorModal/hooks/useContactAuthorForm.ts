@@ -36,6 +36,7 @@ export function useContactAuthorForm({ artworkTitle, onSuccess }: TArgs) {
       message: yup.string().trim().required(t('message_required')),
     }),
     onSubmit: async (values, { resetForm, setSubmitting }) => {
+      console.log('Sending email:', values);
       try {
         await emailjs.send(
           import.meta.env.VITE_EMAILJS_SERVICE_ID,
