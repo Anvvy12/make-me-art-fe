@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import cn from 'classnames';
 import s from './GalleryPage.module.scss';
 import { useTranslation } from 'react-i18next';
-import { ART_SERIES, type TArtSeries } from '../../data/artSeries';
+import { ART_TITLES, ARTWORKS_BY_SERIES, type TArtSeries, } from '../../data/artSeries';
 import TypeGalleryCard from '../../components/TypeGalleryCard';
 import TypeGalleryMdl from '../../modals/TypeGalleryMdl';
 
@@ -20,10 +20,12 @@ function getLocale(language: string): TLocale {
   return 'en';
 }
 
-const ALL_ARTWORKS: TGalleryArtwork[] = ART_SERIES.flatMap((series) =>
-  series.artworks.map((artwork) => ({ artwork, series }))
+const ALL_ARTWORKS = ART_TITLES.flatMap((series) =>
+  ARTWORKS_BY_SERIES[series.slug].map((artwork) => ({
+    artwork,
+    series,
+  }))
 );
-
 export default function GalleryPage() {
   const { t, i18n } = useTranslation(undefined, { keyPrefix: 'page.gallery' });
   const [selectedArtwork, setSelectedArtwork] =
@@ -61,16 +63,15 @@ export default function GalleryPage() {
       </div>
 
       <div className={s.grid}>
-        {ALL_ARTWORKS.map(({ artwork, series }) => {
+        {ALL_ARTWORKS.map(({ artwork, series }, index) => {
           const artworkText = artwork.translations[locale];
+
           return (
             <TypeGalleryCard
               key={`${series.slug}-${artwork.id}`}
               artwork={artwork}
               artworkText={artworkText}
-              index={ALL_ARTWORKS.findIndex(
-                (item) => item.artwork.id === artwork.id
-              )}
+              index={index}
               labels={{
                 openArtwork: t('open_artwork'),
                 viewDetails: t('view_details'),

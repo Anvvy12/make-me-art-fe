@@ -2,7 +2,7 @@ import cn from 'classnames';
 
 import s from './GallerySct.module.scss';
 import { useTranslation } from 'react-i18next';
-import { ART_SERIES, type TArtSeries } from '../../../../data/artSeries';
+import { ART_TITLES, type TArtSeries } from '../../../../data/artSeries';
 import { SECTIONS_CONSTANTS } from 'constants/SECTIONS_CONSTANTS';
 import GroupCart from './components/GroupCart';
 
@@ -27,11 +27,11 @@ export default function GallerySct() {
     >
       <h2 className={s.sectionTitle}>{t('title')}</h2>
       <div className={s.galleryContent}>
-        {ART_SERIES.map((series) => (
+        {ART_TITLES.map((series) => (
           <GroupCart
             key={series.slug}
             src={series.cover}
-            count={series.artworks.length}
+            count={1}
             title={series.translations[locale].title}
             type={{
               slug: series.slug,

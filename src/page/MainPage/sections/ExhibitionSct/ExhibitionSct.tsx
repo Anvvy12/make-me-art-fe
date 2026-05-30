@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
 
 import studioFloorColor from 'img/exhibition/smile_photo.jpg';
-import galleryInstallation from 'img/photo1_sct1.jpg';
+import galleryInstallation from 'img/exhibition/photo1_sct1.jpg';
 import studioFloorMono from 'img/title-art/krov-sohne.jpg';
 
 import s from './ExhibitionSct.module.scss';
