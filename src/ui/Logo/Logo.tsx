@@ -8,7 +8,7 @@ import cn from 'classnames';
 export default function Logo() {
   return (
     <Link className={cn(s.link, s.Logo)} to={NAVIGATION_LINKS.MAIN}>
-      <img className={s.img} src={LogoImg} alt={'logo'} />
+      <img loading={'lazy'} className={s.img} src={LogoImg} alt={'logo'} />
     </Link>
   );
 }

@@ -94,7 +94,7 @@ export default function TypeGalleryMdl({
           onClick={handleToggleZoom}
           data-zoomed={isZoomed}
         >
-          <img src={artwork.image} alt={artworkText.title} />
+          <img loading={'lazy'} src={artwork.image} alt={artworkText.title} />
         </div>
 
         <div className={s.modalInfo}>

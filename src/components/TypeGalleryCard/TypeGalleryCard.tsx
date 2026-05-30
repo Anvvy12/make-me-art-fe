@@ -53,7 +53,7 @@ export default function TypeGalleryCard({
         aria-label={`${labels.openArtwork} ${artworkText.title}`}
         onClick={() => onOpen(artwork)}
       >
-        <img src={artwork.image} alt={artworkText.title} />
+        <img loading={'lazy'} src={artwork.image} alt={artworkText.title} />
         <span className={s.viewHint}>{labels.viewDetails}</span>
       </button>
       <div className={s.content}>
