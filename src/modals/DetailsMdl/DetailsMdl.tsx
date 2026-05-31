@@ -1,10 +1,10 @@
-import type { CSSProperties, MouseEvent, TouchEvent } from 'react';
-import { useState } from 'react';
+import { CSSProperties } from 'react';
 
 import { IconButton } from '@mui/material';
 import type { TArtwork, TArtworkLocale } from '../../data/artSeries';
 import CloseIcon from 'svg/close-icon.svg?react';
 import s from './DetailsMdl.module.scss';
+import useZoom from 'modals/DetailsMdl/hooks/useZoom';
 
 type TProps = {
   artwork: TArtwork;
@@ -21,47 +21,13 @@ export default function DetailsMdl({
   closeLabel = 'Close',
   onClose,
 }: TProps) {
-  const [zoomPosition, setZoomPosition] = useState({
-    x: 50,
-    y: 50,
-  });
-
-  const [isZoomed, setIsZoomed] = useState(false);
-
-  const updateZoomPosition = (
-    clientX: number,
-    clientY: number,
-    rect: DOMRect
-  ) => {
-    setZoomPosition({
-      x: ((clientX - rect.left) / rect.width) * 100,
-      y: ((clientY - rect.top) / rect.height) * 100,
-    });
-  };
-
-  const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
-    if (window.innerWidth <= 768) return;
-
-    const rect = event.currentTarget.getBoundingClientRect();
-
-    updateZoomPosition(event.clientX, event.clientY, rect);
-  };
-
-  const handleTouchMove = (event: TouchEvent<HTMLDivElement>) => {
-    if (!isZoomed) return;
-
-    const touch = event.touches[0];
-
-    const rect = event.currentTarget.getBoundingClientRect();
-
-    updateZoomPosition(touch.clientX, touch.clientY, rect);
-  };
-
-  const handleToggleZoom = () => {
-    if (window.innerWidth > 768) return;
-
-    setIsZoomed((prev) => !prev);
-  };
+  const {
+    handleToggleZoom,
+    handleTouchMove,
+    handleMouseMove,
+    zoomPosition,
+    isZoomed,
+  } = useZoom();
 
   return (
     <div className={s.modalOverlay} role='presentation' onMouseDown={onClose}>
@@ -94,12 +60,16 @@ export default function DetailsMdl({
           onClick={handleToggleZoom}
           data-zoomed={isZoomed}
         >
-          <img loading={'lazy'} src={artwork.image} alt={artworkText.title} />
+          <img
+            className={s.img}
+            loading={'lazy'}
+            src={artwork.image}
+            alt={artworkText.title}
+          />
         </div>
 
         <div className={s.modalInfo}>
           <p>{artworkText.series ?? fallbackSeriesTitle}</p>
-
           <h2>{artworkText.title}</h2>
         </div>
       </div>

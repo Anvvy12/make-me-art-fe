@@ -31,7 +31,7 @@ export default function GallerySct() {
           <GroupCart
             key={series.slug}
             src={series.cover}
-            count={1}
+            count={series.pictureCount}
             title={series.translations[locale].title}
             type={{
               slug: series.slug,
