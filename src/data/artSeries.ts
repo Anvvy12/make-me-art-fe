@@ -33,18 +33,27 @@ export type TArtwork = {
 export type TArtSeries = {
   slug: string;
   cover: string;
+  pictureCount: number;
   translations: {
     ua: { title: string; description: string; deliveryNote: string };
     en: { title: string; description: string; deliveryNote: string };
     es: { title: string; description: string; deliveryNote: string };
   };
-  artworks: TArtwork[];
 };
 
-export const ART_TITLES = [
+export const ARTWORKS_BY_SERIES: Record<string, TArtwork[]> = {
+  men: menArtArray,
+  rutine: RutineArtArray,
+  napoleon_life: napoleonsLifeArtArray,
+  office_new_year: officeNewYearArtArray,
+};
+
+export const ART_TITLES: TArtSeries[] = [
   {
     slug: 'men',
     cover: borisLowImg,
+    pictureCount: ARTWORKS_BY_SERIES['men'].length,
+
     translations: {
       ua: {
         title: 'Чоловіки',
@@ -67,6 +76,8 @@ export const ART_TITLES = [
   {
     slug: 'rutine',
     cover: loopLowImg,
+    pictureCount: ARTWORKS_BY_SERIES['rutine'].length,
+
     translations: {
       ua: {
         title: 'Рутина',
@@ -89,6 +100,8 @@ export const ART_TITLES = [
   {
     slug: 'office_new_year',
     cover: onTheWayLowImg,
+    pictureCount: ARTWORKS_BY_SERIES['office_new_year'].length,
+
     translations: {
       ua: {
         title: 'Новий рік офісного планктона',
@@ -111,6 +124,7 @@ export const ART_TITLES = [
   {
     slug: 'napoleon_life',
     cover: NapInEgyptLowImg,
+    pictureCount: ARTWORKS_BY_SERIES['napoleon_life'].length,
     translations: {
       ua: {
         title: 'Наполеонівське життя',
@@ -130,9 +144,3 @@ export const ART_TITLES = [
     },
   },
 ];
-export const ARTWORKS_BY_SERIES: Record<string, TArtwork[]> = {
-  men: menArtArray,
-  rutine: RutineArtArray,
-  napoleon_life: napoleonsLifeArtArray,
-  office_new_year: officeNewYearArtArray,
-};
