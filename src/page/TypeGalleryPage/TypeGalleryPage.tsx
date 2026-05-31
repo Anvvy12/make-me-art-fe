@@ -1,17 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import cn from 'classnames';
 
 import s from './TypeGalleryPage.module.scss';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+
 import TypeGalleryCard from '../../components/TypeGalleryCard';
-import { ART_SERIES_BY_SLUG, type TArtSeries } from '../../data/artSeries';
-import TypeGalleryMdl from '../../modals/TypeGalleryMdl';
+import DetailsMdl from 'modals/DetailsMdl';
 import TextBlock from 'components/TextBlock';
 
+import {
+  ART_TITLES,
+  ARTWORKS_BY_SERIES,
+  type TArtSeries,
+  type TArtwork,
+} from '../../data/artSeries';
+
 type TLocale = keyof TArtSeries['translations'];
-type TArtwork = TArtSeries['artworks'][number];
 
 function getLocale(language: string): TLocale {
   if (language.startsWith('ua')) return 'ua';
@@ -21,32 +27,20 @@ function getLocale(language: string): TLocale {
 
 export default function TypeGalleryPage() {
   const { typeName = '' } = useParams();
+
   const { t, i18n } = useTranslation(undefined, {
     keyPrefix: 'page.type_gallery',
   });
+
   const [selectedArtwork, setSelectedArtwork] = useState<TArtwork | null>(null);
+
   const locale = getLocale(i18n.language);
-  const series = ART_SERIES_BY_SLUG[typeName];
 
-  useEffect(() => {
-    if (!selectedArtwork) return;
+  const series = ART_TITLES.find((item) => item.slug === typeName);
 
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setSelectedArtwork(null);
-      }
-    };
+  const artworks = ARTWORKS_BY_SERIES[typeName];
 
-    document.body.style.overflow = 'hidden';
-    document.addEventListener('keydown', handleEscape);
-
-    return () => {
-      document.body.style.overflow = '';
-      document.removeEventListener('keydown', handleEscape);
-    };
-  }, [selectedArtwork]);
-
-  if (!series) {
+  if (!series || !artworks) {
     return (
       <section className={cn(s.TypeGalleryPage)}>
         <div className={s.header}>
@@ -64,41 +58,46 @@ export default function TypeGalleryPage() {
     <section className={cn(s.TypeGalleryPage)}>
       <div className={s.header}>
         <p className={s.eyebrow}>
-          {series.artworks.length} {t('works')}
+          {artworks.length} {t('works')}
         </p>
+
         <h1>{seriesText.title}</h1>
+
         <p className={s.description}>{seriesText.description}</p>
-        <TextBlock>
-          <p className={s.deliveryNote}>{seriesText.deliveryNote}</p>
-        </TextBlock>
+
+        {seriesText.deliveryNote && (
+          <TextBlock>
+            <p className={s.deliveryNote}>{seriesText.deliveryNote}</p>
+          </TextBlock>
+        )}
       </div>
 
       <div className={s.grid}>
-        {series.artworks.map((artwork, index) => {
+        {artworks.map((artwork, index) => {
           const artworkText = artwork.translations[locale];
 
           return (
             <TypeGalleryCard
+              key={artwork.id}
               artwork={artwork}
               artworkText={artworkText}
               index={index}
-              key={artwork.id}
               labels={{
                 openArtwork: t('open_artwork'),
                 viewDetails: t('view_details'),
-                medium: t('medium'),
+                materials: t('materials'),
                 year: t('year'),
                 size: t('size'),
                 price: t('price'),
               }}
-              onOpen={setSelectedArtwork}
+              onOpen={() => setSelectedArtwork(artwork)}
             />
           );
         })}
       </div>
 
       {selectedArtwork && selectedArtworkText && (
-        <TypeGalleryMdl
+        <DetailsMdl
           artwork={selectedArtwork}
           artworkText={selectedArtworkText}
           closeLabel={t('close')}

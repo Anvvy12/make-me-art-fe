@@ -7,14 +7,14 @@
     "paths": {
       "api/*": ["./api/*"],
       "assets/*": ["./assets/*"],
+      "svg/*": ["./assets/svg*"],
+      "img/*": ["./assets/img*"],
       "main": ["./main"],
-      "ws": ["./ws"],
       "components/*": ["./components/*"],
       "contexts/*": ["./contexts/*"],
-      "modal/*": ["./components/Modal/*"],
+      "modals/*": ["./modals/*"],
       "hooks/*": ["./hooks/*"],
       "pages/*": ["./pages/*"],
-      "store/*": ["./store/*"],
       "queries/*": ["./queries/*"],
       "managers/*": ["./managers/*"],
       "layouts/*": ["./layouts/*"],
@@ -22,7 +22,8 @@
       "translation/*": ["./translation/*"],
       "validation/*": ["./validation/*"],
       "utils/*": ["./utils/*"],
-      "types/*": ["./types/*"]
+      "types/*": ["./types/*"],
+      "styles/*": ["./styles/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,

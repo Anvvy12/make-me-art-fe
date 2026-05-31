@@ -16,30 +16,29 @@ const isLocalStorageURL = LOCAL_BASE_URL && LOCAL_BASE_URL !== '';
 // config base url (from local or from env)
 export const BASE_URL = isLocalStorageURL
   ? LOCAL_BASE_URL
-  : String(process.env.REACT_APP_API_URL);
+  : String(process.env.VITE_DEFAULT_API_URL);
 
-// Init Rest Client
-export const altrisRESTClient = new MakeMeArtClient({
+export const EMAIL_BASE_URL = String(
+  process.env.VITE_EMAILJS_API_URL || BASE_URL
+);
+
+// Init Rest Clients
+export const makeMeArtClient = new MakeMeArtClient({
   BASE_URL,
-  defaultLanguage: CURRENT_LANGUAGE || process.env.REACT_APP_DEFAULT_LANGUAGE,
+  defaultLanguage: CURRENT_LANGUAGE || process.env.VITE_DEFAULT_LANGUAGE,
 });
 
-export const api = altrisRESTClient.api;
+export const api = {
+  art: makeMeArtClient.api.art,
+};
 
 // Init WS Client
-export const altrisWSClient = new MakeMeArtClient({
-  BASE_URL: String(process.env.REACT_APP_WS_URL),
-});
-
-export const ws = altrisWSClient;
 
 // methods
 export function login(newToken: TMakeMeArtToken) {
-  altrisRESTClient.localAuthManager.login(newToken);
-  altrisWSClient.localAuthManager.login(newToken);
+  makeMeArtClient.localAuthManager.login(newToken);
 }
 
 export function logout() {
-  altrisRESTClient.localAuthManager.logout();
-  altrisWSClient.localAuthManager.logout();
+  makeMeArtClient.localAuthManager.logout();
 }

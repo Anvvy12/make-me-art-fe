@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import DescCart from './components/DescCart';
 import s from './ArtSct.module.scss';
-import SHodunnukImg from 'img/title-art/shodennuk.jpg';
-import ShpaleruImg from 'img/title-art/shpaleru.jpg';
-import OvulOsmynoga from 'img/title-art/ovul_osmynoga.jpg';
+import SHodunnukImg from 'assets/lowImg/title-art/shodennuk.webp';
+import ShpaleruImg from 'assets/lowImg/title-art/shpaleru.webp';
+import OvulOsmynoga from 'assets/lowImg/title-art/ovul_osmynoga.webp';
 import { useTranslation } from 'react-i18next';
 
 export default function ArtSct() {
@@ -31,7 +31,7 @@ export default function ArtSct() {
         </DescCart.Title>
         <DescCart.ImgWrapper
           src={SHodunnukImg}
-          desc={'фото роботи «щоденник»'}
+          desc={t('transformation.img_desc')}
         />
         <DescCart.Desc>{t('transformation.desc')}</DescCart.Desc>
       </DescCart.Wrapper>

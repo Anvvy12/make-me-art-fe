@@ -2,7 +2,7 @@
   "name": "makemeart",
   "homepage": "https://anvvy12.github.io/make-me-art-fe/",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.2.1",
   "type": "module",
   "scripts": {
     "start": "vite",
@@ -14,12 +14,14 @@
     "eslint:fix": "eslint \"**/*.{ts,tsx,js,jsx}\" --fix"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^9.0.1",
     "@tanstack/react-query": "^5.100.9",
     "axios": "^1.16.0",
     "classnames": "^2.5.1",
+    "formik": "^2.4.9",
     "hamburger-react": "^2.5.2",
     "img": "^3.0.3",
     "local-auth-manager": "^1.2.3",
@@ -27,7 +29,9 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-i18next": "^17.0.7",
-    "react-router-dom": "^7.14.0"
+    "react-router-dom": "^7.14.0",
+    "react-toastify": "^11.1.0",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",

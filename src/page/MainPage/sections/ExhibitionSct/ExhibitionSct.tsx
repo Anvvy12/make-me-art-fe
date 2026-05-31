@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
 
-import studioFloorColor from 'img/exhibition/smile_photo.jpg';
-import galleryInstallation from 'img/photo1_sct1.jpg';
-import studioFloorMono from 'img/title-art/krov-sohne.jpg';
+import studioFloorColor from 'assets/lowImg/exhibition/smile_photo.webp';
+import galleryInstallation from 'assets/lowImg/exhibition/photo1_sct1.webp';
+import studioFloorMono from 'assets/lowImg/exhibition/krov-sohne.webp';
 
 import s from './ExhibitionSct.module.scss';
 
@@ -36,6 +36,7 @@ export default function ExhibitionSct() {
         >
           <figure className={cn(s.photo, s.photoLarge)}>
             <img
+              loading={'lazy'}
               src={galleryInstallation}
               alt={t('page.main.exhibition_sct.gallery_alt')}
             />
@@ -43,6 +44,7 @@ export default function ExhibitionSct() {
 
           <figure className={cn(s.photo, s.photoSmall)}>
             <img
+              loading={'lazy'}
               src={studioFloorColor}
               alt={t('page.main.exhibition_sct.studio_alt')}
             />
@@ -62,6 +64,7 @@ export default function ExhibitionSct() {
       <div className={s.finalBlock}>
         <figure className={s.monoPhoto}>
           <img
+            loading={'lazy'}
             src={studioFloorMono}
             alt={t('page.main.exhibition_sct.mono_alt')}
           />
