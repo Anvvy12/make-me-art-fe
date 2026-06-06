@@ -4,8 +4,8 @@ import path from 'path';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
-  // base: '/', // for Cpanel
-  base: '/make-me-art-fe/', // for gh-pages
+  base: '/', // for Cpanel
+  // base: '/make-me-art-fe/', // for gh-pages
 
   plugins: [
     react(),
