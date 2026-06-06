@@ -103,6 +103,11 @@ export default {
       open_artwork: 'Abrir obra',
       close: 'Cerrar',
     },
+    not_found: {
+      title: 'Esta página no está disponible actualmente',
+      description: 'La página puede haber sido movida, eliminada o no existir.',
+      home_btn: 'Ir al inicio',
+    },
   },
   common: {
     header: {},
