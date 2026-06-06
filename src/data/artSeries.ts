@@ -6,6 +6,7 @@ import onTheWayLowImg from 'assets/lowImg/NYPlankton/on_the_way_1.webp';
 import NapInEgyptLowImg from 'assets/lowImg/napoleonsLife/NapInEgyptImg.webp';
 import ActorOn2MonthsLowImg from 'assets/lowImg/PeopleWhatISee/ActorOn2Month.webp';
 import NudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_in_the_white_light.webp';
+import EmbryoOfAFreak2LowImg from 'assets/lowImg/EmbryoOfAFreak/embryo_of_a_freak_2.webp';
 
 import { menArtArray } from './artSeries/Men';
 import { napoleonsLifeArtArray } from './artSeries/NapoleonsLife';
@@ -13,6 +14,7 @@ import { officeNewYearArtArray } from './artSeries/OfficeNewyear';
 import { RutineArtArray } from './artSeries/Rutine';
 import { peopleWhatISee } from './artSeries/PeopleWhatISee';
 import { nakedInWorldWhite } from './artSeries/nakedInWorldWhite';
+import { embryoOfAFreak } from './artSeries/EmbryoOfAFreak';
 
 export type TArtworkLocale = {
   title: string;
@@ -51,6 +53,7 @@ export const ARTWORKS_BY_SERIES: Record<string, TArtwork[]> = {
   office_new_year: officeNewYearArtArray,
   people_what_i_see: peopleWhatISee,
   naked_in_world_white: nakedInWorldWhite,
+  embryo_of_a_freak: embryoOfAFreak,
 };
 
 export const ART_TITLES: TArtSeries[] = [
@@ -177,6 +180,29 @@ export const ART_TITLES: TArtSeries[] = [
         title: 'Desnudos en un mundo blanco',
         description:
           'Esta serie explora la vulnerabilidad, la sinceridad y la presencia humanas en un espacio despojado de elementos superfluos. Las figuras, inspiradas en las personas que la artista encuentra en la vida cotidiana, aparecen expuestas no solo físicamente, sino también emocionalmente, abiertas a la mirada, la memoria y el paso del tiempo.',
+      },
+    },
+  },
+  {
+    slug: 'embryo_of_a_freak',
+    cover: EmbryoOfAFreak2LowImg,
+    pictureCount: ARTWORKS_BY_SERIES['embryo_of_a_freak'].length,
+
+    translations: {
+      ua: {
+        title: 'Зародиш урода',
+        description:
+          'Серія робіт, присвячена дослідженню внутрішніх деформацій, соціальних масок та химерних проявів людської природи.',
+      },
+      en: {
+        title: 'The Freak Primordium',
+        description:
+          'A series exploring inner distortions, social masks, and the bizarre manifestations of human nature.',
+      },
+      es: {
+        title: 'El Germen de la Rareza',
+        description:
+          'Una serie que explora las deformaciones internas, las máscaras sociales y las extrañas manifestaciones de la naturaleza humana.',
       },
     },
   },
