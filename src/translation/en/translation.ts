@@ -104,6 +104,11 @@ export default {
       open_artwork: 'Open artwork',
       close: 'Close',
     },
+    not_found: {
+      title: 'This page is currently unavailable',
+      description: 'The page may have been moved, deleted, or does not exist.',
+      home_btn: 'Go to home',
+    },
   },
   common: {
     header: {},

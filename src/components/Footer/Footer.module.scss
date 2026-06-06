@@ -13,6 +13,8 @@
     border-top: 1px solid rgb(255 255 255 / 10%);
     padding: clamp(2.5em, 6vw, 4.5em) 1.2em;
     color: var(--primary-color);
+    position: relative;
+    bottom: 0;
 
     .navList {
       display: flex;
