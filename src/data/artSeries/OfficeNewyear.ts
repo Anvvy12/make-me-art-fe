@@ -8,8 +8,9 @@ import wontDoImg from 'assets/img/NYPlankton/n_4_i_wont_do_it_again.jpg';
 import wontDoLowImg from 'assets/lowImg/NYPlankton/i_wont_do_it_again.webp';
 import onTheWay2Img from 'assets/img/NYPlankton/n_5_on_the_way.jpg';
 import onTheWay2LowImg from 'assets/lowImg/NYPlankton/on_the_way_2.webp';
+import { TArtwork } from '../artSeries';
 
-export const officeNewYearArtArray = [
+export const officeNewYearArtArray: TArtwork[] = [
   {
     id: 'on-the-way',
     image: onTheWayImg,

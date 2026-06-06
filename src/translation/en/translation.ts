@@ -92,6 +92,9 @@ export default {
       close: 'Close',
       not_found_title: 'Series not found',
       not_found_desc: 'Choose a series from the gallery.',
+      common: {
+        not_include_delivery: 'Price does not include delivery',
+      },
     },
     gallery: {
       title: 'All artworks',

@@ -3,9 +3,14 @@ import { useEffect, useState } from 'react';
 import cn from 'classnames';
 import s from './GalleryPage.module.scss';
 import { useTranslation } from 'react-i18next';
-import { ART_TITLES, ARTWORKS_BY_SERIES, type TArtSeries, } from '../../data/artSeries';
+import {
+  ART_TITLES,
+  ARTWORKS_BY_SERIES,
+  type TArtSeries,
+} from '../../data/artSeries';
 import TypeGalleryCard from '../../components/TypeGalleryCard';
 import DetailsMdl from 'modals/DetailsMdl';
+import TextBlock from 'components/TextBlock';
 
 type TLocale = keyof TArtSeries['translations'];
 
@@ -28,6 +33,9 @@ const ALL_ARTWORKS = ART_TITLES.flatMap((series) =>
 );
 export default function GalleryPage() {
   const { t, i18n } = useTranslation(undefined, { keyPrefix: 'page.gallery' });
+  const { t: t_type_gallery } = useTranslation(undefined, {
+    keyPrefix: 'page.type_gallery.common',
+  });
   const [selectedArtwork, setSelectedArtwork] =
     useState<TGalleryArtwork | null>(null);
   const locale = getLocale(i18n.language);
@@ -60,6 +68,11 @@ export default function GalleryPage() {
           {ALL_ARTWORKS.length} {t('works')}
         </p>
         <h1>{t('title')}</h1>
+        <TextBlock>
+          <p className={s.deliveryNote}>
+            {t_type_gallery('not_include_delivery')}
+          </p>
+        </TextBlock>
       </div>
 
       <div className={s.grid}>
