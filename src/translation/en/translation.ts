@@ -92,6 +92,9 @@ export default {
       close: 'Close',
       not_found_title: 'Series not found',
       not_found_desc: 'Choose a series from the gallery.',
+      common: {
+        not_include_delivery: 'Price does not include delivery',
+      },
     },
     gallery: {
       title: 'All artworks',
@@ -103,6 +106,11 @@ export default {
       view_details: 'View',
       open_artwork: 'Open artwork',
       close: 'Close',
+    },
+    not_found: {
+      title: 'This page is currently unavailable',
+      description: 'The page may have been moved, deleted, or does not exist.',
+      home_btn: 'Go to home',
     },
   },
   common: {

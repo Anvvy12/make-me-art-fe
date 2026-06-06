@@ -3,9 +3,15 @@ import { useEffect, useState } from 'react';
 import cn from 'classnames';
 import s from './GalleryPage.module.scss';
 import { useTranslation } from 'react-i18next';
-import { ART_TITLES, ARTWORKS_BY_SERIES, type TArtSeries, } from '../../data/artSeries';
+import {
+  ART_TITLES,
+  ARTWORKS_BY_SERIES,
+  type TArtSeries,
+} from '../../data/artSeries';
 import TypeGalleryCard from '../../components/TypeGalleryCard';
 import DetailsMdl from 'modals/DetailsMdl';
+import TextBlock from 'components/TextBlock';
+import { Helmet } from 'react-helmet-async';
 
 type TLocale = keyof TArtSeries['translations'];
 
@@ -28,6 +34,9 @@ const ALL_ARTWORKS = ART_TITLES.flatMap((series) =>
 );
 export default function GalleryPage() {
   const { t, i18n } = useTranslation(undefined, { keyPrefix: 'page.gallery' });
+  const { t: t_type_gallery } = useTranslation(undefined, {
+    keyPrefix: 'page.type_gallery.common',
+  });
   const [selectedArtwork, setSelectedArtwork] =
     useState<TGalleryArtwork | null>(null);
   const locale = getLocale(i18n.language);
@@ -54,47 +63,62 @@ export default function GalleryPage() {
   const selectedSeriesText = selectedArtwork?.series.translations[locale];
 
   return (
-    <section className={cn(s.GalleryPage)}>
-      <div className={s.header}>
-        <p className={s.eyebrow}>
-          {ALL_ARTWORKS.length} {t('works')}
-        </p>
-        <h1>{t('title')}</h1>
-      </div>
+    <>
+      <Helmet>
+        <title>Gallery | Roman Sophie</title>
 
-      <div className={s.grid}>
-        {ALL_ARTWORKS.map(({ artwork, series }, index) => {
-          const artworkText = artwork.translations[locale];
-
-          return (
-            <TypeGalleryCard
-              key={`${series.slug}-${artwork.id}`}
-              artwork={artwork}
-              artworkText={artworkText}
-              index={index}
-              labels={{
-                openArtwork: t('open_artwork'),
-                viewDetails: t('view_details'),
-                materials: t('materials'),
-                year: t('year'),
-                size: t('size'),
-                price: t('price'),
-              }}
-              onOpen={() => setSelectedArtwork({ artwork, series })}
-            />
-          );
-        })}
-      </div>
-
-      {selectedArtwork && selectedArtworkText && selectedSeriesText && (
-        <DetailsMdl
-          artwork={selectedArtwork.artwork}
-          artworkText={selectedArtworkText}
-          closeLabel={t('close')}
-          fallbackSeriesTitle={selectedSeriesText.title}
-          onClose={() => setSelectedArtwork(null)}
+        <meta
+          name='description'
+          content='Explore the complete gallery of artworks by Roman Sophie, including drawings, mixed media works, and contemporary art series.'
         />
-      )}
-    </section>
+      </Helmet>
+      <section className={cn(s.GalleryPage)}>
+        <div className={s.header}>
+          <p className={s.eyebrow}>
+            {ALL_ARTWORKS.length} {t('works')}
+          </p>
+          <h1>{t('title')}</h1>
+          <TextBlock>
+            <p className={s.deliveryNote}>
+              {t_type_gallery('not_include_delivery')}
+            </p>
+          </TextBlock>
+        </div>
+
+        <div className={s.grid}>
+          {ALL_ARTWORKS.map(({ artwork, series }, index) => {
+            const artworkText = artwork.translations[locale];
+
+            return (
+              <TypeGalleryCard
+                key={`${series.slug}-${artwork.id}`}
+                artwork={artwork}
+                artworkText={artworkText}
+                index={index}
+                labels={{
+                  openArtwork: t('open_artwork'),
+                  viewDetails: t('view_details'),
+                  materials: t('materials'),
+                  year: t('year'),
+                  size: t('size'),
+                  price: t('price'),
+                }}
+                onOpen={() => setSelectedArtwork({ artwork, series })}
+              />
+            );
+          })}
+        </div>
+
+        {selectedArtwork && selectedArtworkText && selectedSeriesText && (
+          <DetailsMdl
+            artwork={selectedArtwork.artwork}
+            artworkText={selectedArtworkText}
+            closeLabel={t('close')}
+            fallbackSeriesTitle={selectedSeriesText.title}
+            onClose={() => setSelectedArtwork(null)}
+          />
+        )}
+      </section>
+    </>
   );
 }

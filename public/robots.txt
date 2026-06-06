@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roman-sophie-artist.art/sitemap.xml

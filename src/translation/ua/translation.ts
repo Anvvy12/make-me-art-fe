@@ -93,6 +93,9 @@ export default {
       close: '\u0417\u0430\u043a\u0440\u0438\u0442\u0438',
       not_found_title: 'Серію не знайдено',
       not_found_desc: 'Оберіть серію з галереї.',
+      common: {
+        not_include_delivery: 'Ціна вказана без доставки',
+      },
     },
     gallery: {
       title: 'Галерея',
@@ -105,6 +108,11 @@ export default {
       open_artwork:
         '\u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0438 \u0440\u043e\u0431\u043e\u0442\u0443',
       close: '\u0417\u0430\u043a\u0440\u0438\u0442\u0438',
+    },
+    not_found: {
+      title: 'Ця сторінка на разі не доступна',
+      description: 'Сторінку могли перемістити, видалити або вона не існує.',
+      home_btn: 'Перейти на головну',
     },
   },
   common: {

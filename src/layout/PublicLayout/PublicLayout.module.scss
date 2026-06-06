@@ -4,10 +4,15 @@
   .PublicLayout {
     width: 100%;
     position: relative;
-    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
     .main {
-      max-width: 100%;
+      width: 100%;
+      min-height: 100%;
       display: grid;
       padding: clamp(2.2em, 5vw, 5em) clamp(1em, 4vw, 3em);
 

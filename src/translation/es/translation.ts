@@ -91,6 +91,9 @@ export default {
       close: 'Cerrar',
       not_found_title: 'Serie no encontrada',
       not_found_desc: 'Elige una serie desde la galería.',
+      common: {
+        not_include_delivery: 'El precio no incluye los gastos de envío',
+      },
     },
     gallery: {
       title: 'Galería',
@@ -102,6 +105,11 @@ export default {
       view_details: 'Ver',
       open_artwork: 'Abrir obra',
       close: 'Cerrar',
+    },
+    not_found: {
+      title: 'Esta página no está disponible actualmente',
+      description: 'La página puede haber sido movida, eliminada o no existir.',
+      home_btn: 'Ir al inicio',
     },
   },
   common: {

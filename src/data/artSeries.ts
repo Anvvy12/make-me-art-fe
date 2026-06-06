@@ -4,15 +4,20 @@ import loopLowImg from 'assets/lowImg/rutine/loop.webp';
 import onTheWayLowImg from 'assets/lowImg/NYPlankton/on_the_way_1.webp';
 
 import NapInEgyptLowImg from 'assets/lowImg/napoleonsLife/NapInEgyptImg.webp';
+import ActorOn2MonthsLowImg from 'assets/lowImg/PeopleWhatISee/ActorOn2Month.webp';
+import NudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_in_the_white_light.webp';
+import EmbryoOfAFreak2LowImg from 'assets/lowImg/EmbryoOfAFreak/embryo_of_a_freak_2.webp';
 
 import { menArtArray } from './artSeries/Men';
 import { napoleonsLifeArtArray } from './artSeries/NapoleonsLife';
 import { officeNewYearArtArray } from './artSeries/OfficeNewyear';
 import { RutineArtArray } from './artSeries/Rutine';
+import { peopleWhatISee } from './artSeries/PeopleWhatISee';
+import { nakedInWorldWhite } from './artSeries/nakedInWorldWhite';
+import { embryoOfAFreak } from './artSeries/EmbryoOfAFreak';
 
 export type TArtworkLocale = {
   title: string;
-  series?: string;
   materials: string;
   year: string;
   size: string;
@@ -35,9 +40,9 @@ export type TArtSeries = {
   cover: string;
   pictureCount: number;
   translations: {
-    ua: { title: string; description: string; deliveryNote: string };
-    en: { title: string; description: string; deliveryNote: string };
-    es: { title: string; description: string; deliveryNote: string };
+    ua: { title: string; description: string };
+    en: { title: string; description: string };
+    es: { title: string; description: string };
   };
 };
 
@@ -46,6 +51,9 @@ export const ARTWORKS_BY_SERIES: Record<string, TArtwork[]> = {
   rutine: RutineArtArray,
   napoleon_life: napoleonsLifeArtArray,
   office_new_year: officeNewYearArtArray,
+  people_what_i_see: peopleWhatISee,
+  naked_in_world_white: nakedInWorldWhite,
+  embryo_of_a_freak: embryoOfAFreak,
 };
 
 export const ART_TITLES: TArtSeries[] = [
@@ -58,17 +66,14 @@ export const ART_TITLES: TArtSeries[] = [
       ua: {
         title: 'Чоловіки',
         description: 'Серія робіт «Чоловіки».',
-        deliveryNote: 'Ціна вказана без доставки.',
       },
       en: {
         title: 'Men',
         description: 'Works from the "Men" series.',
-        deliveryNote: 'Price does not include delivery.',
       },
       es: {
         title: 'Hombres',
         description: 'Obras de la serie "Hombres" (Choloviky).',
-        deliveryNote: 'El precio no incluye la entrega.',
       },
     },
   },
@@ -82,17 +87,14 @@ export const ART_TITLES: TArtSeries[] = [
       ua: {
         title: 'Рутина',
         description: 'Серія робіт «Рутина».',
-        deliveryNote: 'Ціна вказана без доставки.',
       },
       en: {
         title: 'Routine',
         description: 'Works from the "Routine" series.',
-        deliveryNote: 'Price does not include delivery.',
       },
       es: {
         title: 'Rutina',
         description: 'Obras de la serie "Rutina".',
-        deliveryNote: 'El precio no incluye la entrega.',
       },
     },
   },
@@ -106,17 +108,14 @@ export const ART_TITLES: TArtSeries[] = [
       ua: {
         title: 'Новий рік офісного планктона',
         description: 'Серія робіт «Новий рік офісного планктона».',
-        deliveryNote: 'Ціна вказана без доставки.',
       },
       en: {
         title: "Office Plankton's New Year",
         description: 'Works from the series.',
-        deliveryNote: 'Price does not include delivery.',
       },
       es: {
         title: 'Año Nuevo del Oficinista',
         description: 'Obras de la serie.',
-        deliveryNote: 'El precio no incluye la entrega.',
       },
     },
   },
@@ -129,17 +128,81 @@ export const ART_TITLES: TArtSeries[] = [
       ua: {
         title: 'Наполеонівське життя',
         description: 'Серія «Наполеонівське життя».',
-        deliveryNote: 'Ціна вказана без доставки.',
       },
       en: {
         title: 'Napoleonic Life',
         description: 'Works from the series.',
-        deliveryNote: 'Price does not include delivery.',
       },
       es: {
         title: 'Vida Napoleónica',
         description: 'Obras de la serie.',
-        deliveryNote: 'El precio no incluye la entrega.',
+      },
+    },
+  },
+  {
+    slug: 'people_what_i_see',
+    cover: ActorOn2MonthsLowImg,
+    pictureCount: ARTWORKS_BY_SERIES['people_what_i_see'].length,
+    translations: {
+      ua: {
+        title: 'Люди, яких я бачу',
+        description:
+          'Серія робіт, присвячена людям, яких художниця зустрічає, спостерігає та запам’ятовує у повсякденному житті.',
+      },
+      en: {
+        title: 'People I See',
+        description:
+          'A series dedicated to the people the artist encounters, observes, and remembers in everyday life.',
+      },
+      es: {
+        title: 'La gente que veo',
+        description:
+          'Una serie dedicada a las personas que la artista encuentra, observa y recuerda en la vida cotidiana.',
+      },
+    },
+  },
+  {
+    slug: 'naked_in_world_white',
+    cover: NudeInWhiteWorldLowImg,
+    pictureCount: ARTWORKS_BY_SERIES['naked_in_world_white'].length,
+    translations: {
+      ua: {
+        title: 'Оголені у білому світі',
+        description:
+          'Серія досліджує людську вразливість, щирість і присутність у просторі, позбавленому зайвих деталей. Постаті, зустрінуті художницею в повсякденному житті, постають оголеними не лише фізично, а й емоційно — відкритими до погляду, пам’яті та часу.',
+      },
+      en: {
+        title: 'Naked in a White World',
+        description:
+          'This series explores human vulnerability, sincerity, and presence within a space stripped of distractions. The figures, inspired by people the artist encounters in everyday life, appear exposed not only physically but emotionally—open to observation, memory, and time.',
+      },
+      es: {
+        title: 'Desnudos en un mundo blanco',
+        description:
+          'Esta serie explora la vulnerabilidad, la sinceridad y la presencia humanas en un espacio despojado de elementos superfluos. Las figuras, inspiradas en las personas que la artista encuentra en la vida cotidiana, aparecen expuestas no solo físicamente, sino también emocionalmente, abiertas a la mirada, la memoria y el paso del tiempo.',
+      },
+    },
+  },
+  {
+    slug: 'embryo_of_a_freak',
+    cover: EmbryoOfAFreak2LowImg,
+    pictureCount: ARTWORKS_BY_SERIES['embryo_of_a_freak'].length,
+
+    translations: {
+      ua: {
+        title: 'Зародиш урода',
+        description:
+          'Серія робіт, присвячена дослідженню внутрішніх деформацій, соціальних масок та химерних проявів людської природи.',
+      },
+      en: {
+        title: 'The Freak Primordium',
+        description:
+          'A series exploring inner distortions, social masks, and the bizarre manifestations of human nature.',
+      },
+      es: {
+        title: 'El Germen de la Rareza',
+        description:
+          'Una serie que explora las deformaciones internas, las máscaras sociales y las extrañas manifestaciones de la naturaleza humana.',
       },
     },
   },
