@@ -5,12 +5,14 @@ import onTheWayLowImg from 'assets/lowImg/NYPlankton/on_the_way_1.webp';
 
 import NapInEgyptLowImg from 'assets/lowImg/napoleonsLife/NapInEgyptImg.webp';
 import ActorOn2MonthsLowImg from 'assets/lowImg/PeopleWhatISee/ActorOn2Month.webp';
+import NudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_in_the_white_light.webp';
 
 import { menArtArray } from './artSeries/Men';
 import { napoleonsLifeArtArray } from './artSeries/NapoleonsLife';
 import { officeNewYearArtArray } from './artSeries/OfficeNewyear';
 import { RutineArtArray } from './artSeries/Rutine';
 import { peopleWhatISee } from './artSeries/PeopleWhatISee';
+import { nakedInWorldWhite } from './artSeries/nakedInWorldWhite';
 
 export type TArtworkLocale = {
   title: string;
@@ -48,6 +50,7 @@ export const ARTWORKS_BY_SERIES: Record<string, TArtwork[]> = {
   napoleon_life: napoleonsLifeArtArray,
   office_new_year: officeNewYearArtArray,
   people_what_i_see: peopleWhatISee,
+  naked_in_world_white: nakedInWorldWhite,
 };
 
 export const ART_TITLES: TArtSeries[] = [
@@ -152,6 +155,28 @@ export const ART_TITLES: TArtSeries[] = [
         title: 'La gente que veo',
         description:
           'Una serie dedicada a las personas que la artista encuentra, observa y recuerda en la vida cotidiana.',
+      },
+    },
+  },
+  {
+    slug: 'naked_in_world_white',
+    cover: NudeInWhiteWorldLowImg,
+    pictureCount: ARTWORKS_BY_SERIES['naked_in_world_white'].length,
+    translations: {
+      ua: {
+        title: 'Оголені у білому світі',
+        description:
+          'Серія досліджує людську вразливість, щирість і присутність у просторі, позбавленому зайвих деталей. Постаті, зустрінуті художницею в повсякденному житті, постають оголеними не лише фізично, а й емоційно — відкритими до погляду, пам’яті та часу.',
+      },
+      en: {
+        title: 'Naked in a White World',
+        description:
+          'This series explores human vulnerability, sincerity, and presence within a space stripped of distractions. The figures, inspired by people the artist encounters in everyday life, appear exposed not only physically but emotionally—open to observation, memory, and time.',
+      },
+      es: {
+        title: 'Desnudos en un mundo blanco',
+        description:
+          'Esta serie explora la vulnerabilidad, la sinceridad y la presencia humanas en un espacio despojado de elementos superfluos. Las figuras, inspiradas en las personas que la artista encuentra en la vida cotidiana, aparecen expuestas no solo físicamente, sino también emocionalmente, abiertas a la mirada, la memoria y el paso del tiempo.',
       },
     },
   },

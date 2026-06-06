@@ -14,8 +14,9 @@ import NapoleonTakingJosephineLowImg from 'assets/lowImg/napoleonsLife/NapoleonT
 import NapoleonTakingJosephineBackViewLowImg from 'assets/lowImg/napoleonsLife/NapoleonTakingJosephine(BackView).webp';
 import NapoleonTheBuckwheatSowerLowImg from 'assets/lowImg/napoleonsLife/NapoleonTheBuckwheatSower.webp';
 import NapoleonTheTravelerLowImg from 'assets/lowImg/napoleonsLife/NapoleonTheTraveler.webp';
+import { TArtwork } from '../artSeries';
 
-export const napoleonsLifeArtArray = [
+export const napoleonsLifeArtArray: TArtwork[] = [
   {
     id: 'napoleon-in-egypt',
     image: NapInEgypt,
