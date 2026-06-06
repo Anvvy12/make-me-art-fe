@@ -65,11 +65,9 @@ export default function TypeGalleryPage() {
 
         <p className={s.description}>{seriesText.description}</p>
 
-        {seriesText.deliveryNote && (
-          <TextBlock>
-            <p className={s.deliveryNote}>{seriesText.deliveryNote}</p>
-          </TextBlock>
-        )}
+        <TextBlock>
+          <p className={s.deliveryNote}>{t('common.not_include_delivery')}</p>
+        </TextBlock>
       </div>
 
       <div className={s.grid}>

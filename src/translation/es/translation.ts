@@ -91,6 +91,9 @@ export default {
       close: 'Cerrar',
       not_found_title: 'Serie no encontrada',
       not_found_desc: 'Elige una serie desde la galería.',
+      common: {
+        not_include_delivery: 'El precio no incluye los gastos de envío',
+      },
     },
     gallery: {
       title: 'Galería',
