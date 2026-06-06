@@ -10,6 +10,9 @@ import ActorOn2MonthsLowImg from 'assets/lowImg/PeopleWhatISee/ActorOn2Month.web
 ////
 import MansAndGenjiniImg from 'assets/img/PeopleWhatISee/MansAndGenjini.jpg';
 import MansAndGenjiniLowImg from 'assets/lowImg/PeopleWhatISee/MansAndGenjini.webp';
+////
+import ClashingImg from 'assets/img/PeopleWhatISee/Clashing.jpg';
+import ClashingLowImg from 'assets/lowImg/PeopleWhatISee/Clashing.webp';
 
 export const peopleWhatISee: TArtwork[] = [
   {
@@ -103,7 +106,6 @@ export const peopleWhatISee: TArtwork[] = [
     translations: {
       ua: {
         title: 'чоловіки і жінки',
-        series: 'люди, яких я бачу',
         materials: 'папір, туш, акриловий маркер',
         year: '2025',
         size: '54x74',
@@ -111,7 +113,6 @@ export const peopleWhatISee: TArtwork[] = [
       },
       en: {
         title: 'Men and Women',
-        series: 'People I See',
         materials: 'paper, ink, acrylic marker',
         year: '2025',
         size: '54x74',
@@ -119,11 +120,38 @@ export const peopleWhatISee: TArtwork[] = [
       },
       es: {
         title: 'Hombres y mujeres',
-        series: 'La gente que veo',
         materials: 'papel, tinta, rotulador acrílico',
         year: '2025',
         size: '54x74',
         price: '200 dólares',
+      },
+    },
+  },
+  {
+    id: 'clashing',
+    image: ClashingImg,
+    lowImg: ClashingLowImg,
+    translations: {
+      ua: {
+        title: 'сперечаються',
+        materials: 'папір, акриловий маркер',
+        year: '2025',
+        size: '74x54',
+        price: '$300',
+      },
+      en: {
+        title: 'Clashing',
+        materials: 'paper, acrylic marker',
+        year: '2025',
+        size: '74x54',
+        price: '$300',
+      },
+      es: {
+        title: 'Chocando',
+        materials: 'papel, rotulador acrílico',
+        year: '2025',
+        size: '74x54',
+        price: '300 dólares',
       },
     },
   },

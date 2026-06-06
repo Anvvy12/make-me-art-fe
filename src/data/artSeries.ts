@@ -14,7 +14,6 @@ import { peopleWhatISee } from './artSeries/PeopleWhatISee';
 
 export type TArtworkLocale = {
   title: string;
-  series?: string;
   materials: string;
   year: string;
   size: string;
