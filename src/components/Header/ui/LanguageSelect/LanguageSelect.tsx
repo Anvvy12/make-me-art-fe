@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 
 import cn from 'classnames';
 import s from './LanguageSelect.module.scss';
-import { LOCAL_STORAGE_LANGUAGE_KEY } from 'constants/LANGUAGES_CONSTANTS';
 import { useTranslation } from 'react-i18next';
 import { LANGUAGE_CODES, type TLanguageCode } from 'translation/i18';
 
@@ -37,7 +36,10 @@ export default function LanguageSelect() {
   }, []);
 
   const handleLanguageChange = (language: TLanguageCode) => {
-    localStorage.setItem(LOCAL_STORAGE_LANGUAGE_KEY, language);
+    localStorage.setItem(
+      import.meta.env.VITE_LOCAL_STORAGE_LANGUAGE_KEY,
+      language
+    );
     void i18n.changeLanguage(language);
     setIsOpen(false);
   };

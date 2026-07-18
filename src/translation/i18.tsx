@@ -2,7 +2,6 @@ import en from './en/translation';
 import es from './es/translation';
 import ua from './ua/translation';
 import i18n from 'i18next';
-import { LOCAL_STORAGE_LANGUAGE_KEY } from 'constants/LANGUAGES_CONSTANTS';
 
 export type Language = typeof en;
 export type TLanguageCode = 'en' | 'ua' | 'es';
@@ -38,7 +37,9 @@ function getDefaultLanguage(): TLanguageCode {
 }
 
 function getInitialLanguage(): TLanguageCode {
-  const savedLanguage = localStorage.getItem(LOCAL_STORAGE_LANGUAGE_KEY);
+  const savedLanguage = localStorage.getItem(
+    import.meta.env.VITE_LOCAL_STORAGE_LANGUAGE_KEY
+  );
 
   return normalizeLanguage(savedLanguage) ?? getDefaultLanguage();
 }

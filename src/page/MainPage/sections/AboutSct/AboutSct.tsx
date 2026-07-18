@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import ArtistImg from 'assets/lowImg/main-photo.webp';
+import Img from 'components/ArtCart/sections/Img';
 import s from './AboutSct.module.scss';
 import { useTranslation } from 'react-i18next';
 
@@ -9,7 +10,7 @@ export default function AboutSct() {
   return (
     <section className={cn(s.AboutSct)} id='about-sct'>
       <div className={s.imgWrapper}>
-        <img className={s.img} src={ArtistImg} alt={t('img_alt')} />
+        <Img className={s.img} src={ArtistImg} alt={t('img_alt')} />
       </div>
       <div className={s.description}>
         <h3>{t('name')}</h3>
