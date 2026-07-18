@@ -4,10 +4,12 @@ import MainPage from './page/MainPage';
 import GalleryPage from './page/GalleryPage';
 import SeriesGalleryPage from './page/SeriesGalleryPage';
 import NotFoundPage from './page/NotFoundPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<PublicLayout />}>
           <Route index element={<MainPage />} />

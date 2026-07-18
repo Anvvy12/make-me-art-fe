@@ -6,6 +6,7 @@ import cn from 'classnames';
 import s from './GroupCart.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import Img from 'components/ArtCart/sections/Img';
 
 interface TProps extends React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
@@ -47,7 +48,7 @@ export default function GroupCart({
   return (
     <div className={cn(s.GroupCart, className)} {...props}>
       <div className={s.imgWrapper} onClick={handleClick}>
-        <img loading={'lazy'} className={s.img} src={src} alt={t('img_alt')} />
+        <Img className={s.img} src={src} alt={t('img_alt')} />
         <Button variant='outlined' className={s.btn}>
           {t('view_btn')}
         </Button>

@@ -6,6 +6,7 @@ import galleryInstallation from 'assets/lowImg/exhibition/photo1_sct1.webp';
 import studioFloorMono from 'assets/lowImg/exhibition/krov-sohne.webp';
 
 import s from './ExhibitionSct.module.scss';
+import Img from 'components/ArtCart/sections/Img';
 
 export default function ExhibitionSct() {
   const { t } = useTranslation();
@@ -35,16 +36,14 @@ export default function ExhibitionSct() {
           aria-label={t('page.main.exhibition_sct.photos_aria')}
         >
           <figure className={cn(s.photo, s.photoLarge)}>
-            <img
-              loading={'lazy'}
+            <Img
               src={galleryInstallation}
               alt={t('page.main.exhibition_sct.gallery_alt')}
             />
           </figure>
 
           <figure className={cn(s.photo, s.photoSmall)}>
-            <img
-              loading={'lazy'}
+            <Img
               src={studioFloorColor}
               alt={t('page.main.exhibition_sct.studio_alt')}
             />
@@ -63,8 +62,7 @@ export default function ExhibitionSct() {
 
       <div className={s.finalBlock}>
         <figure className={s.monoPhoto}>
-          <img
-            loading={'lazy'}
+          <Img
             src={studioFloorMono}
             alt={t('page.main.exhibition_sct.mono_alt')}
           />

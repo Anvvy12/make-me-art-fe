@@ -70,6 +70,7 @@
 }
 
 .zoomArea {
+  position: relative;
   max-height: 100%;
   overflow: hidden;
   display: flex;
@@ -88,14 +89,28 @@
 
     transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
 
-    transition: transform 0.18s ease;
+    transition:
+      transform 0.18s ease,
+      opacity 0.3s ease;
+
+    &.hidden {
+      opacity: 0;
+    }
   }
 
-  &:hover img {
+  .skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover img:not(.hidden) {
     transform: scale(1.9);
   }
 
-  &[data-zoomed='true'] img {
+  &[data-zoomed='true'] img:not(.hidden) {
     transform: scale(2);
   }
 }
