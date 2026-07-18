@@ -1,10 +1,12 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, useState } from 'react';
 
 import { IconButton } from '@mui/material';
 import type { TArtwork, TArtworkLocale } from '../../data/artSeries';
 import CloseIcon from 'svg/close-icon.svg?react';
 import s from './DetailsMdl.module.scss';
 import useZoom from 'modals/DetailsMdl/hooks/useZoom';
+import { Skeleton } from '../../ui/Skeleton';
+import cn from 'classnames';
 
 type TProps = {
   artwork: TArtwork;
@@ -28,6 +30,8 @@ export default function DetailsMdl({
     zoomPosition,
     isZoomed,
   } = useZoom();
+
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
     <div className={s.modalOverlay} role='presentation' onMouseDown={onClose}>
@@ -60,16 +64,18 @@ export default function DetailsMdl({
           onClick={handleToggleZoom}
           data-zoomed={isZoomed}
         >
+          {!isImageLoaded && <Skeleton className={s.skeleton} />}
           <img
-            className={s.img}
+            className={cn(s.img, { [s.hidden]: !isImageLoaded })}
             loading={'lazy'}
             src={artwork.image}
             alt={artworkText.title}
+            onLoad={() => setIsImageLoaded(true)}
           />
         </div>
 
         <div className={s.modalInfo}>
-          <p>{artworkText.series ?? fallbackSeriesTitle}</p>
+          <p>{fallbackSeriesTitle}</p>
           <h2>{artworkText.title}</h2>
         </div>
       </div>

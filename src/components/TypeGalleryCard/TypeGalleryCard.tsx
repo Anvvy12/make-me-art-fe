@@ -1,9 +1,11 @@
 import type { TArtwork, TArtworkLocale } from '../../data/artSeries';
 import { useState } from 'react';
+import cn from 'classnames';
 
 import { Button } from '@mui/material';
 import ContactAuthorModal from 'modals/ContactAuthorModal';
 import { useTranslation } from 'react-i18next';
+import { Skeleton } from '../../ui/Skeleton';
 import s from './TypeGalleryCard.module.scss';
 
 type TProps = {
@@ -37,6 +39,7 @@ export default function TypeGalleryCard({
     message: '',
     title: '',
   });
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
   const { t } = useTranslation(undefined, {
     keyPrefix: 'common.contact_modal',
   });
@@ -53,7 +56,14 @@ export default function TypeGalleryCard({
         aria-label={`${labels.openArtwork} ${artworkText.title}`}
         onClick={() => onOpen(artwork)}
       >
-        <img loading={'lazy'} src={artwork.lowImg} alt={artworkText.title} />
+        {!isImageLoaded && <Skeleton className={s.skeleton} />}
+        <img
+          loading={'lazy'}
+          src={artwork.lowImg}
+          alt={artworkText.title}
+          className={cn({ [s.hidden]: !isImageLoaded })}
+          onLoad={() => setIsImageLoaded(true)}
+        />
         <span className={s.viewHint}>{labels.viewDetails}</span>
       </button>
       <div className={s.content}>
