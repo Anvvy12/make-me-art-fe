@@ -4,13 +4,10 @@ import CloseIcon from 'svg/close-icon.svg?react';
 import s from './ContactAuthorModal.module.scss';
 import { useInitForm } from './hooks/useInitForm';
 import { useTranslation } from 'react-i18next';
+import type { TContactModalState } from './types';
 
 type TProps = {
-  isOpen: {
-    open: boolean;
-    message: string;
-    title: string;
-  };
+  isOpen: TContactModalState;
   onClose: () => void;
 };
 

@@ -15,36 +15,7 @@ import { RutineArtArray } from './artSeries/Rutine';
 import { peopleWhatISee } from './artSeries/PeopleWhatISee';
 import { nakedInWorldWhite } from './artSeries/nakedInWorldWhite';
 import { embryoOfAFreak } from './artSeries/EmbryoOfAFreak';
-
-export type TArtworkLocale = {
-  title: string;
-  materials: string;
-  year: string;
-  size: string;
-  price: string;
-};
-
-export type TArtwork = {
-  id: string;
-  image: string;
-  lowImg: string;
-  translations: {
-    ua: TArtworkLocale;
-    en: TArtworkLocale;
-    es: TArtworkLocale;
-  };
-};
-
-export type TArtSeries = {
-  slug: string;
-  cover: string;
-  pictureCount: number;
-  translations: {
-    ua: { title: string; description: string };
-    en: { title: string; description: string };
-    es: { title: string; description: string };
-  };
-};
+import type { TArtSeries, TArtwork } from './artSeries/types';
 
 export const ARTWORKS_BY_SERIES: Record<string, TArtwork[]> = {
   men: menArtArray,

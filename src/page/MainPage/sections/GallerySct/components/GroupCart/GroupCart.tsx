@@ -7,6 +7,7 @@ import s from './GroupCart.module.scss';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import Img from 'components/ArtCart/sections/Img';
+import { trackEvent } from 'services/analytics';
 
 interface TProps extends React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
@@ -37,6 +38,11 @@ export default function GroupCart({
   const navigate = useNavigate();
 
   const handleClick = () => {
+    trackEvent('select_content', {
+      content_type: 'art_series',
+      content_id: type.slug,
+      item_name: type.title,
+    });
     navigate(`/series/${type.slug}`, {
       state: {
         title: type.title,

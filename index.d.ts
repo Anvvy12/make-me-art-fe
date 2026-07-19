@@ -30,6 +30,7 @@ interface ImportMetaEnv {
   readonly VITE_EMAILJS_SERVICE_ID: string;
   readonly VITE_DEFAULT_CACHE_EXPIRATION: string;
   readonly VITE_INSTAGRAM_LINK: string;
+  readonly VITE_GA4_MEASUREMENT_ID: string;
 }
 
 interface ImportMeta {
