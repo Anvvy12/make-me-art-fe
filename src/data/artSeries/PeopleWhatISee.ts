@@ -1,4 +1,4 @@
-import { TArtwork } from '../artSeries';
+import type { TArtwork } from './types';
 import BuilderInHadImg from 'assets/img/PeopleWhatISee/BuilderInHad.jpg';
 import BuilderInHadLowImg from 'assets/lowImg/PeopleWhatISee/BuilderInHad.webp';
 ///
