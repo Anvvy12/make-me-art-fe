@@ -14,10 +14,12 @@
       width: 100%;
       min-height: 100%;
       display: grid;
-      padding: clamp(2.2em, 5vw, 5em) clamp(1em, 4vw, 3em);
+      padding: var(--page-padding-block) var(--layout-gutter);
 
-      @media screen and (max-width: $lg) {
-        padding-block: 5em;
+      > * {
+        width: 100%;
+        max-width: var(--layout-max-width);
+        margin-inline: auto;
       }
     }
   }
