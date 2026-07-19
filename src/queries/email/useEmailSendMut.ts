@@ -1,24 +1,24 @@
 import { MutationOptions, useMutation } from '@tanstack/react-query';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
-import { TError } from 'api/MakeMeArtClient/routes/art/getAllArtTypes';
+import type { TResponseError } from 'api/types';
 
-export type TPayload = {
+type TPayload = {
   title: string;
   name: string;
   email: string;
   message: string;
 };
-export type TSuccess = EmailJSResponseStatus;
-export type TEmailSendMutOpts = Omit<
-  MutationOptions<TSuccess, TError, TPayload>,
+type TSuccess = EmailJSResponseStatus;
+type TEmailSendMutOpts = Omit<
+  MutationOptions<TSuccess, TResponseError, TPayload>,
   'mutationKey' | 'mutationFn'
 >;
 
 export const getEmailSendKey = () => ['Email', 'EmailSend'];
 
 export default function useEmailSendMut(options?: TEmailSendMutOpts) {
-  return useMutation<TSuccess, TError, TPayload>({
+  return useMutation<TSuccess, TResponseError, TPayload>({
     ...options,
     mutationKey: getEmailSendKey(),
     mutationFn: async ({ title, name, email, message }: TPayload) => {

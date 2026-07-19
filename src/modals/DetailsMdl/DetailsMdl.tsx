@@ -1,7 +1,7 @@
 import { CSSProperties, useState } from 'react';
 
 import { IconButton } from '@mui/material';
-import type { TArtwork, TArtworkLocale } from '../../data/artSeries';
+import type { TArtwork, TArtworkLocale } from '../../data/artSeries/types';
 import CloseIcon from 'svg/close-icon.svg?react';
 import s from './DetailsMdl.module.scss';
 import useZoom from 'modals/DetailsMdl/hooks/useZoom';

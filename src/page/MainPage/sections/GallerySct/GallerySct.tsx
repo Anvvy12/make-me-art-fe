@@ -2,13 +2,12 @@ import cn from 'classnames';
 
 import s from './GallerySct.module.scss';
 import { useTranslation } from 'react-i18next';
-import { ART_TITLES, type TArtSeries } from '../../../../data/artSeries';
+import { ART_TITLES } from '../../../../data/artSeries';
+import type { TArtLocale } from '../../../../data/artSeries/types';
 import { SECTIONS_CONSTANTS } from 'constants/SECTIONS_CONSTANTS';
 import GroupCart from './components/GroupCart';
 
-type TLocale = keyof TArtSeries['translations'];
-
-function getLocale(language: string): TLocale {
+function getLocale(language: string): TArtLocale {
   if (language.startsWith('ua')) return 'ua';
   if (language.startsWith('es')) return 'es';
   return 'en';

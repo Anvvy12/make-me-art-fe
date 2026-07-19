@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 import { NAVIGATION_LINKS } from 'constants/SECTIONS_CONSTANTS';
 import { IconButton } from '@mui/material';
 import ContactAuthorModal from 'modals/ContactAuthorModal';
+import { trackContact } from 'services/analytics';
+import type { TContactModalState } from 'modals/ContactAuthorModal/types';
 
 interface TProps extends React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
@@ -22,11 +24,7 @@ interface TProps extends React.DetailedHTMLProps<
 export default function Footer({ className = '', ...props }: TProps) {
   const { t } = useTranslation(undefined, { keyPrefix: 'common.nav' });
 
-  const [isModalOpen, setIsModalOpen] = useState<{
-    open: boolean;
-    message: string;
-    title: string;
-  }>({
+  const [isModalOpen, setIsModalOpen] = useState<TContactModalState>({
     open: false,
     message: '',
     title: '',
@@ -52,7 +50,10 @@ export default function Footer({ className = '', ...props }: TProps) {
       <div className={s.contacts}>
         <IconButton
           className={s.iconButton}
-          onClick={() => setIsModalOpen((prev) => ({ ...prev, open: true }))}
+          onClick={() => {
+            trackContact('contact_form');
+            setIsModalOpen((prev) => ({ ...prev, open: true }));
+          }}
         >
           <MailIcon className={s.svg} />
         </IconButton>
@@ -63,6 +64,8 @@ export default function Footer({ className = '', ...props }: TProps) {
             'https://www.instagram.com/sofyromann?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='
           }
           target='_blank'
+          rel='noopener noreferrer'
+          onClick={() => trackContact('instagram')}
         >
           <InstagramIcon className={s.svg} />
         </IconButton>

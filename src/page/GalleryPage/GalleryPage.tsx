@@ -6,21 +6,24 @@ import { useTranslation } from 'react-i18next';
 import {
   ART_TITLES,
   ARTWORKS_BY_SERIES,
-  type TArtSeries,
 } from '../../data/artSeries';
+import type {
+  TArtLocale,
+  TArtSeries,
+  TArtwork,
+} from '../../data/artSeries/types';
 import TypeGalleryCard from '../../components/TypeGalleryCard';
 import DetailsMdl from 'modals/DetailsMdl';
 import TextBlock from 'components/TextBlock';
 import { Helmet } from 'react-helmet-async';
-
-type TLocale = keyof TArtSeries['translations'];
+import { trackGalleryView } from 'services/analytics';
 
 type TGalleryArtwork = {
-  artwork: TArtSeries['artworks'][number];
+  artwork: TArtwork;
   series: TArtSeries;
 };
 
-function getLocale(language: string): TLocale {
+function getLocale(language: string): TArtLocale {
   if (language.startsWith('ua')) return 'ua';
   if (language.startsWith('es')) return 'es';
   return 'en';
@@ -40,6 +43,10 @@ export default function GalleryPage() {
   const [selectedArtwork, setSelectedArtwork] =
     useState<TGalleryArtwork | null>(null);
   const locale = getLocale(i18n.language);
+
+  useEffect(() => {
+    trackGalleryView('all_gallery', ALL_ARTWORKS.length);
+  }, []);
 
   useEffect(() => {
     if (!selectedArtwork) return;

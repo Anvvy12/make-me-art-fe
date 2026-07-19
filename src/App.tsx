@@ -5,10 +5,12 @@ import GalleryPage from './page/GalleryPage';
 import SeriesGalleryPage from './page/SeriesGalleryPage';
 import NotFoundPage from './page/NotFoundPage';
 import ScrollToTop from './components/ScrollToTop';
+import AnalyticsRouteTracker from './components/AnalyticsRouteTracker';
 
 function App() {
   return (
     <BrowserRouter>
+      <AnalyticsRouteTracker />
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<PublicLayout />}>

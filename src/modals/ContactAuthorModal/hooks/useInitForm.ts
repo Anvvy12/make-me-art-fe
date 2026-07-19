@@ -3,8 +3,9 @@ import * as yup from 'yup';
 import { useTranslation } from 'react-i18next';
 import notify from 'utils/toast';
 import useEmailSendMut from 'queries/email/useEmailSendMut';
+import { trackEvent } from 'services/analytics';
 
-export type TContactAuthorFormValues = {
+type TContactAuthorFormValues = {
   name: string;
   email: string;
   message: string;
@@ -50,6 +51,11 @@ export function useInitForm({ title = '', initMessage, onClose }: TArgs) {
     onSubmit: (values, formikHelpers) => {
       mutate(values, {
         onSuccess: () => {
+          trackEvent('generate_lead', {
+            lead_source: 'contact_form',
+            artwork_name: values.title || undefined,
+            form_name: 'contact_author',
+          });
           notify('success', tNotify('success'));
         },
         onError: () => {
