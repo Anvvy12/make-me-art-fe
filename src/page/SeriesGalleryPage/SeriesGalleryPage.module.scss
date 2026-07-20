@@ -4,7 +4,7 @@
   .SeriesGalleryPage {
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: var(--content-gap);
     width: 100%;
   }
 
@@ -38,18 +38,20 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 300px));
+    gap: var(--grid-gap);
     align-items: stretch;
+    justify-content: start;
   }
 
   @media screen and (max-width: $md) {
-    .TypeGalleryPage {
-      gap: 28px;
+    .SeriesGalleryPage {
+      gap: 24px;
     }
 
     .grid {
       grid-template-columns: 1fr;
+      gap: 16px;
     }
 
     .header h1 {

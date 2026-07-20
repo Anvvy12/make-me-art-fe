@@ -63,7 +63,11 @@
   flex-direction: column;
   gap: 16px;
   margin-top: 22px;
-  align-items: center;
+  align-items: stretch;
+}
+
+.submitBtn:global(.MuiButton-root) {
+  align-self: flex-start;
 }
 
 .field:global(.MuiTextField-root) {
@@ -102,5 +106,9 @@
 
   .header h2 {
     font-size: 20px;
+  }
+
+  .submitBtn:global(.MuiButton-root) {
+    width: 100%;
   }
 }

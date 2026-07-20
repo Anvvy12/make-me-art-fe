@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import cn from 'classnames';
 
@@ -13,15 +13,13 @@ import TextBlock from 'components/TextBlock';
 import {
   ART_TITLES,
   ARTWORKS_BY_SERIES,
-  type TArtSeries,
-  type TArtwork,
 } from '../../data/artSeries';
+import type { TArtLocale, TArtwork } from '../../data/artSeries/types';
 import { Helmet } from 'react-helmet-async';
 import { SERIES_SEO } from '../../constants/SEO';
+import { trackGalleryView } from 'services/analytics';
 
-type TLocale = keyof TArtSeries['translations'];
-
-function getLocale(language: string): TLocale {
+function getLocale(language: string): TArtLocale {
   if (language.startsWith('ua')) return 'ua';
   if (language.startsWith('es')) return 'es';
   return 'en';
@@ -34,7 +32,9 @@ export default function SeriesGalleryPage() {
     keyPrefix: 'page.type_gallery',
   });
 
-  const seo = SERIES_SEO[seriesName ?? ''];
+  const seo = Object.hasOwn(SERIES_SEO, seriesName)
+    ? SERIES_SEO[seriesName as keyof typeof SERIES_SEO]
+    : undefined;
   const [selectedArtwork, setSelectedArtwork] = useState<TArtwork | null>(null);
 
   const locale = getLocale(i18n.language);
@@ -42,6 +42,12 @@ export default function SeriesGalleryPage() {
   const series = ART_TITLES.find((item) => item.slug === seriesName);
 
   const artworks = ARTWORKS_BY_SERIES[seriesName];
+
+  useEffect(() => {
+    if (series && artworks) {
+      trackGalleryView(series.slug, artworks.length);
+    }
+  }, [series, artworks]);
 
   if (!series || !artworks) {
     return (

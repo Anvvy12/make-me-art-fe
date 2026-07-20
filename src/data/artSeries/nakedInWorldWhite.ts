@@ -1,4 +1,4 @@
-import { TArtwork } from '../artSeries';
+import type { TArtwork } from './types';
 import BodyOfNudeInWhiteWorldImg from 'assets/img/nakedInWorldWhite/naked_body_in_the_white_light.jpg';
 import BodyOfNudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_body_in_the_white_light.webp';
 ///

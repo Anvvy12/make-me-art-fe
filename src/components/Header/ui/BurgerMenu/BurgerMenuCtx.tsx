@@ -1,6 +1,6 @@
 import {createContext, type Dispatch, type SetStateAction} from "react";
 
-export type TBurgerMenuCtx = {
+type TBurgerMenuCtx = {
     open: boolean;
     setOpen: Dispatch<SetStateAction<boolean>>;
 };

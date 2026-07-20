@@ -1,4 +1,4 @@
-import { TResponseError } from '../types';
+import type { TResponseError } from '../../../types';
 import BaseClient from 'api/BaseClient';
 import { AxiosRequestConfig, isAxiosError } from 'axios';
 
@@ -8,25 +8,22 @@ import { AxiosRequestConfig, isAxiosError } from 'axios';
  * @see https://github.com/axios/axios
  */
 
-export interface TAPIGetArtType {
-  TError: TResponseError;
-  TSuccess: {
-    data: object;
-  };
-}
-
-export type TError = TAPIGetArtType['TError'];
-export type TSuccess = TAPIGetArtType['TSuccess'];
+export type TArtTypesResponse = {
+  data: object;
+};
 
 export async function getAllArtTypes(
   this: BaseClient,
   config?: AxiosRequestConfig
-): Promise<TSuccess> {
+): Promise<TArtTypesResponse> {
   try {
-    const { data } = await this.client.get<TSuccess>(`/art/art-type/`, config);
+    const { data } = await this.client.get<TArtTypesResponse>(
+      `/art/art-type/`,
+      config
+    );
     return data;
   } catch (error: unknown) {
-    if (isAxiosError<TError>(error)) {
+    if (isAxiosError<TResponseError>(error)) {
       if (error.response?.data?.status === 'Error') throw error.response.data;
 
       throw {

@@ -1,4 +1,4 @@
-import type { TArtwork, TArtworkLocale } from '../../data/artSeries';
+import type { TArtwork, TArtworkLocale } from '../../data/artSeries/types';
 import { useState } from 'react';
 import cn from 'classnames';
 
@@ -7,6 +7,8 @@ import ContactAuthorModal from 'modals/ContactAuthorModal';
 import { useTranslation } from 'react-i18next';
 import { Skeleton } from '../../ui/Skeleton';
 import s from './TypeGalleryCard.module.scss';
+import { trackArtworkView, trackContact } from 'services/analytics';
+import type { TContactModalState } from 'modals/ContactAuthorModal/types';
 
 type TProps = {
   artwork: TArtwork;
@@ -30,11 +32,7 @@ export default function TypeGalleryCard({
   labels,
   onOpen,
 }: TProps) {
-  const [isModalOpen, setIsModalOpen] = useState<{
-    open: boolean;
-    message: string;
-    title: string;
-  }>({
+  const [isModalOpen, setIsModalOpen] = useState<TContactModalState>({
     open: false,
     message: '',
     title: '',
@@ -54,7 +52,14 @@ export default function TypeGalleryCard({
         className={s.imageWrapper}
         type='button'
         aria-label={`${labels.openArtwork} ${artworkText.title}`}
-        onClick={() => onOpen(artwork)}
+        onClick={() => {
+          trackArtworkView({
+            id: artwork.id,
+            name: artworkText.title,
+            price: artworkText.price,
+          });
+          onOpen(artwork);
+        }}
       >
         {!isImageLoaded && <Skeleton className={s.skeleton} />}
         <img
@@ -71,9 +76,7 @@ export default function TypeGalleryCard({
           <span className={s.number}>{index + 1}</span>
           <h2>{artworkText.title}</h2>
         </div>
-        {artworkText.series && (
-          <p className={s.seriesLabel}>{artworkText.series}</p>
-        )}
+
         <dl className={s.metaList}>
           <div>
             <dt>{labels.materials}</dt>
@@ -99,6 +102,7 @@ export default function TypeGalleryCard({
           variant='outlined'
           size='small'
           onClick={() => {
+            trackContact('artwork_contact_form');
             setIsModalOpen({
               message: t('message_default', {
                 artworkTitle: artworkText.title,

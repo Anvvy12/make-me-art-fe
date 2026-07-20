@@ -8,7 +8,7 @@ import vladikLowImg from 'assets/lowImg/mans/vladik.webp';
 import oleksiiLowImg from 'assets/lowImg/mans/oleksii.webp';
 import borisLowImg from 'assets/lowImg/mans/borus.webp';
 import vitalikLowImg from 'assets/lowImg/mans/vitalik.webp';
-import { TArtwork } from '../artSeries';
+import type { TArtwork } from './types';
 
 export const menArtArray: TArtwork[] = [
   {
