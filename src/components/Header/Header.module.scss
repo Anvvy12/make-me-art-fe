@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
 
-  padding-inline: clamp(1em, 4vw, 3em);
+  padding-inline: var(--layout-gutter);
 
   color: var(--main-text-color);
 
@@ -22,12 +22,8 @@
   min-height: calc(72px + env(safe-area-inset-top));
   backdrop-filter: blur(18px);
   box-shadow: 0 16px 40px rgb(33 28 25 / 7%);
-  @media screen and (max-width: $lg) {
-    padding-inline: 0;
-  }
-
   .inner {
-    max-width: 80em;
+    max-width: var(--layout-max-width);
     width: 100%;
     display: flex;
     align-items: center;
@@ -40,7 +36,7 @@
       justify-content: center;
       max-width: 46px;
       max-height: 46px;
-      margin-left: 24px;
+      margin-left: 0;
       padding: 0;
       border-radius: 50%;
       aspect-ratio: 1;

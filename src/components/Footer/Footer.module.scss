@@ -6,28 +6,29 @@
     min-height: 100px;
     display: flex;
     width: 100%;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 18px;
     border-top: 1px solid rgb(255 255 255 / 10%);
-    padding: clamp(2.5em, 6vw, 4.5em) 1.2em;
+    padding: clamp(40px, 6vw, 72px) var(--layout-gutter);
     color: var(--primary-color);
     position: relative;
     bottom: 0;
 
+    .inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      align-items: center;
+      gap: var(--grid-gap);
+      width: 100%;
+      max-width: var(--layout-max-width);
+      margin-inline: auto;
+    }
+
     .navList {
       display: flex;
-      flex-direction: column;
-      width: 100%;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-
-      @media screen and (min-width: $lg) {
-        flex-direction: row;
-        gap: 2.4em;
-      }
+      gap: 2.4em;
 
       .link {
         font-size: var(--main-sm-font-size);
@@ -42,6 +43,7 @@
     .contacts {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       gap: 12px;
 
       .iconButton {
@@ -52,6 +54,22 @@
         svg {
           width: 24px;
         }
+      }
+    }
+
+    @media screen and (max-width: $md) {
+      .inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+
+      .navList {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .contacts {
+        justify-content: center;
       }
     }
 

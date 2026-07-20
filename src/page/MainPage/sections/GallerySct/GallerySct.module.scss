@@ -4,7 +4,7 @@
   .GallerySct {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: var(--content-gap);
 
     .sectionTitle {
       max-width: 740px;
@@ -20,7 +20,7 @@
       align-items: start;
       justify-items: stretch;
       width: 100%;
-      gap: clamp(18px, 3vw, 32px);
+      gap: var(--grid-gap);
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
       @media screen and (max-width: $lg) {
