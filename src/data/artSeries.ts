@@ -158,17 +158,17 @@ export const ART_TITLES: TArtSeries[] = [
 
     translations: {
       ua: {
-        title: 'Зародиш урода',
+        title: 'Office Plankton',
         description:
           'Серія робіт, присвячена дослідженню внутрішніх деформацій, соціальних масок та химерних проявів людської природи.',
       },
       en: {
-        title: 'The Freak Primordium',
+        title: 'Office Plankton',
         description:
           'A series exploring inner distortions, social masks, and the bizarre manifestations of human nature.',
       },
       es: {
-        title: 'El Germen de la Rareza',
+        title: 'Office Plankton',
         description:
           'Una serie que explora las deformaciones internas, las máscaras sociales y las extrañas manifestaciones de la naturaleza humana.',
       },

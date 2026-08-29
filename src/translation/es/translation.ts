@@ -127,6 +127,8 @@ export default {
       message_placeholder: 'Escribe tu mensaje aquí',
       message_default:
         'Estoy interesado en su obra y me gustaría añadir la pintura "{{artworkTitle}}" a mi colección\n\n¡Por favor, póngase en contacto conmigo!\n\n¡Saludos cordiales!',
+      message_sold_default:
+        'Estoy interesado en su obra "{{artworkTitle}}". Veo que ya está vendida, pero me gustaría saber más sobre ella y sobre otras obras disponibles\n\n¡Por favor, póngase en contacto conmigo!\n\n¡Saludos cordiales!',
       submit_btn: 'Enviar',
       close_label: 'Cerrar formulario de contacto',
       contact_author: 'Contactar con el autor',

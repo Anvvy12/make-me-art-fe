@@ -43,6 +43,7 @@ export const officeNewYearArtArray: TArtwork[] = [
     id: 'in-progress',
     image: inProgressImg,
     lowImg: inProgressLowImg,
+    isSold: true,
     translations: {
       ua: {
         title: 'In Progress',
@@ -50,6 +51,7 @@ export const officeNewYearArtArray: TArtwork[] = [
         year: '2025',
         size: '67x87 см',
         price: '$600',
+        label: 'Продано',
       },
       en: {
         title: 'In Progress',
@@ -57,6 +59,7 @@ export const officeNewYearArtArray: TArtwork[] = [
         year: '2025',
         size: '67x87 cm',
         price: '$600',
+        label: 'Sold',
       },
       es: {
         title: 'En proceso',
@@ -64,6 +67,7 @@ export const officeNewYearArtArray: TArtwork[] = [
         year: '2025',
         size: '67x87 cm',
         price: '$600',
+        label: 'Vendido',
       },
     },
   },

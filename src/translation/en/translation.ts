@@ -128,6 +128,8 @@ export default {
       message_placeholder: 'Type your message here',
       message_default:
         'I am interested in your artwork and I would like to get "{{artworkTitle}}" picture to my collection\n\nPlease contact me!\n\nBest regards!',
+      message_sold_default:
+        'I am interested in your artwork "{{artworkTitle}}". I can see it is already sold, but I would like to know more about it and about other available works\n\nPlease contact me!\n\nBest regards!',
       submit_btn: 'Submit',
       close_label: 'Close contact form',
       contact_author: 'Contact with author',

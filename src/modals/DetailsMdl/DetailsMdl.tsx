@@ -4,6 +4,7 @@ import useZoom from 'modals/DetailsMdl/hooks/useZoom';
 import { type CSSProperties, useState } from 'react';
 import CloseIcon from 'svg/close-icon.svg?react';
 import type { TArtwork, TArtworkLocale } from '../../data/artSeries/types';
+import Label from '../../ui/Label';
 import { Skeleton } from '../../ui/Skeleton';
 import s from './DetailsMdl.module.scss';
 
@@ -79,6 +80,11 @@ export default function DetailsMdl({
         <div className={s.modalInfo}>
           <p>{fallbackSeriesTitle}</p>
           <h2>{artworkText.title}</h2>
+          <Label
+            className={s.label}
+            text={artworkText.label}
+            color={artwork.labelColor}
+          />
         </div>
       </div>
     </div>

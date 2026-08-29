@@ -9,6 +9,7 @@ export const embryoOfAFreak: TArtwork[] = [
     id: 'embryo_of_a_freak_1',
     image: EmbryoOfAFreakImg,
     lowImg: EmbryoOfAFreakLowImg,
+    isSold: true,
     translations: {
       ua: {
         title: 'Office Plankton 1',
@@ -16,6 +17,7 @@ export const embryoOfAFreak: TArtwork[] = [
         year: '2025',
         size: '54×74 см',
         price: '400 $',
+        label: 'Продано',
       },
       en: {
         title: 'Office Plankton 1',
@@ -23,6 +25,7 @@ export const embryoOfAFreak: TArtwork[] = [
         year: '2025',
         size: '54×74 cm',
         price: '$400',
+        label: 'Sold',
       },
       es: {
         title: 'Office Plankton 1',
@@ -30,6 +33,7 @@ export const embryoOfAFreak: TArtwork[] = [
         year: '2025',
         size: '54×74 cm',
         price: '400 $',
+        label: 'Vendido',
       },
     },
   },

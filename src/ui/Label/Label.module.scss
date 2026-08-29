@@ -1,0 +1,41 @@
+@layer component {
+  .Label {
+    display: inline-block;
+    padding: 9px 16px;
+    box-shadow: 0 8px 20px rgb(15 23 42 / 22%);
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    //colors
+
+    &.accent {
+      background-color: var(--accent-color);
+    }
+
+    &.dark {
+      background-color: var(--dark-color);
+    }
+
+    &.secondary {
+      background-color: var(--secondary-color);
+      color: var(--main-text-color);
+    }
+
+    &.success {
+      background-color: var(--success-color);
+    }
+
+    &.warning {
+      background-color: var(--warning-color);
+    }
+
+    &.info {
+      background-color: var(--info-color);
+    }
+  }
+}

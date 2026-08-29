@@ -90,6 +90,18 @@
     transform 0.2s ease;
 }
 
+.label {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  pointer-events: none;
+}
+
+.soldPrice {
+  color: var(--main-light-text-color);
+  text-decoration: line-through;
+}
+
 .content {
   display: flex;
   flex: 1 1 auto;
