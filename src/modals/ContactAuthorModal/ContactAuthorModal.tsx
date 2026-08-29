@@ -1,9 +1,14 @@
-import { Button, Dialog, DialogContent, IconButton, TextField, } from '@mui/material';
-
+import {
+  Button,
+  Dialog,
+  DialogContent,
+  IconButton,
+  TextField,
+} from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import CloseIcon from 'svg/close-icon.svg?react';
 import s from './ContactAuthorModal.module.scss';
 import { useInitForm } from './hooks/useInitForm';
-import { useTranslation } from 'react-i18next';
 import type { TContactModalState } from './types';
 
 type TProps = {

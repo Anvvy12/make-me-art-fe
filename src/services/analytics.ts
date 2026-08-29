@@ -1,10 +1,7 @@
 const MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID?.trim();
 const CONSENT_KEY = 'analyticsConsent';
 
-type AnalyticsParams = Record<
-  string,
-  string | number | boolean | undefined
->;
+type AnalyticsParams = Record<string, string | number | boolean | undefined>;
 
 declare global {
   interface Window {

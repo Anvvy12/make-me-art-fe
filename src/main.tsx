@@ -1,15 +1,14 @@
-import { StrictMode } from 'react';
 import { ThemeProvider } from '@mui/material';
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.scss';
-import { I18nextProvider } from 'react-i18next';
-import i18n from './translation/i18';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
-
+import { I18nextProvider } from 'react-i18next';
+import { ToastContainer } from 'react-toastify';
 import App from './App';
 import { WhiteTheme } from './mui/white-theme';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ToastContainer } from 'react-toastify';
+import i18n from './translation/i18';
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,7 +21,13 @@ export const queryClient = new QueryClient({
   },
 });
 
-createRoot(document.getElementById('root')!).render(
+const rootElement = document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error('Root element was not found');
+}
+
+createRoot(rootElement).render(
   <StrictMode>
     <ThemeProvider theme={WhiteTheme}>
       <HelmetProvider>

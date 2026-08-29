@@ -1,8 +1,8 @@
-import type { TArtwork } from './types';
 import EmbryoOfAFreakImg from 'assets/img/EmbryoOfAFreak/embryo_of_a_freak_1.jpg';
+import EmbryoOfAFreak2Img from 'assets/img/EmbryoOfAFreak/embryo_of_a_freak_2.jpg';
 import EmbryoOfAFreakLowImg from 'assets/lowImg/EmbryoOfAFreak/embryo_of_a_freak_1.webp';
 import EmbryoOfAFreak2LowImg from 'assets/lowImg/EmbryoOfAFreak/embryo_of_a_freak_2.webp';
-import EmbryoOfAFreak2Img from 'assets/img/EmbryoOfAFreak/embryo_of_a_freak_2.jpg';
+import type { TArtwork } from './types';
 
 export const embryoOfAFreak: TArtwork[] = [
   {

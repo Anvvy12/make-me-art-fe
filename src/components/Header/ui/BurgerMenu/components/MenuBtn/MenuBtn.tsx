@@ -1,15 +1,14 @@
-import React from 'react';
-import Hamburger from 'hamburger-react';
 import cn from 'classnames';
-
+import Hamburger from 'hamburger-react';
+import type React from 'react';
+import { useBurgerMenuCtx } from '../../useBurgerMenuCtx';
 import s from './MenuBtn.module.scss';
 
-import { useBurgerMenuCtx } from '../../useBurgerMenuCtx';
-
-interface TProps extends React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
-> {
+interface TProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   className?: string;
   icon?: React.ReactNode;
 }

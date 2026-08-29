@@ -1,11 +1,10 @@
 import cn from 'classnames';
-
-import s from './GallerySct.module.scss';
+import { SECTIONS_CONSTANTS } from 'constants/SECTIONS_CONSTANTS';
 import { useTranslation } from 'react-i18next';
 import { ART_TITLES } from '../../../../data/artSeries';
 import type { TArtLocale } from '../../../../data/artSeries/types';
-import { SECTIONS_CONSTANTS } from 'constants/SECTIONS_CONSTANTS';
 import GroupCart from './components/GroupCart';
+import s from './GallerySct.module.scss';
 
 function getLocale(language: string): TArtLocale {
   if (language.startsWith('ua')) return 'ua';

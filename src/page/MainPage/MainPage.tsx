@@ -1,12 +1,11 @@
 import cn from 'classnames';
-
+import { SECTIONS_CONSTANTS } from 'constants/SECTIONS_CONSTANTS';
+import { Helmet } from 'react-helmet-async';
 import s from './MainPage.module.scss';
-import GallerySct from './sections/GallerySct';
 import AboutSct from './sections/AboutSct';
 import ArtSct from './sections/ArtSct';
 import ExhibitionSct from './sections/ExhibitionSct';
-import { SECTIONS_CONSTANTS } from 'constants/SECTIONS_CONSTANTS';
-import { Helmet } from 'react-helmet-async';
+import GallerySct from './sections/GallerySct';
 
 export default function MainPage() {
   return (

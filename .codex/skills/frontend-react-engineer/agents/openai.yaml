@@ -1,0 +1,4 @@
+interface:
+  display_name: "Senior React Engineer"
+  short_description: "Clean, optimized React engineering"
+  default_prompt: "Use $frontend-react-engineer to implement this React task cleanly, optimize responsibly, and verify the result."

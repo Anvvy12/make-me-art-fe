@@ -1,13 +1,13 @@
+import borisImg from 'assets/img/mans/borus.jpg';
 import edikImg from 'assets/img/mans/edik.jpg';
 import oleksiiImg from 'assets/img/mans/oleksii.jpg';
-import borisImg from 'assets/img/mans/borus.jpg';
 import vitalikImg from 'assets/img/mans/vitalik.jpg';
-import edikLowImg from 'assets/lowImg/mans/edik.webp';
-import vladikImg from 'img//mans/vladik.jpg';
-import vladikLowImg from 'assets/lowImg/mans/vladik.webp';
-import oleksiiLowImg from 'assets/lowImg/mans/oleksii.webp';
 import borisLowImg from 'assets/lowImg/mans/borus.webp';
+import edikLowImg from 'assets/lowImg/mans/edik.webp';
+import oleksiiLowImg from 'assets/lowImg/mans/oleksii.webp';
 import vitalikLowImg from 'assets/lowImg/mans/vitalik.webp';
+import vladikLowImg from 'assets/lowImg/mans/vladik.webp';
+import vladikImg from 'img//mans/vladik.jpg';
 import type { TArtwork } from './types';
 
 export const menArtArray: TArtwork[] = [

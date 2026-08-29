@@ -1,14 +1,13 @@
-import React from 'react';
-
 import cn from 'classnames';
-
-import s from './MenuItem.module.scss';
 import { useBurgerMenuCtx } from 'components/Header/ui/BurgerMenu/useBurgerMenuCtx';
+import type React from 'react';
+import s from './MenuItem.module.scss';
 
-interface TProps extends React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
-> {
+interface TProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   className?: string;
   children?: React.ReactNode;
 }

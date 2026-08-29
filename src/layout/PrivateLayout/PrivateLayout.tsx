@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { Outlet } from 'react-router-dom';
-import s from './PrivateLayout.module.scss';
 import Header from '../../components/Header';
+import s from './PrivateLayout.module.scss';
 
 export default function PrivateLayout() {
   return (

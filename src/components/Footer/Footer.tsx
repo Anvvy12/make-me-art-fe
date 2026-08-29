@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
+import { IconButton } from '@mui/material';
 
 import cn from 'classnames';
+import { NAVIGATION_LINKS } from 'constants/SECTIONS_CONSTANTS';
+import ContactAuthorModal from 'modals/ContactAuthorModal';
+import type { TContactModalState } from 'modals/ContactAuthorModal/types';
+import type React from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import { trackContact } from 'services/analytics';
 import InstagramIcon from 'svg/instagram-logo.svg?react';
 import MailIcon from 'svg/mail-to.svg?react';
-import s from './Footer.module.scss';
 import Logo from 'ui/Logo';
-import { Link } from 'react-router-dom';
-import { NAVIGATION_LINKS } from 'constants/SECTIONS_CONSTANTS';
-import { IconButton } from '@mui/material';
-import ContactAuthorModal from 'modals/ContactAuthorModal';
-import { trackContact } from 'services/analytics';
-import type { TContactModalState } from 'modals/ContactAuthorModal/types';
+import s from './Footer.module.scss';
 
-interface TProps extends React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
-> {
+interface TProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   className?: string;
   children?: React.ReactNode;
 }

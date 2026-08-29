@@ -1,4 +1,4 @@
-import { Components, Theme } from '@mui/material/styles';
+import type { Components, Theme } from '@mui/material/styles';
 
 export const muiDialog: Components<Theme> = {
   MuiDialog: {
@@ -9,7 +9,7 @@ export const muiDialog: Components<Theme> = {
         padding: '27px 25px 25px',
         minWidth: '580px',
 
-        [`@media (max-width: 992px)`]: {
+        '@media (max-width: 992px)': {
           minWidth: 'unset',
           padding: '20px 10px',
           margin: '10px',
@@ -32,7 +32,7 @@ export const muiDialog: Components<Theme> = {
   MuiDialogContent: {
     styleOverrides: {
       root: {
-        [`@media (max-width: 992px)`]: {
+        '@media (max-width: 992px)': {
           padding: '12px',
         },
       },

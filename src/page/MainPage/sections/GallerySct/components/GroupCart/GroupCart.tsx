@@ -1,18 +1,17 @@
-import React from 'react';
-
 import { Button } from '@mui/material';
 import cn from 'classnames';
-
-import s from './GroupCart.module.scss';
+import Img from 'components/ArtCart/sections/Img';
+import type React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import Img from 'components/ArtCart/sections/Img';
 import { trackEvent } from 'services/analytics';
+import s from './GroupCart.module.scss';
 
-interface TProps extends React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
-> {
+interface TProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   className?: string;
   src: string;
   count: number;
@@ -53,6 +52,8 @@ export default function GroupCart({
 
   return (
     <div className={cn(s.GroupCart, className)} {...props}>
+      {/* biome-ignore lint/a11y/noStaticElementInteractions: the nested accessible button is the keyboard interaction target. */}
+      {/* biome-ignore lint/a11y/useKeyWithClickEvents: the nested accessible button is the keyboard interaction target. */}
       <div className={s.imgWrapper} onClick={handleClick}>
         <Img className={s.img} src={src} alt={t('img_alt')} />
         <Button variant='outlined' className={s.btn}>

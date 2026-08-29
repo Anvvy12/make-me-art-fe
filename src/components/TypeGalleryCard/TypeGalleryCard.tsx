@@ -1,14 +1,13 @@
-import type { TArtwork, TArtworkLocale } from '../../data/artSeries/types';
-import { useState } from 'react';
-import cn from 'classnames';
-
 import { Button } from '@mui/material';
+import cn from 'classnames';
 import ContactAuthorModal from 'modals/ContactAuthorModal';
+import type { TContactModalState } from 'modals/ContactAuthorModal/types';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { trackArtworkView, trackContact } from 'services/analytics';
+import type { TArtwork, TArtworkLocale } from '../../data/artSeries/types';
 import { Skeleton } from '../../ui/Skeleton';
 import s from './TypeGalleryCard.module.scss';
-import { trackArtworkView, trackContact } from 'services/analytics';
-import type { TContactModalState } from 'modals/ContactAuthorModal/types';
 
 type TProps = {
   artwork: TArtwork;

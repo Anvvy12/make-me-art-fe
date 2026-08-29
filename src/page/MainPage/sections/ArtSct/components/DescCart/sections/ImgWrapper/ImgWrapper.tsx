@@ -1,14 +1,13 @@
-import React from 'react';
-
 import cn from 'classnames';
-
-import s from './ImgWrapper.module.scss';
 import Img from 'components/ArtCart/sections/Img';
+import type React from 'react';
+import s from './ImgWrapper.module.scss';
 
-interface TProps extends React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
-> {
+interface TProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   className?: string;
   src: string;
   desc?: string;

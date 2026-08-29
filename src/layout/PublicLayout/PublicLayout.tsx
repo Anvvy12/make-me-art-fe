@@ -1,9 +1,8 @@
 import cn from 'classnames';
-
-import s from './PublicLayout.module.scss';
-import Header from '../../components/Header';
 import { Outlet } from 'react-router-dom';
 import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import s from './PublicLayout.module.scss';
 
 export default function PublicLayout() {
   return (

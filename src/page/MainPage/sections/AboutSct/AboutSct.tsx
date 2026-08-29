@@ -1,8 +1,8 @@
-import cn from 'classnames';
 import ArtistImg from 'assets/lowImg/main-photo.webp';
+import cn from 'classnames';
 import Img from 'components/ArtCart/sections/Img';
-import s from './AboutSct.module.scss';
 import { useTranslation } from 'react-i18next';
+import s from './AboutSct.module.scss';
 
 export default function AboutSct() {
   const { t } = useTranslation(undefined, { keyPrefix: 'page.main.about_sct' });

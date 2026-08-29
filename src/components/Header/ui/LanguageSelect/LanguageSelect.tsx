@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
-
 import cn from 'classnames';
-import s from './LanguageSelect.module.scss';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LANGUAGE_CODES, type TLanguageCode } from 'translation/i18';
+import s from './LanguageSelect.module.scss';
 
 export default function LanguageSelect() {
   const { t, i18n } = useTranslation(undefined, { keyPrefix: 'common' });

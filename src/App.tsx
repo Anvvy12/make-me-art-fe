@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PublicLayout from './layout/PublicLayout';
-import MainPage from './page/MainPage';
-import GalleryPage from './page/GalleryPage';
-import SeriesGalleryPage from './page/SeriesGalleryPage';
-import NotFoundPage from './page/NotFoundPage';
-import ScrollToTop from './components/ScrollToTop';
 import AnalyticsRouteTracker from './components/AnalyticsRouteTracker';
+import ScrollToTop from './components/ScrollToTop';
+import PublicLayout from './layout/PublicLayout';
+import GalleryPage from './page/GalleryPage';
+import MainPage from './page/MainPage';
+import NotFoundPage from './page/NotFoundPage';
+import SeriesGalleryPage from './page/SeriesGalleryPage';
 
 function App() {
   return (

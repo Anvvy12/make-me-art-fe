@@ -1,5 +1,5 @@
-import { MutationOptions, useMutation } from '@tanstack/react-query';
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { type MutationOptions, useMutation } from '@tanstack/react-query';
 
 import type { TResponseError } from 'api/types';
 

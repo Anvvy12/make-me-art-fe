@@ -1,23 +1,16 @@
-import { useEffect, useState } from 'react';
-
 import cn from 'classnames';
-
-import s from './SeriesGalleryPage.module.scss';
-import { useParams } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-
-import TypeGalleryCard from '../../components/TypeGalleryCard';
-import DetailsMdl from 'modals/DetailsMdl';
 import TextBlock from 'components/TextBlock';
-
-import {
-  ART_TITLES,
-  ARTWORKS_BY_SERIES,
-} from '../../data/artSeries';
-import type { TArtLocale, TArtwork } from '../../data/artSeries/types';
+import DetailsMdl from 'modals/DetailsMdl';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { SERIES_SEO } from '../../constants/SEO';
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
 import { trackGalleryView } from 'services/analytics';
+import TypeGalleryCard from '../../components/TypeGalleryCard';
+import { SERIES_SEO } from '../../constants/SEO';
+import { ART_TITLES, ARTWORKS_BY_SERIES } from '../../data/artSeries';
+import type { TArtLocale, TArtwork } from '../../data/artSeries/types';
+import s from './SeriesGalleryPage.module.scss';
 
 function getLocale(language: string): TArtLocale {
   if (language.startsWith('ua')) return 'ua';

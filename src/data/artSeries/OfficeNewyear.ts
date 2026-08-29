@@ -1,13 +1,13 @@
-import onTheWayImg from 'img//NYPlankton/n_1_on_the_way.jpg';
-import onTheWayLowImg from 'assets/lowImg/NYPlankton/on_the_way_1.webp';
-import inProgressImg from 'img//NYPlankton/n_2 in progress.jpg';
-import inProgressLowImg from 'assets/lowImg/NYPlankton/in_progress.webp';
 import wrongImg from 'assets/img/NYPlankton/n_3_something_went_wrong.jpg';
-import wrongLowImg from 'assets/lowImg/NYPlankton/something_went_wrong.webp';
 import wontDoImg from 'assets/img/NYPlankton/n_4_i_wont_do_it_again.jpg';
-import wontDoLowImg from 'assets/lowImg/NYPlankton/i_wont_do_it_again.webp';
 import onTheWay2Img from 'assets/img/NYPlankton/n_5_on_the_way.jpg';
+import wontDoLowImg from 'assets/lowImg/NYPlankton/i_wont_do_it_again.webp';
+import inProgressLowImg from 'assets/lowImg/NYPlankton/in_progress.webp';
+import onTheWayLowImg from 'assets/lowImg/NYPlankton/on_the_way_1.webp';
 import onTheWay2LowImg from 'assets/lowImg/NYPlankton/on_the_way_2.webp';
+import wrongLowImg from 'assets/lowImg/NYPlankton/something_went_wrong.webp';
+import onTheWayImg from 'img//NYPlankton/n_1_on_the_way.jpg';
+import inProgressImg from 'img//NYPlankton/n_2 in progress.jpg';
 import type { TArtwork } from './types';
 
 export const officeNewYearArtArray: TArtwork[] = [

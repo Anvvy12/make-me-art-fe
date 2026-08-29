@@ -1,12 +1,11 @@
-import cn from 'classnames';
-import { useTranslation } from 'react-i18next';
+import studioFloorMono from 'assets/lowImg/exhibition/krov-sohne.webp';
+import galleryInstallation from 'assets/lowImg/exhibition/photo1_sct1.webp';
 
 import studioFloorColor from 'assets/lowImg/exhibition/smile_photo.webp';
-import galleryInstallation from 'assets/lowImg/exhibition/photo1_sct1.webp';
-import studioFloorMono from 'assets/lowImg/exhibition/krov-sohne.webp';
-
-import s from './ExhibitionSct.module.scss';
+import cn from 'classnames';
 import Img from 'components/ArtCart/sections/Img';
+import { useTranslation } from 'react-i18next';
+import s from './ExhibitionSct.module.scss';
 
 export default function ExhibitionSct() {
   const { t } = useTranslation();
@@ -31,8 +30,10 @@ export default function ExhibitionSct() {
           <p>{t('page.main.exhibition_sct.lead')}</p>
         </div>
 
+        {/* biome-ignore lint/a11y/useSemanticElements: this is a visual image group, not form controls that belong in a fieldset. */}
         <div
           className={s.photoStack}
+          role='group'
           aria-label={t('page.main.exhibition_sct.photos_aria')}
         >
           <figure className={cn(s.photo, s.photoLarge)}>

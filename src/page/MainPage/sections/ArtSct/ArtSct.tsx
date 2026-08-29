@@ -1,10 +1,10 @@
-import cn from 'classnames';
-import DescCart from './components/DescCart';
-import s from './ArtSct.module.scss';
+import OvulOsmynoga from 'assets/lowImg/title-art/ovul_osmynoga.webp';
 import SHodunnukImg from 'assets/lowImg/title-art/shodennuk.webp';
 import ShpaleruImg from 'assets/lowImg/title-art/shpaleru.webp';
-import OvulOsmynoga from 'assets/lowImg/title-art/ovul_osmynoga.webp';
+import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
+import s from './ArtSct.module.scss';
+import DescCart from './components/DescCart';
 
 export default function ArtSct() {
   const { t } = useTranslation(undefined, { keyPrefix: 'page.main.art_sct' });

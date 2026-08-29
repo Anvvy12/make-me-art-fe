@@ -1,5 +1,5 @@
+import type MakeMeArtClient from './MakeMeArtClient';
 import { art } from './routes';
-import MakeMeArtClient from './MakeMeArtClient';
 
 export const BindAllApis = (thisArg: MakeMeArtClient) => {
   return {

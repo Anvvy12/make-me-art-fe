@@ -1,20 +1,17 @@
+import EmbryoOfAFreak2LowImg from 'assets/lowImg/EmbryoOfAFreak/embryo_of_a_freak_2.webp';
 import borisLowImg from 'assets/lowImg/mans/borus.webp';
-
-import loopLowImg from 'assets/lowImg/rutine/loop.webp';
 import onTheWayLowImg from 'assets/lowImg/NYPlankton/on_the_way_1.webp';
-
+import NudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_in_the_white_light.webp';
 import NapInEgyptLowImg from 'assets/lowImg/napoleonsLife/NapInEgyptImg.webp';
 import ActorOn2MonthsLowImg from 'assets/lowImg/PeopleWhatISee/ActorOn2Month.webp';
-import NudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_in_the_white_light.webp';
-import EmbryoOfAFreak2LowImg from 'assets/lowImg/EmbryoOfAFreak/embryo_of_a_freak_2.webp';
-
+import loopLowImg from 'assets/lowImg/rutine/loop.webp';
+import { embryoOfAFreak } from './artSeries/EmbryoOfAFreak';
 import { menArtArray } from './artSeries/Men';
 import { napoleonsLifeArtArray } from './artSeries/NapoleonsLife';
-import { officeNewYearArtArray } from './artSeries/OfficeNewyear';
-import { RutineArtArray } from './artSeries/Rutine';
-import { peopleWhatISee } from './artSeries/PeopleWhatISee';
 import { nakedInWorldWhite } from './artSeries/nakedInWorldWhite';
-import { embryoOfAFreak } from './artSeries/EmbryoOfAFreak';
+import { officeNewYearArtArray } from './artSeries/OfficeNewyear';
+import { peopleWhatISee } from './artSeries/PeopleWhatISee';
+import { RutineArtArray } from './artSeries/Rutine';
 import type { TArtSeries, TArtwork } from './artSeries/types';
 
 export const ARTWORKS_BY_SERIES: Record<string, TArtwork[]> = {
@@ -31,7 +28,7 @@ export const ART_TITLES: TArtSeries[] = [
   {
     slug: 'men',
     cover: borisLowImg,
-    pictureCount: ARTWORKS_BY_SERIES['men'].length,
+    pictureCount: ARTWORKS_BY_SERIES.men.length,
 
     translations: {
       ua: {
@@ -52,7 +49,7 @@ export const ART_TITLES: TArtSeries[] = [
   {
     slug: 'rutine',
     cover: loopLowImg,
-    pictureCount: ARTWORKS_BY_SERIES['rutine'].length,
+    pictureCount: ARTWORKS_BY_SERIES.rutine.length,
 
     translations: {
       ua: {
@@ -73,7 +70,7 @@ export const ART_TITLES: TArtSeries[] = [
   {
     slug: 'office_new_year',
     cover: onTheWayLowImg,
-    pictureCount: ARTWORKS_BY_SERIES['office_new_year'].length,
+    pictureCount: ARTWORKS_BY_SERIES.office_new_year.length,
 
     translations: {
       ua: {
@@ -94,7 +91,7 @@ export const ART_TITLES: TArtSeries[] = [
   {
     slug: 'napoleon_life',
     cover: NapInEgyptLowImg,
-    pictureCount: ARTWORKS_BY_SERIES['napoleon_life'].length,
+    pictureCount: ARTWORKS_BY_SERIES.napoleon_life.length,
     translations: {
       ua: {
         title: 'Наполеонівське життя',
@@ -113,7 +110,7 @@ export const ART_TITLES: TArtSeries[] = [
   {
     slug: 'people_what_i_see',
     cover: ActorOn2MonthsLowImg,
-    pictureCount: ARTWORKS_BY_SERIES['people_what_i_see'].length,
+    pictureCount: ARTWORKS_BY_SERIES.people_what_i_see.length,
     translations: {
       ua: {
         title: 'Люди, яких я бачу',
@@ -135,7 +132,7 @@ export const ART_TITLES: TArtSeries[] = [
   {
     slug: 'naked_in_world_white',
     cover: NudeInWhiteWorldLowImg,
-    pictureCount: ARTWORKS_BY_SERIES['naked_in_world_white'].length,
+    pictureCount: ARTWORKS_BY_SERIES.naked_in_world_white.length,
     translations: {
       ua: {
         title: 'Оголені у білому світі',
@@ -157,7 +154,7 @@ export const ART_TITLES: TArtSeries[] = [
   {
     slug: 'embryo_of_a_freak',
     cover: EmbryoOfAFreak2LowImg,
-    pictureCount: ARTWORKS_BY_SERIES['embryo_of_a_freak'].length,
+    pictureCount: ARTWORKS_BY_SERIES.embryo_of_a_freak.length,
 
     translations: {
       ua: {

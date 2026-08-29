@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-
 import cn from 'classnames';
-import { BurgerMenuCtx } from './BurgerMenuCtx';
+import type React from 'react';
+import { useState } from 'react';
 import s from './BurgerMenu.module.scss';
+import { BurgerMenuCtx } from './BurgerMenuCtx';
 
-interface TProps extends React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
-> {
+interface TProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   className?: string;
   children?: React.ReactNode;
 }

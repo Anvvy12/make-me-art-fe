@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-
 import cn from 'classnames';
+import type React from 'react';
+import { useState } from 'react';
 
 import { Skeleton } from 'ui/Skeleton';
 

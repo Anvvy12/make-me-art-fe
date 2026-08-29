@@ -1,5 +1,5 @@
-import cn from 'classnames';
 import { Button } from '@mui/material';
+import cn from 'classnames';
 import { useTranslation } from 'react-i18next';
 
 import s from './DescriptionSct.module.scss';

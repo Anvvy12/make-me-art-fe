@@ -1,7 +1,11 @@
-import BaseClient from '../BaseClient';
+import type {
+  AxiosError,
+  AxiosResponse,
+  InternalAxiosRequestConfig,
+} from 'axios';
 import AuthManager from 'local-auth-manager';
-import { TMakeMeArtToken } from '../types';
-import { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import BaseClient from '../BaseClient';
+import type { TMakeMeArtToken } from '../types';
 import { BindAllApis } from './api';
 
 interface TInitialConstructorProps {
@@ -65,7 +69,6 @@ export default class MakeMeArtClient extends BaseClient {
       const error = new Error(
         response.data.message || response.data || 'Unknown error'
       );
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-expect-error
       (error as unknown).response = { data: response.data };
       throw error;
@@ -77,9 +80,8 @@ export default class MakeMeArtClient extends BaseClient {
     request: InternalAxiosRequestConfig
   ): InternalAxiosRequestConfig => {
     if (this.localAuthManager.isValidToken(this.localAuthManager.token))
-      request.headers['Authorization'] =
-        `Bearer ${this.localAuthManager.token}`;
-    request.headers['Language'] = this._language;
+      request.headers.Authorization = `Bearer ${this.localAuthManager.token}`;
+    request.headers.Language = this._language;
     return request;
   };
 }

@@ -1,7 +1,7 @@
-import loopImg from 'assets/img/rutine/loop.jpg';
 import climbImg from 'assets/img/rutine/Climb.jpg';
-import loopLowImg from 'assets/lowImg/rutine/loop.webp';
+import loopImg from 'assets/img/rutine/loop.jpg';
 import climbLowImg from 'assets/lowImg/rutine/Climb.webp';
+import loopLowImg from 'assets/lowImg/rutine/loop.webp';
 import type { TArtwork } from './types';
 
 export const RutineArtArray: TArtwork[] = [

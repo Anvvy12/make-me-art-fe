@@ -1,4 +1,4 @@
-import { Slide, toast, ToastOptions } from 'react-toastify';
+import { Slide, type ToastOptions, toast } from 'react-toastify';
 
 const notify = (
   type: 'success' | 'error' | 'info',

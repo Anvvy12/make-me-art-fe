@@ -1,6 +1,6 @@
 import {
-  DefinedInitialDataOptions,
-  UndefinedInitialDataOptions,
+  type DefinedInitialDataOptions,
+  type UndefinedInitialDataOptions,
   useQuery,
 } from '@tanstack/react-query';
 

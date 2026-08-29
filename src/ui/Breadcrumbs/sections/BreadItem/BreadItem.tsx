@@ -1,12 +1,12 @@
 import cn from 'classnames';
-
+import type React from 'react';
 import s from './BreadItem.module.scss';
-import React from 'react';
 
-interface TProps extends React.DetailedHTMLProps<
-  React.AnchorHTMLAttributes<HTMLAnchorElement>,
-  HTMLAnchorElement
-> {
+interface TProps
+  extends React.DetailedHTMLProps<
+    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    HTMLAnchorElement
+  > {
   className?: string;
   children?: React.ReactNode;
 }

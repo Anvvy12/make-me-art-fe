@@ -1,6 +1,7 @@
 import MakeMeArtClient from './MakeMeArtClient';
 
-import { TMakeMeArtToken } from './types';
+import type { TMakeMeArtToken } from './types';
+
 // get user language
 const CURRENT_LANGUAGE = localStorage.getItem(
   import.meta.env.VITE_LOCAL_STORAGE_LANGUAGE_KEY

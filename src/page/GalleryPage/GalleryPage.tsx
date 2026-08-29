@@ -1,22 +1,18 @@
-import { useEffect, useState } from 'react';
-
 import cn from 'classnames';
-import s from './GalleryPage.module.scss';
+import TextBlock from 'components/TextBlock';
+import DetailsMdl from 'modals/DetailsMdl';
+import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
-import {
-  ART_TITLES,
-  ARTWORKS_BY_SERIES,
-} from '../../data/artSeries';
+import { trackGalleryView } from 'services/analytics';
+import TypeGalleryCard from '../../components/TypeGalleryCard';
+import { ART_TITLES, ARTWORKS_BY_SERIES } from '../../data/artSeries';
 import type {
   TArtLocale,
   TArtSeries,
   TArtwork,
 } from '../../data/artSeries/types';
-import TypeGalleryCard from '../../components/TypeGalleryCard';
-import DetailsMdl from 'modals/DetailsMdl';
-import TextBlock from 'components/TextBlock';
-import { Helmet } from 'react-helmet-async';
-import { trackGalleryView } from 'services/analytics';
+import s from './GalleryPage.module.scss';
 
 type TGalleryArtwork = {
   artwork: TArtwork;

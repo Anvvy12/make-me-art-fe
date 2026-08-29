@@ -1,9 +1,9 @@
-import type { TArtwork } from './types';
 import BodyOfNudeInWhiteWorldImg from 'assets/img/nakedInWorldWhite/naked_body_in_the_white_light.jpg';
-import BodyOfNudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_body_in_the_white_light.webp';
 ///
 import NudeInWhiteWorldImg from 'assets/img/nakedInWorldWhite/naked_in_the_white_light.jpg';
+import BodyOfNudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_body_in_the_white_light.webp';
 import NudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_in_the_white_light.webp';
+import type { TArtwork } from './types';
 
 export const nakedInWorldWhite: TArtwork[] = [
   {

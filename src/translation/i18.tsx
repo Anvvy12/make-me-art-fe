@@ -1,7 +1,7 @@
+import i18n from 'i18next';
 import en from './en/translation';
 import es from './es/translation';
 import ua from './ua/translation';
-import i18n from 'i18next';
 
 type Language = typeof en;
 export type TLanguageCode = 'en' | 'ua' | 'es';

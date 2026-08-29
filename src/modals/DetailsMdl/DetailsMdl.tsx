@@ -1,12 +1,11 @@
-import { CSSProperties, useState } from 'react';
-
 import { IconButton } from '@mui/material';
-import type { TArtwork, TArtworkLocale } from '../../data/artSeries/types';
-import CloseIcon from 'svg/close-icon.svg?react';
-import s from './DetailsMdl.module.scss';
-import useZoom from 'modals/DetailsMdl/hooks/useZoom';
-import { Skeleton } from '../../ui/Skeleton';
 import cn from 'classnames';
+import useZoom from 'modals/DetailsMdl/hooks/useZoom';
+import { type CSSProperties, useState } from 'react';
+import CloseIcon from 'svg/close-icon.svg?react';
+import type { TArtwork, TArtworkLocale } from '../../data/artSeries/types';
+import { Skeleton } from '../../ui/Skeleton';
+import s from './DetailsMdl.module.scss';
 
 type TProps = {
   artwork: TArtwork;
@@ -34,6 +33,7 @@ export default function DetailsMdl({
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
+    // biome-ignore lint/a11y/noStaticElementInteractions: backdrop dismissal intentionally uses pointer interaction; the dialog has a dedicated accessible close button.
     <div className={s.modalOverlay} role='presentation' onMouseDown={onClose}>
       <div
         className={s.modal}
@@ -51,6 +51,8 @@ export default function DetailsMdl({
           <CloseIcon className={s.closeIcon} />
         </IconButton>
 
+        {/* biome-ignore lint/a11y/noStaticElementInteractions: image zoom is an optional pointer enhancement and is not required to access the artwork. */}
+        {/* biome-ignore lint/a11y/useKeyWithClickEvents: image zoom is an optional pointer enhancement and is not required to access the artwork. */}
         <div
           className={s.zoomArea}
           style={

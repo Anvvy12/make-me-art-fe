@@ -1,10 +1,8 @@
-import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-
 import { Button } from '@mui/material';
-
-import s from './NotFoundPage.module.scss';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import s from './NotFoundPage.module.scss';
 
 export default function NotFoundPage() {
   const navigate = useNavigate();

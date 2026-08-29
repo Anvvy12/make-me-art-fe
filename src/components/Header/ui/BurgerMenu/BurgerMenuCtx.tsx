@@ -1,9 +1,9 @@
-import {createContext, type Dispatch, type SetStateAction} from "react";
+import { createContext, type Dispatch, type SetStateAction } from 'react';
 
 type TBurgerMenuCtx = {
-    open: boolean;
-    setOpen: Dispatch<SetStateAction<boolean>>;
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
 };
 export const BurgerMenuCtx = createContext<TBurgerMenuCtx>(
-    {} as TBurgerMenuCtx
+  {} as TBurgerMenuCtx
 );

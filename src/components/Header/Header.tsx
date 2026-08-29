@@ -1,13 +1,13 @@
+import { IconButton } from '@mui/material';
 import cn from 'classnames';
-import s from './Header.module.scss';
-import Logo from 'ui/Logo';
-import BurgerMenu from './ui/BurgerMenu';
 import { NAVIGATION_LINKS } from 'constants/SECTIONS_CONSTANTS';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
-import LanguageSelect from './ui/LanguageSelect';
 import ArrowIcon from 'svg/arrow.svg?react';
-import { IconButton } from '@mui/material';
+import Logo from 'ui/Logo';
+import s from './Header.module.scss';
+import BurgerMenu from './ui/BurgerMenu';
+import LanguageSelect from './ui/LanguageSelect';
 
 export default function Header() {
   const n = useNavigate();

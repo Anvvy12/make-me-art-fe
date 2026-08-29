@@ -1,6 +1,6 @@
+import type BaseClient from 'api/BaseClient';
+import { type AxiosRequestConfig, isAxiosError } from 'axios';
 import type { TResponseError } from '../../../types';
-import BaseClient from 'api/BaseClient';
-import { AxiosRequestConfig, isAxiosError } from 'axios';
 
 /**
  * @function getAllArtTypes

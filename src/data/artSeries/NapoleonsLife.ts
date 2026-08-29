@@ -1,19 +1,19 @@
-import NapInEgypt from 'assets/img/napoleonsLife/NapInEgyptImg.jpg';
-import NapoleonWithRooster from 'assets/img/napoleonsLife/NapoleonWithRooster.jpg';
-import NapoleonIsCold from 'assets/img/napoleonsLife/NapoleonIsCold.jpg';
 import Josephine from 'assets/img/napoleonsLife/JosephineImg.jpg';
+import NapInEgypt from 'assets/img/napoleonsLife/NapInEgyptImg.jpg';
+import NapoleonIsCold from 'assets/img/napoleonsLife/NapoleonIsCold.jpg';
 import NapoleonTakingJosephine from 'assets/img/napoleonsLife/NapoleonTakingJosephine.jpg';
 import NapoleonTakingJosephineBackView from 'assets/img/napoleonsLife/NapoleonTakingJosephine(BackView).jpg';
 import NapoleonTheBuckwheatSower from 'assets/img/napoleonsLife/NapoleonTheBuckwheatSower.jpg';
 import NapoleonTheTraveler from 'assets/img/napoleonsLife/NapoleonTheTraveler.jpg';
-import NapInEgyptLowImg from 'assets/lowImg/napoleonsLife/NapInEgyptImg.webp';
-import NapoleonWithRoosterLowImg from 'assets/lowImg/napoleonsLife/NapoleonWithRooster.webp';
-import NapoleonIsColdLowImg from 'assets/lowImg/napoleonsLife/NapoleonIsCold.webp';
+import NapoleonWithRooster from 'assets/img/napoleonsLife/NapoleonWithRooster.jpg';
 import JosephineLowImg from 'assets/lowImg/napoleonsLife/JosephineImg.webp';
+import NapInEgyptLowImg from 'assets/lowImg/napoleonsLife/NapInEgyptImg.webp';
+import NapoleonIsColdLowImg from 'assets/lowImg/napoleonsLife/NapoleonIsCold.webp';
 import NapoleonTakingJosephineLowImg from 'assets/lowImg/napoleonsLife/NapoleonTakingJosephine.webp';
 import NapoleonTakingJosephineBackViewLowImg from 'assets/lowImg/napoleonsLife/NapoleonTakingJosephine(BackView).webp';
 import NapoleonTheBuckwheatSowerLowImg from 'assets/lowImg/napoleonsLife/NapoleonTheBuckwheatSower.webp';
 import NapoleonTheTravelerLowImg from 'assets/lowImg/napoleonsLife/NapoleonTheTraveler.webp';
+import NapoleonWithRoosterLowImg from 'assets/lowImg/napoleonsLife/NapoleonWithRooster.webp';
 import type { TArtwork } from './types';
 
 export const napoleonsLifeArtArray: TArtwork[] = [

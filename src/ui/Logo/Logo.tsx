@@ -1,9 +1,8 @@
+import cn from 'classnames';
 import LogoImg from 'img/Logo.png';
-
-import s from './Logo.module.scss';
 import { Link } from 'react-router-dom';
 import { NAVIGATION_LINKS } from '../../constants/SECTIONS_CONSTANTS';
-import cn from 'classnames';
+import s from './Logo.module.scss';
 
 export default function Logo() {
   return (

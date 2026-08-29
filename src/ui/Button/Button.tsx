@@ -1,11 +1,9 @@
-import React from 'react';
-
 import cn from 'classnames';
+import type React from 'react';
 
 import s from './Button.module.scss';
 
-interface TProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface TProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   children?: React.ReactNode;
   variant?: 'outline' | 'primary';
