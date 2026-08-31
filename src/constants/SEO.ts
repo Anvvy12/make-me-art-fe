@@ -36,7 +36,7 @@ export const SERIES_SEO = {
   },
 
   embryo_of_a_freak: {
-    title: 'The Freak Primordium | Roman Sophie',
+    title: 'Office Plankton | Roman Sophie',
     description:
       'A series examining social masks, inner transformation, and the strange, grotesque, and vulnerable aspects of human nature.',
   },

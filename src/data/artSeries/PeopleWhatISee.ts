@@ -1,5 +1,5 @@
 ////
-import ActorOn2MonthsImg from 'assets/img/PeopleWhatISee/ActorOn2Month.jpg';
+// Тимчасово приховано: import ActorOn2MonthsImg from 'assets/img/PeopleWhatISee/ActorOn2Month.jpg';
 ///
 import AutoPortraitInHatImg from 'assets/img/PeopleWhatISee/AutoPortraitInHat.jpg';
 import BuilderInHadImg from 'assets/img/PeopleWhatISee/BuilderInHad.jpg';
@@ -7,7 +7,7 @@ import BuilderInHadImg from 'assets/img/PeopleWhatISee/BuilderInHad.jpg';
 import ClashingImg from 'assets/img/PeopleWhatISee/Clashing.jpg';
 ////
 import MansAndGenjiniImg from 'assets/img/PeopleWhatISee/MansAndGenjini.jpg';
-import ActorOn2MonthsLowImg from 'assets/lowImg/PeopleWhatISee/ActorOn2Month.webp';
+// Тимчасово приховано: import ActorOn2MonthsLowImg from 'assets/lowImg/PeopleWhatISee/ActorOn2Month.webp';
 import AutoPortraitInHatLowImg from 'assets/lowImg/PeopleWhatISee/AutoPortraitInHat.webp';
 import BuilderInHadLowImg from 'assets/lowImg/PeopleWhatISee/BuilderInHad.webp';
 import ClashingLowImg from 'assets/lowImg/PeopleWhatISee/Clashing.webp';
@@ -71,6 +71,7 @@ export const peopleWhatISee: TArtwork[] = [
       },
     },
   },
+  /* Тимчасово приховано
   {
     id: 'actor-for-2-months',
     image: ActorOn2MonthsImg,
@@ -99,6 +100,7 @@ export const peopleWhatISee: TArtwork[] = [
       },
     },
   },
+*/
   {
     id: 'men-and-women',
     image: MansAndGenjiniImg,

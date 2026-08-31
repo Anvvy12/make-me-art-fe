@@ -47,6 +47,7 @@ export default {
       about_sct: {
         name: 'Sophie Roman',
         description: 'Kyiv-based artist. Contemporary and naive art.',
+        bio: 'Sophie Roman (b. Kyiv, Ukraine) is a prominent contemporary multimedia artist whose practice operates as a living, visual archive of modern Kyiv. Rooted in the methodology of psychological documentation, Sophie observes and captures the immediate raw textures of daily life, tracking the subtle yet profound shifts in human emotion, body language, and collective behavior. Sophie transforms her personal sensory experiences into visual objects, charting a chronological map of human resilience, adaptation, and vulnerability.',
         img_alt: 'Sophie Roman',
       },
       gallery_sct: {
@@ -107,6 +108,46 @@ export default {
       open_artwork: 'Open artwork',
       close: 'Close',
     },
+    projects: {
+      title: 'Projects',
+      description:
+        'Art projects by Sophie Roman: collaborations, residencies and works made for a specific space.',
+      sub_rosa: {
+        eyebrow: 'Sub Rosa × Sophie Roman',
+        title: '“Don’t Worry. It’s Private Here”',
+        subtitle:
+          'A new monumental stained-glass work by Sophie Roman in collaboration with Sub Rosa.',
+        intro:
+          '“Don’t Worry. It’s Private Here” is a monumental stained-glass work by the Ukrainian multimedia artist Sophie Roman. The project was made as a local art residency supported by the intimate bar Sub Rosa.',
+        concept_title: 'Concept',
+        concept_1:
+          'In Latin, the name Sub Rosa means “under the seal of secrecy”. By an old tradition, a rose in the interior stood for the inviolability of everything said in the room. Today the bar keeps that intimate atmosphere, letting guests be themselves.',
+        concept_2:
+          'The central element of the stained glass is a large red circle — a visual interpretation of that secret rose, which loops the composition, holds everything within itself and does not let privacy leave the venue.',
+        concept_3:
+          'Every shard of this glass is a real bottle from the drinks the guests ordered. They are sealed-in witnesses of someone’s frank conversations, laughter, confessions and secrets, which will stay here forever.',
+        story_title: 'How it was made',
+        story_1:
+          'It all started as a pure experiment. While looking for tin cans for another independent project, the artist received a message from Maria, the co-owner of the bar:',
+        story_quote:
+          'We have no cans, but we do have glass from our guests’ bottles.',
+        story_2:
+          'As an artist focused on the randomness of materials, Sophie agreed to the adventure at once. That step grew into a private art residency in Irpin. Life in a country house amid the silence turned into a daily ritual of deconstruction: hours of washing, breaking and laying the mosaic by hand in search of the perfect monumental form.',
+        location_label: 'Location',
+        location_value: 'Sub Rosa bar',
+        artist_label: 'Artist',
+        artist_value: 'Sophie Roman',
+        hero_alt:
+          'The artist in front of the illuminated stained-glass work “Don’t Worry. It’s Private Here” at the Sub Rosa bar',
+        process_alt:
+          'A mosaic of broken bottle glass in a wooden mould while the stained glass is being made',
+        residency_alt:
+          'The artist in a respirator washing bottle glass in the studio during the residency',
+        more: 'Read more',
+        less: 'Collapse',
+        video_caption: 'Making of the stained glass',
+      },
+    },
     not_found: {
       title: 'This page is currently unavailable',
       description: 'The page may have been moved, deleted, or does not exist.',
@@ -128,6 +169,8 @@ export default {
       message_placeholder: 'Type your message here',
       message_default:
         'I am interested in your artwork and I would like to get "{{artworkTitle}}" picture to my collection\n\nPlease contact me!\n\nBest regards!',
+      message_sold_default:
+        'I am interested in your artwork "{{artworkTitle}}". I can see it is already sold, but I would like to know more about it and about other available works\n\nPlease contact me!\n\nBest regards!',
       submit_btn: 'Submit',
       close_label: 'Close contact form',
       contact_author: 'Contact with author',
@@ -141,6 +184,7 @@ export default {
     nav: {
       main: 'Home',
       gallery: 'Gallery',
+      projects: 'Projects',
       about: 'About me',
     },
     notify: {

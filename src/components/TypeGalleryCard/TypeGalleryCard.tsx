@@ -5,6 +5,7 @@ import type { TContactModalState } from 'modals/ContactAuthorModal/types';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { trackArtworkView, trackContact } from 'services/analytics';
+import Label from 'ui/Label';
 import type { TArtwork, TArtworkLocale } from '../../data/artSeries/types';
 import { Skeleton } from '../../ui/Skeleton';
 import s from './TypeGalleryCard.module.scss';
@@ -46,7 +47,7 @@ export default function TypeGalleryCard({
     });
   };
   return (
-    <article className={s.card}>
+    <article className={cn(s.card, { [s.sold]: artwork.isSold })}>
       <button
         className={s.imageWrapper}
         type='button'
@@ -67,6 +68,11 @@ export default function TypeGalleryCard({
           alt={artworkText.title}
           className={cn({ [s.hidden]: !isImageLoaded })}
           onLoad={() => setIsImageLoaded(true)}
+        />
+        <Label
+          className={s.label}
+          text={artworkText.label}
+          color={artwork.labelColor}
         />
         <span className={s.viewHint}>{labels.viewDetails}</span>
       </button>
@@ -91,7 +97,9 @@ export default function TypeGalleryCard({
           </div>
           <div>
             <dt>{labels.price}</dt>
-            <dd>{artworkText.price}</dd>
+            <dd className={cn({ [s.soldPrice]: artwork.isSold })}>
+              {artworkText.price}
+            </dd>
           </div>
         </dl>
 
@@ -103,9 +111,10 @@ export default function TypeGalleryCard({
           onClick={() => {
             trackContact('artwork_contact_form');
             setIsModalOpen({
-              message: t('message_default', {
-                artworkTitle: artworkText.title,
-              }),
+              message: t(
+                artwork.isSold ? 'message_sold_default' : 'message_default',
+                { artworkTitle: artworkText.title }
+              ),
               title: artworkText.title,
               open: true,
             });

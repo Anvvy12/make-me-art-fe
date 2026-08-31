@@ -23,9 +23,9 @@ export default function MainPage() {
         id={SECTIONS_CONSTANTS.MAIN_SCT.slice(1)}
       >
         <AboutSct />
-        <GallerySct />
         <ExhibitionSct />
         <ArtSct />
+        <GallerySct />
       </main>
     </>
   );
