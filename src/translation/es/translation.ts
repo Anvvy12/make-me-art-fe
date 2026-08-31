@@ -46,6 +46,7 @@ export default {
       about_sct: {
         name: 'Sophie Roman',
         description: 'Artista radicada en Kyiv. Arte contemporáneo y naíf.',
+        bio: 'Sofi Roman (nacida en Kyiv, Ucrania) es una destacada artista multimedia contemporánea cuya práctica funciona como un archivo visual vivo de la Kyiv actual. Basándose en una metodología de documentación psicológica, Sofi observa y captura las texturas crudas e inmediatas de la vida cotidiana, rastreando los sutiles pero profundos cambios en las emociones humanas, el lenguaje corporal y el comportamiento colectivo. Sofi transforma su experiencia sensorial personal en objetos visuales, trazando un mapa cronológico de la resiliencia, la adaptación y la vulnerabilidad humanas.',
         img_alt: 'Sophie Roman',
       },
       gallery_sct: {

@@ -14,7 +14,8 @@ export default function AboutSct() {
       </div>
       <div className={s.description}>
         <h3>{t('name')}</h3>
-        <p>{t('description')}</p>
+        <p className={s.lead}>{t('description')}</p>
+        <p className={s.bio}>{t('bio')}</p>
       </div>
     </section>
   );

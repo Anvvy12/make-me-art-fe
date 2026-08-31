@@ -47,6 +47,7 @@ export default {
       about_sct: {
         name: 'Sophie Roman',
         description: 'Kyiv-based artist. Contemporary and naive art.',
+        bio: 'Sophie Roman (b. Kyiv, Ukraine) is a prominent contemporary multimedia artist whose practice operates as a living, visual archive of modern Kyiv. Rooted in the methodology of psychological documentation, Sophie observes and captures the immediate raw textures of daily life, tracking the subtle yet profound shifts in human emotion, body language, and collective behavior. Sophie transforms her personal sensory experiences into visual objects, charting a chronological map of human resilience, adaptation, and vulnerability.',
         img_alt: 'Sophie Roman',
       },
       gallery_sct: {
