@@ -3,7 +3,7 @@ import borisLowImg from 'assets/lowImg/mans/borus.webp';
 import onTheWayLowImg from 'assets/lowImg/NYPlankton/on_the_way_1.webp';
 // Тимчасово приховано: import NudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_in_the_white_light.webp';
 // Тимчасово приховано: import NapInEgyptLowImg from 'assets/lowImg/napoleonsLife/NapInEgyptImg.webp';
-import ActorOn2MonthsLowImg from 'assets/lowImg/PeopleWhatISee/ActorOn2Month.webp';
+import MansAndGenjiniLowImg from 'assets/lowImg/PeopleWhatISee/MansAndGenjini.webp';
 import loopLowImg from 'assets/lowImg/rutine/loop.webp';
 import { embryoOfAFreak } from './artSeries/EmbryoOfAFreak';
 import { menArtArray } from './artSeries/Men';
@@ -111,7 +111,7 @@ export const ART_TITLES: TArtSeries[] = [
 */
   {
     slug: 'people_what_i_see',
-    cover: ActorOn2MonthsLowImg,
+    cover: MansAndGenjiniLowImg,
     pictureCount: ARTWORKS_BY_SERIES.people_what_i_see.length,
     translations: {
       ua: {
