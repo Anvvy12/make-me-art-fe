@@ -16,6 +16,8 @@ declare module '*.jpeg';
 declare module '*.png';
 declare module '*.webp';
 declare module '*.gif';
+declare module '*.mp4';
+declare module '*.MP4';
 declare module '*.dcm';
 declare module '*.pdf';
 

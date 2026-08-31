@@ -47,7 +47,7 @@ export default function TypeGalleryCard({
     });
   };
   return (
-    <article className={s.card}>
+    <article className={cn(s.card, { [s.sold]: artwork.isSold })}>
       <button
         className={s.imageWrapper}
         type='button'

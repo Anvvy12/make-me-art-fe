@@ -1,14 +1,14 @@
 import EmbryoOfAFreak2LowImg from 'assets/lowImg/EmbryoOfAFreak/embryo_of_a_freak_2.webp';
 import borisLowImg from 'assets/lowImg/mans/borus.webp';
 import onTheWayLowImg from 'assets/lowImg/NYPlankton/on_the_way_1.webp';
-import NudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_in_the_white_light.webp';
-import NapInEgyptLowImg from 'assets/lowImg/napoleonsLife/NapInEgyptImg.webp';
+// Тимчасово приховано: import NudeInWhiteWorldLowImg from 'assets/lowImg/nakedInWorldWhite/naked_in_the_white_light.webp';
+// Тимчасово приховано: import NapInEgyptLowImg from 'assets/lowImg/napoleonsLife/NapInEgyptImg.webp';
 import ActorOn2MonthsLowImg from 'assets/lowImg/PeopleWhatISee/ActorOn2Month.webp';
 import loopLowImg from 'assets/lowImg/rutine/loop.webp';
 import { embryoOfAFreak } from './artSeries/EmbryoOfAFreak';
 import { menArtArray } from './artSeries/Men';
-import { napoleonsLifeArtArray } from './artSeries/NapoleonsLife';
-import { nakedInWorldWhite } from './artSeries/nakedInWorldWhite';
+// Тимчасово приховано: import { napoleonsLifeArtArray } from './artSeries/NapoleonsLife';
+// Тимчасово приховано: import { nakedInWorldWhite } from './artSeries/nakedInWorldWhite';
 import { officeNewYearArtArray } from './artSeries/OfficeNewyear';
 import { peopleWhatISee } from './artSeries/PeopleWhatISee';
 import { RutineArtArray } from './artSeries/Rutine';
@@ -17,10 +17,10 @@ import type { TArtSeries, TArtwork } from './artSeries/types';
 export const ARTWORKS_BY_SERIES: Record<string, TArtwork[]> = {
   men: menArtArray,
   rutine: RutineArtArray,
-  napoleon_life: napoleonsLifeArtArray,
+  // Тимчасово приховано: napoleon_life: napoleonsLifeArtArray,
   office_new_year: officeNewYearArtArray,
   people_what_i_see: peopleWhatISee,
-  naked_in_world_white: nakedInWorldWhite,
+  // Тимчасово приховано: naked_in_world_white: nakedInWorldWhite,
   embryo_of_a_freak: embryoOfAFreak,
 };
 
@@ -88,6 +88,7 @@ export const ART_TITLES: TArtSeries[] = [
     },
   },
 
+  /* Тимчасово приховано
   {
     slug: 'napoleon_life',
     cover: NapInEgyptLowImg,
@@ -107,6 +108,7 @@ export const ART_TITLES: TArtSeries[] = [
       },
     },
   },
+*/
   {
     slug: 'people_what_i_see',
     cover: ActorOn2MonthsLowImg,
@@ -129,6 +131,7 @@ export const ART_TITLES: TArtSeries[] = [
       },
     },
   },
+  /* Тимчасово приховано
   {
     slug: 'naked_in_world_white',
     cover: NudeInWhiteWorldLowImg,
@@ -151,6 +154,7 @@ export const ART_TITLES: TArtSeries[] = [
       },
     },
   },
+*/
   {
     slug: 'embryo_of_a_freak',
     cover: EmbryoOfAFreak2LowImg,

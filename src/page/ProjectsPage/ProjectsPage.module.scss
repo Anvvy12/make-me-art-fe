@@ -1,0 +1,38 @@
+@use 'styles/variables' as *;
+
+@layer section {
+  .ProjectsPage {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 760px;
+
+    h1 {
+      font-size: clamp(2.75rem, 7vw, 5.5rem);
+      font-weight: 500;
+      line-height: 0.95;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .description {
+    max-width: 620px;
+    color: var(--main-light-text-color);
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: $md) {
+    .ProjectsPage {
+      gap: clamp(40px, 10vw, 64px);
+    }
+  }
+}

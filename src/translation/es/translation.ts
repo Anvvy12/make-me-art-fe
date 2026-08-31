@@ -107,6 +107,46 @@ export default {
       open_artwork: 'Abrir obra',
       close: 'Cerrar',
     },
+    projects: {
+      title: 'Proyectos',
+      description:
+        'Proyectos artísticos de Sophie Roman: colaboraciones, residencias y obras creadas para un espacio concreto.',
+      sub_rosa: {
+        eyebrow: 'Sub Rosa × Sophie Roman',
+        title: '«No te preocupes. Aquí es privado»',
+        subtitle:
+          'Una nueva vidriera monumental de Sophie Roman en colaboración con Sub Rosa.',
+        intro:
+          '«No te preocupes. Aquí es privado» es una vidriera monumental de la artista multimedia ucraniana Sophie Roman. El proyecto se realizó como una residencia artística local con el apoyo del bar íntimo Sub Rosa.',
+        concept_title: 'Concepto',
+        concept_1:
+          'En latín, el nombre Sub Rosa significa «bajo secreto». Según una antigua tradición, la rosa en el interior simbolizaba la inviolabilidad de todo lo que se decía en la sala. Hoy el bar conserva esa atmósfera íntima y permite que los invitados sean ellos mismos.',
+        concept_2:
+          'El elemento central de la vidriera es un gran círculo rojo: una interpretación visual de esa rosa secreta que cierra la composición, lo retiene todo dentro de sí y no deja que la privacidad salga del local.',
+        concept_3:
+          'Cada fragmento de este vidrio es una botella real de las bebidas que pidieron los invitados. Son testigos grabados de conversaciones sinceras, risas, confesiones y secretos de alguien, que se quedarán aquí para siempre.',
+        story_title: 'Historia de la creación',
+        story_1:
+          'Todo empezó como un experimento puro. Mientras buscaba latas para otro proyecto independiente, la artista recibió un mensaje de María, copropietaria del bar:',
+        story_quote:
+          'No hay latas, pero sí tenemos vidrio de las botellas de nuestros invitados.',
+        story_2:
+          'Como artista centrada en la aleatoriedad de los materiales, Sophie aceptó la aventura de inmediato. Ese paso se convirtió en una residencia artística privada en la ciudad de Irpín. La vida en una casa de campo, en silencio, se transformó en un ritual diario de deconstrucción: horas de lavado, rotura y colocación manual del mosaico en busca de la forma monumental perfecta.',
+        location_label: 'Ubicación',
+        location_value: 'Bar Sub Rosa',
+        artist_label: 'Artista',
+        artist_value: 'Sophie Roman',
+        hero_alt:
+          'La artista frente a la vidriera iluminada «No te preocupes. Aquí es privado» en el bar Sub Rosa',
+        process_alt:
+          'Mosaico de vidrio roto de botellas en un molde de madera durante la creación de la vidriera',
+        residency_alt:
+          'La artista con respirador lavando vidrio de botellas en el taller durante la residencia',
+        more: 'Leer más',
+        less: 'Contraer',
+        video_caption: 'Proceso de creación de la vidriera',
+      },
+    },
     not_found: {
       title: 'Esta página no está disponible actualmente',
       description: 'La página puede haber sido movida, eliminada o no existir.',
@@ -143,6 +183,7 @@ export default {
     nav: {
       main: 'Inicio',
       gallery: 'Galería',
+      projects: 'Proyectos',
       about: 'Sobre mí',
     },
     notify: {

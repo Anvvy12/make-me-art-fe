@@ -15,6 +15,7 @@ interface TProps
 export default function MenuItem({
   className = '',
   children,
+  onClick,
   ...props
 }: TProps) {
   const { setOpen } = useBurgerMenuCtx();
@@ -22,8 +23,11 @@ export default function MenuItem({
   return (
     <button
       className={cn(s.MenuItem, className)}
-      onClick={() => setOpen(false)}
       {...props}
+      onClick={(event) => {
+        setOpen(false);
+        onClick?.(event);
+      }}
     >
       {children}
     </button>

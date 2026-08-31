@@ -7,5 +7,6 @@ export const SECTIONS_CONSTANTS = {
 export const NAVIGATION_LINKS = {
   ABOUT: `/${SECTIONS_CONSTANTS.ABOUT_SCT}`,
   GALLERY: '/gallery',
+  PROJECTS: '/projects',
   MAIN: '/',
 };

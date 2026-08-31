@@ -90,6 +90,13 @@
     transform 0.2s ease;
 }
 
+.card.sold {
+  .imageWrapper img:not(.hidden),
+  .content {
+    opacity: 0.6;
+  }
+}
+
 .label {
   position: absolute;
   left: 0;
